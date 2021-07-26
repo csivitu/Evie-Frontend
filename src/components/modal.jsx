@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { getEvents } from "../api/Request";
 
 const Modal = ({ closeModal, date }) => {
-  console.log(closeModal);
-
+  const [events, setEvents] = React.useState([]);
+  const AsyncEvent = async () => {
+    let res = await getEvents();
+    setEvents(res);
+  };
+  useEffect(() => {
+    AsyncEvent();
+  }, []);
   if (closeModal) {
-    let res = getEvents();
-    
+    // res.current = res;
+    console.log(events)
     return (
       <div
         className="fixed z-10 inset-0 overflow-y-auto"
@@ -77,10 +83,7 @@ const Modal = ({ closeModal, date }) => {
                     {`Events for ${date}`}
                   </h3>
                   <div className="mt-2">
-                    <div className="flex flex-col">
-                      {}
-
-                    </div>
+                    <div className="flex flex-col">{}</div>
                   </div>
                 </div>
               </div>
