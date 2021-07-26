@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.2.0",
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "@fullcalendar/daygrid": "^5.8.0",
     "@fullcalendar/react": "^5.8.0",
     "@testing-library/jest-dom": "^5.14.1",
