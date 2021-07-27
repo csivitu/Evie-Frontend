@@ -1,10 +1,6 @@
 import React from "react";
 
-const Event=[
-  {
-    
-  }
-]
+const Event = [{}];
 function renderEventContent(eventInfo) {
   return (
     <>

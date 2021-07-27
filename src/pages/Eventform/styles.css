@@ -1,21 +1,10 @@
-
-.fullbox {
-  padding: 1em;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 15px;
-  color: #b9b9b9;
-  background-color: #e3e3e3;
-  height:100%;
-  width:100%;
+.add-event {
+  text-align: center;
+  margin-left: 200px;
+  margin-right: 200px;
+  text-decoration-color: #f0a500;
+  font-weight: bold;
 }
-
-.add-event{
-    text-align: center;
-    margin-left: 200px;
-    margin-right: 200px; 
-    text-decoration-color: #bd8200;
-}
-
 
 *,
 *:before,
@@ -30,9 +19,6 @@ h4 {
 }
 
 input,
-input[type="radio"] + label,
-input[type="checkbox"] + label:before,
-select option,
 select {
   width: 100%;
   padding: 1em;
@@ -47,13 +33,10 @@ select {
   transition: all 0.35s ease-in-out;
 }
 
-
 .input-group {
   margin-bottom: 1em;
   zoom: 1;
 }
-
-
 
 .input-group-icon {
   position: relative;
@@ -61,8 +44,16 @@ select {
 
 .input-group-icon input {
   padding-left: 4.4em;
+  word-wrap: break-word;
+  word-break: break-all;
+  height: 80px;
 }
 
+.description {
+  word-wrap: break-word;
+  word-break: break-all;
+  height: 80px;
+}
 
 .input-group-icon .input-icon:after {
   position: absolute;
@@ -79,7 +70,6 @@ select {
   transition: all 0.35s ease-in-out;
 }
 
-
 .container {
   max-width: 38em;
   padding: 1em 3em 2em 3em;
@@ -95,11 +85,9 @@ select {
   display: table;
 }
 
-
 .row:after {
   clear: both;
 }
-
 
 .col-half {
   padding-right: 10px;
@@ -107,14 +95,11 @@ select {
   width: 50%;
 }
 
-
 .col-third {
   padding-right: 10px;
   float: left;
   width: 33.33333333%;
 }
-
-
 
 @media only screen and (max-width: 540px) {
   .col-half {
@@ -123,9 +108,11 @@ select {
   }
 }
 
-.submit-event{
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #f0a500;
-    font-weight: bold;
-    font-size: 15px;
+.submit-event {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #f0a500;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  color: white;
 }

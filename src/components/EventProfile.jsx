@@ -56,7 +56,6 @@ const EventProfile = ({ event }) => {
                       clipRule="evenodd"
                     ></path>
                   </svg>
-                
                 </div>
               </div>
             </div>

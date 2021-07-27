@@ -14,7 +14,6 @@ import "./styles.css";
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
   const [date, setDate] = useState("");
-  // const [event]  
   const history = useHistory();
 
   const routeChange = () => {
@@ -31,19 +30,15 @@ const Home = () => {
   useEffect(() => {
     AsyncEvent();
   }, []);
-
+  console.log(events)
   return (
     <div className="md:container md:mx-auto">
-      {/* {isMobile?(
-        
-      ):null} */}
 
       <FullCalendar
         plugins={[dayGridPlugin, interactionPlugin, listPlugin, timeGridPlugin]}
         events={events}
         initialView={isMobile ? "listWeek" : "dayGridMonth"}
         height="100vh"
-        // eventDataTransform={events}
         eventAdd={events}
         customButtons={{
           eventform: {
@@ -55,6 +50,7 @@ const Home = () => {
         }}
         dateClick={(current) => {
           setDate(current.dateStr);
+          console.log(current)
           setShowModal(true);
         }}
         headerToolbar={
@@ -80,9 +76,6 @@ const Home = () => {
             : false
         }
         showNonCurrentDates={false}
-        // datesSet={(data) => {
-        //   handleDatesSet(data);
-        // }}
       />
 
       {showModal && !isMobile ? (
