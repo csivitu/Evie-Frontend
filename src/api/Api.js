@@ -6,6 +6,6 @@ export const API = axios.create({
     responseType: "json",
 })
 
-export const baseURL = "http://localhost:3001"
+export const BASEURL = "http://localhost:3001"
 
 export default API
