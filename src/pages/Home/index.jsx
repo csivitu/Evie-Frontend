@@ -3,31 +3,91 @@ import FullCalendar from "@fullcalendar/react"; // must go before plugins
 import dayGridPlugin from "@fullcalendar/daygrid"; // a plugin!
 import interactionPlugin from "@fullcalendar/interaction";
 import Modal from "../../components/modal";
-
+import { useHistory } from "react-router-dom";
+import { getEvents } from "../../api/Request";
+import { useEffect } from "react";
+import listPlugin from "@fullcalendar/list";
+import timeGridPlugin from "@fullcalendar/timegrid";
+import { isMobile } from "react-device-detect";
+import "./styles.css";
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
-  console.log(showModal)
-  const [date,setDate]=useState('')
+  const [date, setDate] = useState("");
+  // const [event]  
+  const history = useHistory();
+
+  const routeChange = () => {
+    let path = `/event-form`;
+    history.push(path);
+  };
+
+  const [events, setEvents] = React.useState([]);
+  const AsyncEvent = async () => {
+    let res = await getEvents();
+    setEvents(res);
+  };
+
+  useEffect(() => {
+    AsyncEvent();
+  }, []);
 
   return (
     <div className="md:container md:mx-auto">
+      {/* {isMobile?(
+        
+      ):null} */}
+
       <FullCalendar
-        plugins={[dayGridPlugin, interactionPlugin]}
-        dateClick={(current)=>{
-          setDate(current.dateStr)
-          setShowModal(true)
+        plugins={[dayGridPlugin, interactionPlugin, listPlugin, timeGridPlugin]}
+        events={events}
+        initialView={isMobile ? "listWeek" : "dayGridMonth"}
+        height="100vh"
+        // eventDataTransform={events}
+        eventAdd={events}
+        customButtons={{
+          eventform: {
+            text: "Event Form",
+            click: () => {
+              routeChange();
+            },
+          },
         }}
-        headerToolbar={{
-          start: 'prev next', // will normally be on the left. if RTL, will be on the right
-          center: 'title',
-          end: 'today' // will normally be on the right. if RTL, will be on the left
+        dateClick={(current) => {
+          setDate(current.dateStr);
+          setShowModal(true);
+        }}
+        headerToolbar={
+          isMobile
+            ? {
+                start: "prev",
+                center: "title",
+                end: "next",
+              }
+            : {
+                start: "prev next",
+                center: "title",
+                end: "today eventform",
+              }
         }
+        footerToolbar={
+          isMobile
+            ? {
+                start: "",
+                center: "today eventform",
+                end: "",
+              }
+            : false
         }
         showNonCurrentDates={false}
+        // datesSet={(data) => {
+        //   handleDatesSet(data);
+        // }}
       />
 
-      {showModal?<Modal closeModal={setShowModal} date={date}/>:null}
+      {showModal && !isMobile ? (
+        <Modal closeModal={setShowModal} date={date} events={events} />
+      ) : null}
     </div>
   );
 };

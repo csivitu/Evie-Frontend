@@ -1,7 +1,7 @@
 import { Route, Switch } from "react-router-dom";
-import Home from "./pages/Home/";
-import Today from "./pages/Today/";
-import EventForm from "./pages/Eventform/"
+import Home from "./pages/Home";
+import Today from "./pages/Today";
+import EventForm from "./pages/Eventform"
 
 function App() {
   return (
