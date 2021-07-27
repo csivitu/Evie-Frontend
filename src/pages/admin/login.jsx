@@ -1,11 +1,12 @@
 import React from "react";
+import "./styles.css";
 
 const AdminLogin = () => {
     return (
          
-<div class="flex flex-col w-full max-w-md px-4 py-8 bg-white rounded-lg shadow dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10">
+<div id="container" class="flex flex-col w-full max-w-md px-4 py-8 bg-white rounded-lg shadow dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10">
     <div class="self-center mb-6 text-xl font-light text-gray-600 sm:text-2xl dark:text-white">
-        Login To Your Account
+        VCal Admin Login
     </div>
     <div class="mt-8">
         <form action="#" autoComplete="off">
@@ -17,7 +18,7 @@ const AdminLogin = () => {
                             </path>
                         </svg>
                     </span>
-                    <input type="text" id="sign-in-email" class=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Your email"/>
+                    <input type="text" id="sign-in-email" class=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Username"/>
                     </div>
                 </div>
                 <div class="flex flex-col mb-6">
@@ -28,14 +29,7 @@ const AdminLogin = () => {
                                 </path>
                             </svg>
                         </span>
-                        <input type="password" id="sign-in-email" class=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Your password"/>
-                        </div>
-                    </div>
-                    <div class="flex items-center mb-6 -mt-4">
-                        <div class="flex ml-auto">
-                            <a href="#" class="inline-flex text-xs font-thin text-gray-500 sm:text-sm dark:text-gray-100 hover:text-gray-700 dark:hover:text-white">
-                                Forgot Your Password?
-                            </a>
+                        <input type="password" id="sign-in-email" class=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Password"/>
                         </div>
                     </div>
                     <div class="flex w-full">
@@ -45,15 +39,7 @@ const AdminLogin = () => {
                     </div>
                 </form>
             </div>
-            <div class="flex items-center justify-center mt-6">
-                <a href="#" target="_blank" class="inline-flex items-center text-xs font-thin text-center text-gray-500 hover:text-gray-700 dark:text-gray-100 dark:hover:text-white">
-                    <span class="ml-2">
-                        You don&#x27;t have an account?
-                    </span>
-                </a>
-            </div>
         </div>
-
     );
 };
 
