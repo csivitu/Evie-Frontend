@@ -1,6 +1,16 @@
 import React from "react";
 import "./styles.css";
-import baseURL from "../../api/Api"; 
+import baseURL from "../../api/Api";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+
+const Example = () => {
+  const [startDate, setStartDate] = useState(new Date());
+  return (
+    <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
+  );
+};
+
 
 const EventForm = () => {
   return (

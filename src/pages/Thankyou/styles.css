@@ -1,53 +1,49 @@
-@import url("https://fonts.googleapis.com/css2?family=STIX+Two+Math&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=STIX+Two+Math&display=swap');
 * {
   box-sizing: border-box;
-  font-family: "STIX Two Math", serif !important;
+  font-family: 'Montserrat', sans-serif !important;
   /* outline:1px solid ;*/
 }
 body {
-  background: #f0a500;
-  background: linear-gradient(to bottom, #ffffff 0%, #f0a500 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0a500', endColorstr='#f0a500',GradientType=0 );
+  background:white ;
   height: 100%;
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-.wrapper-1 {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
+
 .wrapper-2 {
   padding: 30px;
   text-align: center;
 }
+
 h1 {
   font-size: 4em;
   letter-spacing: 3px;
   color: #f0a500;
   margin: 0;
   margin-bottom: 20px;
+  font-weight: bold;
 }
+
 .wrapper-2 p {
   margin: 0;
   font-size: 1.3em;
-  color: #aaa;
+  color: rgb(0, 0, 0);
   font-family: "Source Sans Pro", sans-serif;
   letter-spacing: 1px;
+  font-weight: bold;
 }
 .go-home {
   color: #fff;
   background: #f0a500;
   border: none;
-  padding: 10px 50px;
+  padding: 15px 200px;
   margin: 30px 0;
   border-radius: 30px;
   text-transform: capitalize;
-  box-shadow: 0 10px 16px 1px rgb(230, 197, 8);
+  font-weight: bold;
 }
 
 @media (min-width: 360px) {
