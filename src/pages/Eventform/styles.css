@@ -17,8 +17,14 @@ h4 {
   color: #f0a500;
   font-weight: bold;
 }
+
+.react-datepicker-wrapper{
+  width: 100% !important;
+  color: grey;
+}
+
 .react-datepicker__input-container{
-  width: 220px !important;
+  width: 100% !important;
   color: grey;
 }
 
@@ -97,6 +103,12 @@ select {
   padding-right: 10px;
   float: left;
   width: 50%;
+}
+
+
+.col-full {
+  float: left;
+  width: 100%;
 }
 
 .col-third {
