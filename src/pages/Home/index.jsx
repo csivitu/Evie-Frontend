@@ -4,11 +4,10 @@ import dayGridPlugin from "@fullcalendar/daygrid"; // a plugin!
 import interactionPlugin from "@fullcalendar/interaction";
 import Modal from "../../components/modal";
 import { useHistory } from "react-router-dom";
-import { getDate, getMonth } from "../../api/Request";
+import { getMonth } from "../../api/Request";
 import { useEffect } from "react";
 import listPlugin from "@fullcalendar/list";
 import { isMobile } from "react-device-detect";
-
 import "./styles.css";
 
 const Home = () => {
@@ -30,7 +29,6 @@ const Home = () => {
 
   useEffect(() => {
     if (finalDate.length!==0) {
-      // console.log(finalDate)
       AsyncEvent();
     }
   }, [finalDate]);
@@ -40,7 +38,7 @@ const Home = () => {
       <FullCalendar
         plugins={[dayGridPlugin, interactionPlugin, listPlugin]}
         events={events}
-        initialView={isMobile ? "listWeek" : "dayGridMonth"}
+        initialView={"dayGridMonth"}
         height="100vh"
         eventAdd={events}
         customButtons={{
@@ -54,7 +52,6 @@ const Home = () => {
         dateClick={(current) => {
           console.log(current.date.toUTCString())
           setDate(current.date);
-          // console.log(date)
           setShowModal(true);
         }}
         headerToolbar={
@@ -84,15 +81,13 @@ const Home = () => {
         datesSet={(dateInfo) => {
           const endDate = dateInfo.end;
           endDate.setDate(endDate.getDate() - 1);
-          
-          
           setFinalDate([dateInfo.start.toISOString(), endDate.toISOString()]);
         }}
         
       />
     
 
-      {showModal && !isMobile ? (
+      {showModal ? (
         <Modal closeModal={setShowModal} date={date} />
       ) : null}
     </div>
