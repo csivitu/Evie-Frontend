@@ -4,7 +4,7 @@ import dayGridPlugin from "@fullcalendar/daygrid"; // a plugin!
 import interactionPlugin from "@fullcalendar/interaction";
 import Modal from "../../components/modal";
 import { useHistory } from "react-router-dom";
-import { getDate, getEvents } from "../../api/Request";
+import { getDate, getMonth } from "../../api/Request";
 import { useEffect } from "react";
 import listPlugin from "@fullcalendar/list";
 import { isMobile } from "react-device-detect";
@@ -24,8 +24,7 @@ const Home = () => {
   const [events, setEvents] = useState([]);
 
   const AsyncEvent = async () => {
-    let res = await getEvents( finalDate );
-    // let anotherRes = await getDate("2021-07-26T18:30:00.000Z");
+    let res = await getMonth( finalDate );
     setEvents(res);
   };
 
