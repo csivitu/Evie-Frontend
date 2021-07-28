@@ -5,15 +5,13 @@ import { getDate } from "../api/Request";
 import EventProfile from "./EventProfile";
 
 const Modal = ({ closeModal, date }) => {
-  const [event,setEvent]=useState([])
-  const AsyncDay = async () => {
-    let res = await getDate( date.toUTCString() );
-    // let anotherRes = await getDate("2021-07-26T18:30:00.000Z");
-    setEvent(res);
-  };
+  const [event, setEvent] = useState([]);
   useEffect(() => {
-      // console.log(finalDate)
-      AsyncDay();
+    const AsyncDay = async () => {
+      let res = await getDate(date.toUTCString());
+      setEvent(res);
+    };
+    AsyncDay();
   }, []);
   if (closeModal) {
     return (

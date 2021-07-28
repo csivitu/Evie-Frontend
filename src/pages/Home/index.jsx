@@ -22,13 +22,12 @@ const Home = () => {
   const [finalDate, setFinalDate] = useState([]);
   const [events, setEvents] = useState([]);
 
-  const AsyncEvent = async () => {
-    let res = await getMonth( finalDate );
-    setEvents(res);
-  };
-
   useEffect(() => {
-    if (finalDate.length!==0) {
+    if (finalDate.length !== 0) {
+      const AsyncEvent = async () => {
+        let res = await getMonth(finalDate);
+        setEvents(res);
+      };
       AsyncEvent();
     }
   }, [finalDate]);
@@ -50,7 +49,6 @@ const Home = () => {
           },
         }}
         dateClick={(current) => {
-          console.log(current.date.toUTCString())
           setDate(current.date);
           setShowModal(true);
         }}
@@ -83,13 +81,9 @@ const Home = () => {
           endDate.setDate(endDate.getDate() - 1);
           setFinalDate([dateInfo.start.toISOString(), endDate.toISOString()]);
         }}
-        
       />
-    
 
-      {showModal ? (
-        <Modal closeModal={setShowModal} date={date} />
-      ) : null}
+      {showModal ? <Modal closeModal={setShowModal} date={date} /> : null}
     </div>
   );
 };

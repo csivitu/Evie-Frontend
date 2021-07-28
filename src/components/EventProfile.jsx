@@ -22,7 +22,6 @@ const EventProfile = ({ event }) => {
                     </div>
                     <div className="flex-auto text-gray-400 my-1">
                       <span className="mr-3 ">
-                        {console.log(event)}
                       </span>
                       <span className="mr-3 border-r border-gray-600  max-h-0"></span>
                       <span>{event.org}</span>

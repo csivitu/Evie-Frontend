@@ -8,7 +8,7 @@ const EventForm = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   return (
-    <div className="flex md:container md:mx-auto md:h-screen md:w-screen items-center">
+    <div className="flex md:container md:mx-auto items-center">
       <div className="container" >
         <form action={`${BASEURL}/api/add`} method="POST">
           <div className="row"> 
@@ -64,6 +64,33 @@ const EventForm = () => {
           </div>
           <div className="row">
             </div>
+            <div className="col-half">
+              <h4>Label Color </h4>
+              <div className="event-color">
+              <input
+                type="color"
+                placeholder="Event Color"
+                name="color" height = "50"
+                required style={{height:"60px"}}
+              />
+              </div>
+            </div>
+            <div className="col-half">
+              <h4>Text Color </h4>
+              <div className="text-color">
+              <input
+                type="color"
+                placeholder="Text Color"
+                name="color" 
+                required style={{height:"60px"}}
+              />
+              </div>
+            </div>
+
+            <div className="input-group input-group-icon"></div>
+
+          <div className="row">
+            </div>
             <div className="col-full">
               <h4>Start Date and Time of Event (IST +5:30) </h4>
               <div className="input-group">
@@ -71,7 +98,6 @@ const EventForm = () => {
                 <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} 
                 timeInputLabel="Time:" dateFormat="MM/dd/yyyy h:mm aa" showTimeInput
                 required name = "start" />
-                {console.log(startDate)}
                 </div>
               </div>
             </div>
@@ -85,8 +111,7 @@ const EventForm = () => {
                 <div className="col-full">
                 <DatePicker selected={endDate} onChange={(date) => setEndDate(date)} 
                 timeInputLabel="Time:" dateFormat="MM/dd/yyyy h:mm aa" showTimeInput
-                required name = "end" />
-                {console.log(endDate)}
+                required name = "end"/>
                 </div>
               </div>
             </div>
