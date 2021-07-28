@@ -8,7 +8,7 @@ const EventForm = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   return (
-    <div className="bg-yellow-500 md:container md:mx-auto">
+    <div className="flex md:container md:mx-auto md:h-screen md:w-screen items-center">
       <div className="container" >
         <form action={`${BASEURL}/api/add`} method="POST">
           <div className="row"> 
@@ -64,20 +64,24 @@ const EventForm = () => {
           </div>
           <div className="row">
             </div>
-            <div className="col-half">
-              <h4>Start Date and Time of Event</h4>
+            <div className="col-full">
+              <h4>Start Date and Time of Event (IST +5:30) </h4>
               <div className="input-group">
-                <div className="col-half">
+                <div className="col-full">
                 <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} 
                 timeInputLabel="Time:" dateFormat="MM/dd/yyyy h:mm aa" showTimeInput
                 required name = "start" />
                 </div>
               </div>
             </div>
-            <div className="col-half">
-              <h4>End Date and Time of Event</h4>
+            <div className="input-group input-group-icon"></div>
+            <br></br>
+            <br></br>
+            <div className="input-group input-group-icon"></div>
+            <div className="col-full">
+              <h4>End Date and Time of Event (IST +5:30) </h4>
               <div className="input-group">
-                <div className="col-half">
+                <div className="col-full">
                 <DatePicker selected={endDate} onChange={(date) => setEndDate(date)} 
                 timeInputLabel="Time:" dateFormat="MM/dd/yyyy h:mm aa" showTimeInput
                 required name = "end" />
