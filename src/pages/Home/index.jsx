@@ -4,11 +4,11 @@ import dayGridPlugin from "@fullcalendar/daygrid"; // a plugin!
 import interactionPlugin from "@fullcalendar/interaction";
 import Modal from "../../components/modal";
 import { useHistory } from "react-router-dom";
-import { getEvents } from "../../api/Request";
+import { getDate, getEvents } from "../../api/Request";
 import { useEffect } from "react";
 import listPlugin from "@fullcalendar/list";
-import timeGridPlugin from "@fullcalendar/timegrid";
 import { isMobile } from "react-device-detect";
+
 import "./styles.css";
 
 const Home = () => {
@@ -20,22 +20,26 @@ const Home = () => {
     let path = `/event-form`;
     history.push(path);
   };
+  const [finalDate, setFinalDate] = useState([]);
+  const [events, setEvents] = useState([]);
 
-  const [events, setEvents] = React.useState([]);
   const AsyncEvent = async () => {
-    let res = await getEvents();
+    let res = await getEvents( finalDate );
+    // let anotherRes = await getDate("2021-07-26T18:30:00.000Z");
     setEvents(res);
   };
 
   useEffect(() => {
-    AsyncEvent();
-  }, []);
-  console.log(events)
+    if (finalDate.length!==0) {
+      // console.log(finalDate)
+      AsyncEvent();
+    }
+  }, [finalDate]);
+
   return (
     <div className="md:container md:mx-auto">
-
       <FullCalendar
-        plugins={[dayGridPlugin, interactionPlugin, listPlugin, timeGridPlugin]}
+        plugins={[dayGridPlugin, interactionPlugin, listPlugin]}
         events={events}
         initialView={isMobile ? "listWeek" : "dayGridMonth"}
         height="100vh"
@@ -49,8 +53,9 @@ const Home = () => {
           },
         }}
         dateClick={(current) => {
-          setDate(current.dateStr);
-          console.log(current)
+          console.log(current.date.toUTCString())
+          setDate(current.date);
+          // console.log(date)
           setShowModal(true);
         }}
         headerToolbar={
@@ -75,11 +80,21 @@ const Home = () => {
               }
             : false
         }
+        timeZone="UTC"
         showNonCurrentDates={false}
+        datesSet={(dateInfo) => {
+          const endDate = dateInfo.end;
+          endDate.setDate(endDate.getDate() - 1);
+          
+          
+          setFinalDate([dateInfo.start.toISOString(), endDate.toISOString()]);
+        }}
+        
       />
+    
 
       {showModal && !isMobile ? (
-        <Modal closeModal={setShowModal} date={date} events={events} />
+        <Modal closeModal={setShowModal} date={date} />
       ) : null}
     </div>
   );

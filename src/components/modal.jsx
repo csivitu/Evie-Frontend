@@ -1,7 +1,20 @@
 import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
+import { getDate } from "../api/Request";
 import EventProfile from "./EventProfile";
 
-const Modal = ({ closeModal, date, events }) => {
+const Modal = ({ closeModal, date }) => {
+  const [event,setEvent]=useState([])
+  const AsyncDay = async () => {
+    let res = await getDate( date.toUTCString() );
+    // let anotherRes = await getDate("2021-07-26T18:30:00.000Z");
+    setEvent(res);
+  };
+  useEffect(() => {
+      // console.log(finalDate)
+      AsyncDay();
+  }, []);
   if (closeModal) {
     return (
       <div
@@ -48,11 +61,11 @@ const Modal = ({ closeModal, date, events }) => {
                     className="text-lg leading-6 font-medium text-gray-900"
                     id="modal-title"
                   >
-                    {`Events for ${date}`}
+                    {`Events for ${date.toUTCString()}`}
                   </h3>
                   <div className="mt-2">
                     <div className="flex flex-col">
-                      {events.map((item) => {
+                      {event.map((item) => {
                         return <EventProfile key={item._id} event={item} />;
                       })}
                     </div>
