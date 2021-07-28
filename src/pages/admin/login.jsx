@@ -9,7 +9,7 @@ const AdminLogin = () => {
         VCal Admin Login
     </div>
     <div class="mt-8">
-        <form action="#" autoComplete="off">
+        <form action="http://localhost:3001/admin/login" method="POST" autoComplete="off">
             <div class="flex flex-col mb-2">
                 <div class="flex relative ">
                     <span class="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
@@ -18,7 +18,7 @@ const AdminLogin = () => {
                             </path>
                         </svg>
                     </span>
-                    <input type="text" id="sign-in-email" class=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Username"/>
+                    <input type="text" id="sign-in-email" class=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Username" name="uname"/>
                     </div>
                 </div>
                 <div class="flex flex-col mb-6">
@@ -29,7 +29,7 @@ const AdminLogin = () => {
                                 </path>
                             </svg>
                         </span>
-                        <input type="password" id="sign-in-email" class=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Password"/>
+                        <input type="password" id="sign-in-email" class=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Password" name="password"/>
                         </div>
                     </div>
                     <div class="flex w-full">
