@@ -14,6 +14,7 @@ export const getEvents = async () => {
 
 export const getDate = async (currentDate) => {
   let res = await API.post("/api/date", { date: currentDate })
+  console.log(res)
   return res.data;
 }
 

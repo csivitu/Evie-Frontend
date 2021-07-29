@@ -6,13 +6,16 @@ import EventProfile from "./EventProfile";
 
 const Modal = ({ closeModal, date }) => {
   const [event, setEvent] = useState([]);
+  console.log(date)
+  
   useEffect(() => {
     const AsyncDay = async () => {
-      let res = await getDate(date.toUTCString());
+      let res = await getDate(date);
       setEvent(res);
     };
     AsyncDay();
   }, []);
+  console.log(event)
   if (closeModal) {
     return (
       <div
@@ -59,7 +62,7 @@ const Modal = ({ closeModal, date }) => {
                     className="text-lg leading-6 font-medium text-gray-900"
                     id="modal-title"
                   >
-                    {`Events for ${date.toUTCString()}`}
+                    {`Events for ${date}`}
                   </h3>
                   <div className="mt-2">
                     <div className="flex flex-col">

@@ -98,6 +98,7 @@ const EventForm = () => {
                 <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} 
                 timeInputLabel="Time:" dateFormat="MM/dd/yyyy h:mm aa" showTimeInput
                 required name = "start" />
+                {console.log(startDate)}
                 </div>
               </div>
             </div>

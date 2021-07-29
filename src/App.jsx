@@ -12,10 +12,11 @@ function App() {
       <Switch>
         <Route path="/" component={Home} exact />
         <Route path="/today" component={Today} />
-        <Route path="/event-form" component={EventForm} />
+        <Route path="/addevent" component={EventForm} />
         <Route path="/admin" component={Admin} />
-        <Route path="/admin-login" component={AdminLogin} />
-        <Route path="/thank-you" component={ThankYou} />
+        <Route path="/login" component={AdminLogin} />
+        <Route path="/thankyou" component={ThankYou} />
+        <Route path="/verify" component={ThankYou} />
       </Switch>
     </main>
   );

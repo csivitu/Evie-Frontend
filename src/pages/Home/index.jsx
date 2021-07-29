@@ -12,11 +12,11 @@ import "./styles.css";
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState();
   const history = useHistory();
 
   const routeChange = () => {
-    let path = `/event-form`;
+    let path = "/addevent";
     history.push(path);
   };
   const [finalDate, setFinalDate] = useState([]);
@@ -74,7 +74,7 @@ const Home = () => {
               }
             : false
         }
-        timeZone="UTC"
+        // timeZone="UTC"
         showNonCurrentDates={false}
         datesSet={(dateInfo) => {
           const endDate = dateInfo.end;
