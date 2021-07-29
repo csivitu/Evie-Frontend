@@ -1,14 +1,13 @@
 import React from 'react';
 import "./styles.css";
 
-const Thankyou=() =>{
+const Verify=() =>{
     return (
         <div class="content flex md:container md:mx-auto items-center">
         <div class="wrapper-1">
           <div class="wrapper-2">
-            <h1>Thank you!</h1>
-            <p> Thank you for submitting your event for approval.  </p>
-            <p> Please check your email for updates from the admin. </p>
+            <h1>Verify Email</h1>
+            <p> Please check your email to verify event details.  </p>
             <br></br>
             <br></br>
             <a href="/" class="go-home">
@@ -20,4 +19,4 @@ const Thankyou=() =>{
     );
 };
 
-export default Thankyou;
+export default Verify;
