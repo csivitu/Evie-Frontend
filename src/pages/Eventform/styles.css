@@ -48,37 +48,18 @@ select {
   zoom: 1;
 }
 
-.input-group-icon {
-  position: relative;
-}
 
-.input-group-icon input {
-  padding-left: 4.4em;
+
+.description{
   word-wrap: break-word;
   word-break: break-all;
-  height: 80px;
+  height: 200px;
+ 
+
 }
 
-.description {
-  word-wrap: break-word;
-  word-break: break-all;
-  height: 80px;
-}
 
-.input-group-icon .input-icon:after {
-  position: absolute;
-  top: 0.6em;
-  bottom: 0.6em;
-  left: 3.4em;
-  display: block;
-  border-right: 1px solid #e5e5e5;
-  content: "";
-  -webkit-transition: 0.35s ease-in-out;
-  -moz-transition: 0.35s ease-in-out;
-  -o-transition: 0.35s ease-in-out;
-  transition: 0.35s ease-in-out;
-  transition: all 0.35s ease-in-out;
-}
+
 
 .event-color{
   width: 100%;
@@ -120,11 +101,6 @@ select {
   width: 100%;
 }
 
-.col-third {
-  padding-right: 10px;
-  float: left;
-  width: 33.33333333%;
-}
 
 @media only screen and (max-width: 540px) {
   .col-half {

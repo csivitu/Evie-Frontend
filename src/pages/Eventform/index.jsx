@@ -13,7 +13,7 @@ const EventForm = () => {
         <form action={`${BASEURL}/api/add`} method="POST">
           <div className="row"> 
             <h4>Event Details</h4> 
-            <div className="input-group input-group-icon" > 
+            <div className="input-group" > 
               <input 
                 type="text"
                 placeholder="Event Name"
@@ -24,7 +24,7 @@ const EventForm = () => {
                 <i className="fa fa-user"></i>
               </div>
             </div>
-            <div className="input-group input-group-icon">
+            <div className="input-group">
               <input
                 type="email"
                 placeholder="Email"
@@ -36,7 +36,7 @@ const EventForm = () => {
                 <i className="fa fa-user"></i>
               </div>
             </div>
-            <div className="input-group input-group-icon">
+            <div className="input-group">
               <input
                 type="text"
                 placeholder="Club/Chapter Name"
@@ -47,20 +47,20 @@ const EventForm = () => {
                 <i className="fa fa-envelope"></i>
               </div>
             </div>
-            <div className="input-group input-group-icon" rows="10" cols="58">
+            <div className="description " rows="10" cols="58" >
               <input
                 type="textarea"
                 placeholder="Event Description"
                 name="desc"
                 rows="10"
-                cols="58"
+                cols="58" className="description"
                 required
               />
               <div className="input-icon">
                 <i className="fa fa-user"></i>
               </div>
             </div>
-            <div className="input-group input-group-icon"></div>
+            <div className="input-group"></div>
           </div>
           <div className="row">
             </div>
@@ -87,7 +87,7 @@ const EventForm = () => {
               </div>
             </div>
 
-            <div className="input-group input-group-icon"></div>
+            <div className="input-group"></div>
 
           <div className="row">
             </div>
@@ -101,10 +101,10 @@ const EventForm = () => {
                 </div>
               </div>
             </div>
-            <div className="input-group input-group-icon"></div>
+            <div className="input-group"></div>
             <br></br>
             <br></br>
-            <div className="input-group input-group-icon"></div>
+            <div className="input-group"></div>
             <div className="col-full">
               <h4>End Date and Time of Event (IST +5:30) </h4>
               <div className="input-group">
@@ -123,13 +123,13 @@ const EventForm = () => {
           <div className="row">
             <div className="input-group"></div>
           </div>
-          <div className="input-group input-group-icon">
+          <div className="input-group">
             <input type="text" placeholder="Image URL" name="img" />
             <div className="input-icon">
               <i className="fa fa-user"></i>
             </div>
           </div>
-          <div className="input-group input-group-icon">
+          <div className="input-group">
             <input type="text" placeholder="Event URL" name="url" />
             <div className="input-icon">
               <i className="fa fa-user"></i>
