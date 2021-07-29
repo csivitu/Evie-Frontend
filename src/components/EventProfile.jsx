@@ -1,8 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const EventProfile = ({ img, org, title, desc, email, start }) => {
-  let dateStart = new Date(start);
-  console.log(dateStart)
+const EventProfile = ({ img, org, title, desc, email, start,end,url }) => {
+  start=new Date(start)
+  end=new Date(end)
+  const finalDate = (date) => {
+    function getOrdinalNum(n) {
+      return n + (n > 0 ? ['th', 'st', 'nd', 'rd'][(n > 3 && n < 21) || n % 10 > 3 ? 0 : n % 10] : '');
+    }
+    const dayString = (num) => {
+      let days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+      return days[num];
+    };
+    const monthString = (num) => {
+      const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      return month[num];
+    };
+    return ` ${getOrdinalNum(date.getDate())} ${monthString(date.getMonth())} ${date.getHours()}:${date.getMinutes()}`;
+  };
   return (
     <div className="w-full">
       <div className="flex flex-col">
@@ -19,7 +34,8 @@ const EventProfile = ({ img, org, title, desc, email, start }) => {
                       {title}
                     </div>
                     <div className="flex-auto text-gray-400 my-1">
-                      <span className="mr-3 ">{start}</span>
+                      <span className="mr-3 ">Start Time:{finalDate(start)}</span>
+                      <span className="mr-3 ">End Time:{finalDate(end)}</span>
                       <span className="mr-3 border-r border-gray-600  max-h-0"></span>
                       <span>{org}</span>
                     </div>
@@ -63,6 +79,9 @@ const EventProfile = ({ img, org, title, desc, email, start }) => {
               <b>Description: </b>
               {desc}
             </p>
+          <Link to={url} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" >
+          Click to view event website
+            </Link>
           </div>
         </div>
       </div>
