@@ -6,11 +6,11 @@
     font-weight: bold;
 }
 
-*,
+/* *,
 *:before,
 *:after {
     box-sizing: border-box;
-}
+} */
 
 h4 {
     color: #f0a500;
