@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./styles.css";
 import { BASEURL } from "../../api/Api"
 import DatePicker from "react-datepicker";
@@ -11,16 +11,16 @@ const EventForm = () => {
     <div className="flex md:container md:mx-auto items-center">
       <div className="container" >
         <form action={`${BASEURL}/api/add`} method="POST">
-          <div className="row"> 
-            <h4>Event Details</h4> 
-            <div className="input-group" > 
-              <input 
+          <div className="row">
+            <h4>Event Details</h4>
+            <div className="input-group" >
+              <input
                 type="text"
                 placeholder="Event Name"
                 name="title"
                 required="required"
               />
-              <div className="input-icon"> 
+              <div className="input-icon">
                 <i className="fa fa-user"></i>
               </div>
             </div>
@@ -47,13 +47,10 @@ const EventForm = () => {
                 <i className="fa fa-envelope"></i>
               </div>
             </div>
-            <div className="description " rows="10" cols="58" >
-              <input
-                type="textarea"
+            <div rows="10" cols="58" >
+              <textarea
                 placeholder="Event Description"
-                name="desc"
-                rows="10"
-                cols="58" className="description"
+                name="desc" className="description w-full px-4 pt-4 resize:none"
                 required
               />
               <div className="input-icon">
@@ -63,59 +60,59 @@ const EventForm = () => {
             <div className="input-group"></div>
           </div>
           <div className="row">
-            </div>
-            <div className="col-half">
-              <h4>Label Color </h4>
-              <div className="event-color">
+          </div>
+          <div className="col-half">
+            <h4>Label Color </h4>
+            <div className="event-color">
               <input
                 type="color"
-                placeholder="Event Color"
-                name="color" height = "50"
-                required style={{height:"60px"}}
+                placeholder="Label Color"
+                name="backgroundColor" height="50"
+                required style={{ height: "60px" }}
               />
-              </div>
             </div>
-            <div className="col-half">
-              <h4>Text Color </h4>
-              <div className="text-color">
+          </div>
+          <div className="col-half">
+            <h4>Text Color </h4>
+            <div className="text-color">
               <input
                 type="color"
                 placeholder="Text Color"
-                name="color" 
-                required style={{height:"60px"}}
+                name="textColor"
+                required style={{ height: "60px" }}
               />
-              </div>
             </div>
+          </div>
 
-            <div className="input-group"></div>
+          <div className="input-group"></div>
 
           <div className="row">
-            </div>
-            <div className="col-full">
-              <h4>Start Date and Time of Event (IST +5:30) </h4>
-              <div className="input-group">
-                <div className="col-full">
-                <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} 
-                timeInputLabel="Time:" dateFormat="MM/dd/yyyy h:mm aa" showTimeInput
-                required name = "start" />
+          </div>
+          <div className="col-full">
+            <h4>Start Date and Time of Event (IST +5:30) </h4>
+            <div className="input-group">
+              <div className="col-full">
+                <DatePicker selected={startDate} onChange={(date) => setStartDate(date)}
+                  timeInputLabel="Time:" dateFormat="MM/dd/yyyy h:mm aa" showTimeInput
+                  required name="start" />
                 {console.log(startDate)}
-                </div>
               </div>
             </div>
-            <div className="input-group"></div>
-            <br></br>
-            <br></br>
-            <div className="input-group"></div>
-            <div className="col-full">
-              <h4>End Date and Time of Event (IST +5:30) </h4>
-              <div className="input-group">
-                <div className="col-full">
-                <DatePicker selected={endDate} onChange={(date) => setEndDate(date)} 
-                timeInputLabel="Time:" dateFormat="MM/dd/yyyy h:mm aa" showTimeInput
-                required name = "end"/>
-                </div>
+          </div>
+          <div className="input-group"></div>
+          <br></br>
+          <br></br>
+          <div className="input-group"></div>
+          <div className="col-full">
+            <h4>End Date and Time of Event (IST +5:30) </h4>
+            <div className="input-group">
+              <div className="col-full">
+                <DatePicker selected={endDate} onChange={(date) => setEndDate(date)}
+                  timeInputLabel="Time:" dateFormat="MM/dd/yyyy h:mm aa" showTimeInput
+                  required name="end" />
               </div>
             </div>
+          </div>
 
           <div className="row">
             <div className="input-group"></div>

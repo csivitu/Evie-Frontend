@@ -1,119 +1,119 @@
 .add-event {
-  text-align: center;
-  margin-left: 200px;
-  margin-right: 200px;
-  text-decoration-color: #f0a500;
-  font-weight: bold;
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    text-decoration-color: #f0a500;
+    font-weight: bold;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
-
 
 h4 {
-  color: #f0a500;
-  font-weight: bold;
+    color: #f0a500;
+    font-weight: bold;
 }
 
-.react-datepicker-wrapper{
-  width: 100% !important;
-  color: grey;
+.react-datepicker-wrapper {
+    width: 100% !important;
+    color: grey;
 }
 
-.react-datepicker__input-container{
-  width: 100% !important;
-  color: grey;
+.react-datepicker__input-container {
+    width: 100% !important;
+    color: grey;
 }
 
 input,
 select {
-  width: 100%;
-  padding: 1em;
-  line-height: 1.4;
-  background-color: #f9f9f9;
-  border: 1px solid #e5e5e5;
-  border-radius: 3px;
-  -webkit-transition: 0.35s ease-in-out;
-  -moz-transition: 0.35s ease-in-out;
-  -o-transition: 0.35s ease-in-out;
-  transition: 0.35s ease-in-out;
-  transition: all 0.35s ease-in-out;
+    width: 100%;
+    padding: 1em;
+    line-height: 1.4;
+    background-color: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    -webkit-transition: 0.35s ease-in-out;
+    -moz-transition: 0.35s ease-in-out;
+    -o-transition: 0.35s ease-in-out;
+    transition: 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
 }
 
 .input-group {
-  margin-bottom: 1em;
-  zoom: 1;
+    margin-bottom: 1em;
+    zoom: 1;
 }
 
-
-
-.description{
-  word-wrap: break-word;
-  word-break: break-all;
-  height: 200px;
- 
-
+.description {
+    word-wrap: break-word;
+    word-break: break-all;
+    height: 200px;
+    resize: none;
+    border-radius: 3px;
+    border: 1px solid #e5e5e5;
+    background-color: #f9f9f9;
+    -webkit-transition: 0.35s ease-in-out;
+    -moz-transition: 0.35s ease-in-out;
+    -o-transition: 0.35s ease-in-out;
+    transition: 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+    line-height: 1.4;
 }
 
-
-
-
-.event-color{
-  width: 100%;
+.event-color {
+    width: 100%;
 }
 
-.text-color{
-  width: 100%;
+.text-color {
+    width: 100%;
 }
 
 .container {
-  max-width: 48em;
-  padding: 1em 3em 2em 3em;
-  margin: 0em auto;
-  background-color: #fff;
-  border-radius: 4.2px;
-  box-shadow: 0px 3px 10px -2px rgba(0, 0, 0, 0.2);
-  top: 0px;
+    max-width: 48em;
+    padding: 1em 3em 2em 3em;
+    margin: 0em auto;
+    background-color: #fff;
+    border-radius: 4.2px;
+    box-shadow: 0px 3px 10px -2px rgba(0, 0, 0, 0.2);
+    top: 0px;
 }
 
 .row:before,
 .row:after {
-  content: "";
-  display: table;
+    content: "";
+    display: table;
 }
 
 .row:after {
-  clear: both;
+    clear: both;
 }
 
 .col-half {
-  padding-right: 10px;
-  float: left;
-  width: 50%;
+    padding-right: 10px;
+    float: left;
+    width: 50%;
 }
-
 
 .col-full {
-  float: left;
-  width: 100%;
+    float: left;
+    width: 100%;
 }
 
-
 @media only screen and (max-width: 540px) {
-  .col-half {
-    width: 100%;
-    padding-right: 0;
-  }
+    .col-half {
+        width: 100%;
+        padding-right: 0;
+    }
 }
 
 .submit-event {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #f0a500;
-  font-weight: bold;
-  font-size: 15px;
-  cursor: pointer;
-  color: white;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f0a500;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    color: white;
 }
