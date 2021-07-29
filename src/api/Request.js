@@ -7,8 +7,14 @@ export const getMonth = async (finalDate) => {
 };
 
 export const getEvents = async () => {
-  let res = await API.get('/admin/events', { headers: { Authorization: `Bearer ${localStorage.getItem('jwtToken')}` } })
-  return (res.data)
+  if(localStorage.getItem('jwtToken')){
+    let res = await API.get('/admin/events', { headers: { Authorization: `Bearer ${localStorage.getItem('jwtToken')}` } })
+    return (res.data)
+  }
+  else{
+    let res = {};
+    res.data = null;
+  }
 };
 
 
