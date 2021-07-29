@@ -7,8 +7,8 @@ export const getMonth = async (finalDate) => {
 };
 
 export const getEvents = async () => {
-  let res = await API.get('/admin/events',{ headers: { Authorization:`Bearer ${localStorage.getItem('jwtToken')}` } })
-  return (res.data)  
+  let res = await API.get('/admin/events', { headers: { Authorization: `Bearer ${localStorage.getItem('jwtToken')}` } })
+  return (res.data)
 };
 
 
@@ -19,14 +19,18 @@ export const getDate = async (currentDate) => {
 }
 
 export const getToken = async (uname, password) => {
-  axios({
-    url: `${BASEURL}/admin/login`,
-    method: "post",
-    data: {uname,password},
-  })
-  .then(res => {
+  try {
+    const res = await axios({
+      url: `${BASEURL}/admin/login`,
+      method: "post",
+      data: { uname, password },
+    }
+    );
+    console.log(res.data);
     localStorage.setItem('jwtToken', res.data);
     return
-  })
-  .catch(error => console.error(error));
+  } catch (err) {
+    console.error(err);
+    return
+  }
 }
