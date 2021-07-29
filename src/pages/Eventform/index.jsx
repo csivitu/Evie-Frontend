@@ -96,8 +96,9 @@ const EventForm = () => {
               <div className="input-group">
                 <div className="col-full">
                 <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} 
-                timeInputLabel="Time:" dateFormat="dd/MM/yyyy h:mm aa" showTimeInput
+                timeInputLabel="Time:" dateFormat="MM/dd/yyyy h:mm aa" showTimeInput
                 required name = "start" />
+                {console.log(startDate)}
                 </div>
               </div>
             </div>
@@ -110,7 +111,7 @@ const EventForm = () => {
               <div className="input-group">
                 <div className="col-full">
                 <DatePicker selected={endDate} onChange={(date) => setEndDate(date)} 
-                timeInputLabel="Time:" dateFormat="dd/MM/yyyy h:mm aa" showTimeInput
+                timeInputLabel="Time:" dateFormat="MM/dd/yyyy h:mm aa" showTimeInput
                 required name = "end"/>
                 </div>
               </div>

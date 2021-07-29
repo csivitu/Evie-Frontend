@@ -11,7 +11,8 @@ const Admin = () => {
   useEffect(() => {
     AsyncEvent();
   }, []);
-  if (events.length !== 0) {
+  console.log(events)
+  if (events) {
     return (
       <>
         {events.map((event) => {
@@ -112,13 +113,15 @@ const Admin = () => {
         })}
       </>
     );
-  } else {
+  }
+  else {
     return (
       <>
-        <h1>Rendering....</h1>
+        <h2>Forbidden</h2>
       </>
     );
   }
+  
 };
 
 export default Admin;

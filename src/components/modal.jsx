@@ -1,7 +1,21 @@
 import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
+import { getDate } from "../api/Request";
 import EventProfile from "./EventProfile";
 
-const Modal = ({ closeModal, date, events }) => {
+const Modal = ({ closeModal, date }) => {
+  const [event, setEvent] = useState([]);
+  console.log(date)
+  
+  useEffect(() => {
+    const AsyncDay = async () => {
+      let res = await getDate(date);
+      setEvent(res);
+    };
+    AsyncDay();
+  }, []);
+  console.log(event)
   if (closeModal) {
     return (
       <div
@@ -52,7 +66,7 @@ const Modal = ({ closeModal, date, events }) => {
                   </h3>
                   <div className="mt-2">
                     <div className="flex flex-col">
-                      {events.map((item) => {
+                      {event.map((item) => {
                         return <EventProfile key={item._id} event={item} />;
                       })}
                     </div>

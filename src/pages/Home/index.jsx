@@ -4,40 +4,40 @@ import dayGridPlugin from "@fullcalendar/daygrid"; // a plugin!
 import interactionPlugin from "@fullcalendar/interaction";
 import Modal from "../../components/modal";
 import { useHistory } from "react-router-dom";
-import { getEvents } from "../../api/Request";
+import { getMonth } from "../../api/Request";
 import { useEffect } from "react";
 import listPlugin from "@fullcalendar/list";
-import timeGridPlugin from "@fullcalendar/timegrid";
 import { isMobile } from "react-device-detect";
 import "./styles.css";
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState();
   const history = useHistory();
 
   const routeChange = () => {
-    let path = `/event-form`;
+    let path = "/addevent";
     history.push(path);
   };
-
-  const [events, setEvents] = React.useState([]);
-  const AsyncEvent = async () => {
-    let res = await getEvents();
-    setEvents(res);
-  };
+  const [finalDate, setFinalDate] = useState([]);
+  const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    AsyncEvent();
-  }, []);
-  console.log(events)
+    if (finalDate.length !== 0) {
+      const AsyncEvent = async () => {
+        let res = await getMonth(finalDate);
+        setEvents(res);
+      };
+      AsyncEvent();
+    }
+  }, [finalDate]);
+
   return (
     <div className="md:container md:mx-auto">
-
       <FullCalendar
-        plugins={[dayGridPlugin, interactionPlugin, listPlugin, timeGridPlugin]}
+        plugins={[dayGridPlugin, interactionPlugin, listPlugin]}
         events={events}
-        initialView={isMobile ? "listWeek" : "dayGridMonth"}
+        initialView={"dayGridMonth"}
         height="100vh"
         eventAdd={events}
         customButtons={{
@@ -49,8 +49,7 @@ const Home = () => {
           },
         }}
         dateClick={(current) => {
-          setDate(current.dateStr);
-          console.log(current)
+          setDate(current.date);
           setShowModal(true);
         }}
         headerToolbar={
@@ -75,12 +74,16 @@ const Home = () => {
               }
             : false
         }
+        // timeZone="UTC"
         showNonCurrentDates={false}
+        datesSet={(dateInfo) => {
+          const endDate = dateInfo.end;
+          endDate.setDate(endDate.getDate() - 1);
+          setFinalDate([dateInfo.start.toISOString(), endDate.toISOString()]);
+        }}
       />
 
-      {showModal && !isMobile ? (
-        <Modal closeModal={setShowModal} date={date} events={events} />
-      ) : null}
+      {showModal ? <Modal closeModal={setShowModal} date={date} /> : null}
     </div>
   );
 };
