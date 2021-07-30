@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import listPlugin from "@fullcalendar/list";
 import { isMobile } from "react-device-detect";
 import "./styles.css";
+import { RegisterSW } from "../../components/serviceWorker";
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
@@ -27,6 +28,7 @@ const Home = () => {
       const AsyncEvent = async () => {
         let res = await getMonth(finalDate);
         setEvents(res);
+        RegisterSW(); 
       };
       AsyncEvent();
     }

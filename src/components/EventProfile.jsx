@@ -8,10 +8,6 @@ const EventProfile = ({ img, org, title, desc, email, start,end,url }) => {
     function getOrdinalNum(n) {
       return n + (n > 0 ? ['th', 'st', 'nd', 'rd'][(n > 3 && n < 21) || n % 10 > 3 ? 0 : n % 10] : '');
     }
-    const dayString = (num) => {
-      let days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-      return days[num];
-    };
     const monthString = (num) => {
       const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
       return month[num];
