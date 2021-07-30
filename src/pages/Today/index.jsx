@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { getDate } from "../../api/Request";
 import EventProfile from "../../components/EventProfile";
 
-const Today = ({ }) => {
+const Today = () => {
   let date = new Date()
   const [event, setEvent] = useState([]);
   console.log(date)
