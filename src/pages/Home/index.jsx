@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import listPlugin from "@fullcalendar/list";
 import { isMobile } from "react-device-detect";
 import "./styles.css";
+import { RegisterSW } from "../../components/serviceWorker";
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
@@ -27,13 +28,14 @@ const Home = () => {
       const AsyncEvent = async () => {
         let res = await getMonth(finalDate);
         setEvents(res);
+        RegisterSW(); 
       };
       AsyncEvent();
     }
   }, [finalDate]);
 
   return (
-    <div className="md:container md:mx-auto">
+    <div className="md:container md:mx-auto box">
       <FullCalendar
         plugins={[dayGridPlugin, interactionPlugin, listPlugin]}
         events={events}
@@ -60,9 +62,9 @@ const Home = () => {
                 end: "next",
               }
             : {
-                start: "prev next",
-                center: "title",
-                end: "today eventform",
+                start: "today",
+                center: "prev title next",
+                end: "eventform",
               }
         }
         footerToolbar={
@@ -74,7 +76,6 @@ const Home = () => {
               }
             : false
         }
-        // timeZone="UTC"
         showNonCurrentDates={false}
         datesSet={(dateInfo) => {
           const endDate = dateInfo.end;

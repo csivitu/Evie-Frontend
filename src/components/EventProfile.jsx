@@ -1,31 +1,39 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const EventProfile = ({ event }) => {
+const EventProfile = ({ img, org, title, desc, email, start,end,url }) => {
+  start=new Date(start)
+  end=new Date(end)
+  const finalDate = (date) => {
+    function getOrdinalNum(n) {
+      return n + (n > 0 ? ['th', 'st', 'nd', 'rd'][(n > 3 && n < 21) || n % 10 > 3 ? 0 : n % 10] : '');
+    }
+    const monthString = (num) => {
+      const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      return month[num];
+    };
+    return ` ${getOrdinalNum(date.getDate())} ${monthString(date.getMonth())} ${date.getHours()}:${date.getMinutes()}`;
+  };
   return (
     <div className="w-full">
       <div className="flex flex-col">
         <div className="bg-gray-900 border border-gray-900 shadow-lg  rounded-3xl p-4 m-4 h-48">
           <div className="flex-none sm:flex">
             <div className=" relative sm:mb-0 mb-3">
-              <img
-                src={event.img}
-                alt={event.org}
-                className=" h-20 object-cover rounded-2xl"
-              ></img>
+              <img src={img} alt={org} className="h-20 object-contain"></img>
             </div>
             <div className="flex-auto sm:ml-5 justify-evenly">
               <div className="flex items-center justify-between sm:mt-2">
                 <div className="flex items-center">
                   <div className="flex flex-col">
                     <div className="w-full flex-none text-lg text-gray-200 font-bold leading-none">
-                      {event.title}
+                      {title}
                     </div>
                     <div className="flex-auto text-gray-400 my-1">
-                      <span className="mr-3 ">
-                        {event.date}
-                      </span>
+                      <span className="mr-3 ">Start Time:{finalDate(start)}</span>
+                      <span className="mr-3 ">End Time:{finalDate(end)}</span>
                       <span className="mr-3 border-r border-gray-600  max-h-0"></span>
-                      <span>{event.org}</span>
+                      <span>{org}</span>
                     </div>
                   </div>
                 </div>
@@ -41,7 +49,7 @@ const EventProfile = ({ event }) => {
                   >
                     <path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"></path>
                   </svg>
-                  <p className="">{event.email}</p>
+                  <p className="">{email}</p>
                 </div>
                 <div className="flex-1 inline-flex items-center">
                   <svg
@@ -65,8 +73,11 @@ const EventProfile = ({ event }) => {
           <div className="mt-2 text-gray-400 text-sm">
             <p>
               <b>Description: </b>
-              {event.desc}
+              {desc}
             </p>
+          <Link to={url} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" >
+          Click to view event website
+            </Link>
           </div>
         </div>
       </div>

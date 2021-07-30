@@ -20,7 +20,6 @@ export const getEvents = async () => {
 
 export const getDate = async (currentDate) => {
   let res = await API.post("/api/date", { date: currentDate })
-  console.log(res)
   return res.data;
 }
 
@@ -32,7 +31,6 @@ export const getToken = async (uname, password) => {
       data: { uname, password },
     }
     );
-    console.log(res.data);
     localStorage.setItem('jwtToken', res.data);
     return
   } catch (err) {

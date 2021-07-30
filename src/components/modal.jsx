@@ -6,8 +6,7 @@ import EventProfile from "./EventProfile";
 
 const Modal = ({ closeModal, date }) => {
   const [event, setEvent] = useState([]);
-  console.log(date)
-  
+
   useEffect(() => {
     const AsyncDay = async () => {
       let res = await getDate(date);
@@ -15,8 +14,47 @@ const Modal = ({ closeModal, date }) => {
     };
     AsyncDay();
   }, []);
-  console.log(event)
   if (closeModal) {
+    const getOrdinalNum = (n) => {
+      return (
+        n +
+        (n > 0
+          ? ["th", "st", "nd", "rd"][
+              (n > 3 && n < 21) || n % 10 > 3 ? 0 : n % 10
+            ]
+          : "")
+      );
+    };
+    const dayString = (num) => {
+      let days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+      return days[num];
+    };
+    const monthString = (num) => {
+      const month = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+
+      return month[num];
+    };
     return (
       <div
         className="fixed z-10 inset-0 overflow-y-auto"
@@ -37,7 +75,7 @@ const Modal = ({ closeModal, date }) => {
             &#8203;
           </span>
 
-          <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+          <div className="inline-block  align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle w-9/12">
             <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
               <div className="sm:flex sm:items-start">
                 <div className="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
@@ -62,13 +100,21 @@ const Modal = ({ closeModal, date }) => {
                     className="text-lg leading-6 font-medium text-gray-900"
                     id="modal-title"
                   >
-                    {`Events for ${date}`}
+                    {`Events for ${dayString(date.getDay())}, ${getOrdinalNum(
+                      date.getDate()
+                    )} ${monthString(date.getMonth())}  `}
                   </h3>
                   <div className="mt-2">
                     <div className="flex flex-col">
-                      {event.map((item) => {
-                        return <EventProfile key={item._id} event={item} />;
-                      })}
+                      {event ? (
+                        event.map((item) => {
+                          return <EventProfile key={item._id} {...item} />;
+                        })
+                      ) : (
+                        <>
+                          <h1>No events Today!</h1>
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>
