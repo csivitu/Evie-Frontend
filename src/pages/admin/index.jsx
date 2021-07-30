@@ -24,8 +24,8 @@ const Admin = () => {
                     <div className=" relative sm:mb-0 mb-3">
                       <img
                         src={event.img}
-                        alt="aji"
-                        className=" h-20 object-cover rounded-2xl"
+                        alt={event.org}
+                        className="h-20 object-contain"
                       ></img>
                     </div>
                     <div className="flex-auto sm:ml-5 justify-evenly">
