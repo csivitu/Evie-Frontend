@@ -17,11 +17,14 @@ const AdminLogin = () => {
     routeChange()
   };
   return (
+    <div className="flex md:container md:mx-auto h-screen items-center justify-center">
     <div
       id="container"
-      className="flex flex-col w-full max-w-md px-4 py-8 bg-white rounded-lg shadow dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10"
+      className="flex flex-col align-middle w-full max-w-md px-4 py-8 bg-white rounded-lg shadow dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10"
+      style={{backgroundColor: "#2A2B2C",
+        border: "1px solid #00c49a"}}
     >
-      <div className="self-center mb-6 text-xl font-light text-gray-600 sm:text-2xl dark:text-white">
+      <div className="self-center mb-6 text-xl font-light sm:text-2xl text-white">
         VCal Admin Login
       </div>
       <div className="mt-8">
@@ -41,7 +44,7 @@ const AdminLogin = () => {
               </span>
               <input
                 type="text"
-                className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
                 placeholder="Username"
                 name="uname"
                 onChange={(e) => setUsername(e.target.value)}
@@ -63,7 +66,7 @@ const AdminLogin = () => {
               </span>
               <input
                 type="password"
-                className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
                 placeholder="Password"
                 name="password"
                 onChange={(e) => setPassword(e.target.value)}
@@ -75,12 +78,14 @@ const AdminLogin = () => {
               type="submit"
               className="py-2 px-4  bg-purple-600 hover:bg-purple-700 focus:ring-purple-500 focus:ring-offset-purple-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
               onClick={handleOnClick}
+              style={{backgroundColor:"#00c49a"}}
             >
               Login
             </button>
           </div>
         </form>
       </div>
+    </div>
     </div>
   );
 };

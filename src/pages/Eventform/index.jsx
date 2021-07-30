@@ -13,6 +13,7 @@ const EventForm = () => {
         <form action={`${BASEURL}/api/add`} method="POST">
           <div className="row">
             <h4>Event Details</h4>
+            <br/>
             <div className="input-group" >
               <input
                 type="text"
@@ -94,7 +95,8 @@ const EventForm = () => {
               <div className="col-full">
                 <DatePicker selected={startDate} onChange={(date) => setStartDate(date)}
                   timeInputLabel="Time:" dateFormat="MM/dd/yyyy h:mm aa" showTimeInput
-                  required name="start" />
+                  required name="start"
+                  className="my-2 " />
                 {console.log(startDate)}
               </div>
             </div>
@@ -109,7 +111,8 @@ const EventForm = () => {
               <div className="col-full">
                 <DatePicker selected={endDate} onChange={(date) => setEndDate(date)}
                   timeInputLabel="Time:" dateFormat="MM/dd/yyyy h:mm aa" showTimeInput
-                  required name="end" />
+                  required name="end"
+                  className="mt-2" />
               </div>
             </div>
           </div>
@@ -134,7 +137,7 @@ const EventForm = () => {
             </div>
           </div>
           <div className="h-12">
-            <button className="text-white font-bold bg-yellow-500 hover:bg-yellow-600 w-1/2 w-full scale-100 h-12">
+            <button className="text-white font-bold bg-green-500 hover:bg-green-600 w-1/2 w-full scale-100 h-12 transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg">
               Submit Event For Approval
             </button>
           </div>

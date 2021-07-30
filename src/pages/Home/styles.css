@@ -1,10 +1,85 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+body {
+  font-family: "Ubuntu Mono", monospace;
+  background-color: #2a2b2e;
+}
+.box{
+  color: aliceblue;
 
-.btn {
-  @apply rounded-full py-2 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider;
 }
-.fc-scroller {
+#root
+  > main
+  > div
+  > div
+  > div.fc-view-harness.fc-view-harness-active
+  > div
+  > table {
+  border: none !important;
+}
+.fc-day-today {
+  background-color: #2a2b2e !important;
+  /* background-color: #979ba5 !important; */
+  /* border: 1px solid #00c49a !important; */
+}
+
+.fc-toolbar-chunk {
+  display: flex;
+}
+
+table {
+  border: none;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+}
+.fc-button-primary {
+  text-transform: capitalize !important;
+  background-color: #00c49a !important;
+  border: none !important;
+}
+
+.fc-day-past {
+  cursor: pointer;
+  border-bottom: 1px solid transparent !important;
+}
+.fc-day-future {
+  cursor: pointer;
+  border-bottom: 1px solid transparent !important;
+}
+
+.fc-day-past:hover {
+  cursor: pointer;
+  border-bottom: 1px solid #00c49a !important;
+  transition: ease-in 50ms;
+}
+.fc-day-today {
+  cursor: pointer;
+  /* border-bottom: 1px solid #00c49a !important; */
+  background-color: #00c49a !important;
+  opacity: 0.5;
+  transition: ease-in 50ms;
+}
+.fc-day-future:hover {
+  cursor: pointer;
+  border-bottom: 1px solid #00c49a !important;
+  transition: ease-in 50ms;
+}
+.fc-toolbar {
+  margin: 2%;
+}
+/* .fc-daygrid-day-frame{
+  cursor: pointer;
+} */
+/* tr{
+  margin-top:20px !important;
+} */
+.fc td,
+.fc th {
+  border-style: none;
+  border-width: 1px;
+  padding: 0;
+  vertical-align: top;
+}
+
+/* .fc-scroller {
   height: 100% !important;
-}
+} */

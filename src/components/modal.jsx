@@ -100,13 +100,21 @@ const Modal = ({ closeModal, date }) => {
                     className="text-lg leading-6 font-medium text-gray-900"
                     id="modal-title"
                   >
-                    {`Events for ${dayString(date.getDay())}, ${getOrdinalNum(date.getDate())} ${monthString(date.getMonth())}  `}
+                    {`Events for ${dayString(date.getDay())}, ${getOrdinalNum(
+                      date.getDate()
+                    )} ${monthString(date.getMonth())}  `}
                   </h3>
                   <div className="mt-2">
                     <div className="flex flex-col">
-                      {event.map((item) => {
-                        return <EventProfile key={item._id} {...item} />;
-                      })}
+                      {event ? (
+                        event.map((item) => {
+                          return <EventProfile key={item._id} {...item} />;
+                        })
+                      ) : (
+                        <>
+                          <h1>No events Today!</h1>
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>
