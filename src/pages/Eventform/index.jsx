@@ -97,7 +97,6 @@ const EventForm = () => {
                   timeInputLabel="Time:" dateFormat="MM/dd/yyyy h:mm aa" showTimeInput
                   required name="start"
                   className="my-2 " />
-                {console.log(startDate)}
               </div>
             </div>
           </div>

@@ -18,8 +18,6 @@ body {
 }
 .fc-day-today {
   background-color: #2a2b2e !important;
-  /* background-color: #979ba5 !important; */
-  /* border: 1px solid #00c49a !important; */
 }
 
 .fc-toolbar-chunk {
@@ -53,7 +51,6 @@ table {
 }
 .fc-day-today {
   cursor: pointer;
-  /* border-bottom: 1px solid #00c49a !important; */
   background-color: #00c49a !important;
   opacity: 0.5;
   transition: ease-in 50ms;
@@ -66,12 +63,7 @@ table {
 .fc-toolbar {
   margin: 2%;
 }
-/* .fc-daygrid-day-frame{
-  cursor: pointer;
-} */
-/* tr{
-  margin-top:20px !important;
-} */
+
 .fc td,
 .fc th {
   border-style: none;
@@ -80,6 +72,3 @@ table {
   vertical-align: top;
 }
 
-/* .fc-scroller {
-  height: 100% !important;
-} */
