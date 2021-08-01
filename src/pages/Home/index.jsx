@@ -3,7 +3,7 @@ import FullCalendar from "@fullcalendar/react"; // must go before plugins
 import dayGridPlugin from "@fullcalendar/daygrid"; // a plugin!
 import interactionPlugin from "@fullcalendar/interaction";
 import Modal from "../../components/modal";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { getMonth } from "../../api/Request";
 import { useEffect } from "react";
 import listPlugin from "@fullcalendar/list";
@@ -28,7 +28,7 @@ const Home = () => {
       const AsyncEvent = async () => {
         let res = await getMonth(finalDate);
         setEvents(res);
-        RegisterSW(); 
+        RegisterSW();
       };
       AsyncEvent();
     }
