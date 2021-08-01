@@ -69,15 +69,11 @@ select {
 }
 
 .label-color {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: 100%;
 }
 
 .text-color {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: 100%;
 }
 
 
@@ -90,12 +86,10 @@ select {
 
 .input[type=color] {
     background-color: #2A2B2E;
-    border: none;
+    border: 0;
     cursor: pointer;
     padding: 0;
-    height: 50px !important;
-    width: 50px !important;
-    border-radius: 50% !important;
+    background: none;
 }
 
 .container {
