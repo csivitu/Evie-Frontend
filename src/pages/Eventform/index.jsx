@@ -14,6 +14,8 @@ const EventForm = () => {
   const [email, setEmail] = useState("example@example.com");
   const [desc, setDesc] = useState("Description of the Event");
   const [url, setURL] = useState("URL of the Event");
+  const [textcolor, setTextColor] = useState("");
+  const [labelcolor, setLabelColor] = useState("");
 
   return (
     <div className="flex md:container md:mx-auto items-center">
@@ -72,25 +74,25 @@ const EventForm = () => {
           </div>
           <div className="col-half h-16 flex flex-wrap content-start">
             <h4>Label Color </h4>
-            <input className="label-color"
-              type="color"
+            <input className="input label-color"
+              type="color" value={labelcolor}
               placeholder="Label Color"
               name="backgroundColor"
-              required style={{ height: "60px" }}
+              required style={{ height: "30px"}} onChange={(e) => setLabelColor(e.target.value)}
             />
           </div>
 
           <div className="col-half h-16 flex flex-wrap content-start">
 
             <h4>Text Color </h4>
-            <input className="text-color"
+            <input className="input text-color"
               type="color"
               placeholder="Text Color"
-              name="textColor"
-              required style={{ height: "60px" }}
+              name="textColor" value={textcolor}
+              required style={{ height: "30px"}} onChange={(e) => setTextColor(e.target.value)}
             />
           </div>
-
+          <div className="input-group"></div>
           <div className="col-full">
             <h4>Start Date and Time of Event (IST +5:30) </h4>
             <div className="input-group">
@@ -137,6 +139,8 @@ const EventForm = () => {
               <i className="fa fa-user"></i>
             </div>
           </div>
+        <EventProfile  img={img} org={org} title={title} start={startDate} end={endDate} email={email} 
+        desc={desc} url={url} textColor={textcolor} backgroundColor={labelcolor}/>
           <div className="h-12">
             <button className="text-white font-bold bg-green-500 hover:bg-green-600 w-1/2 w-full scale-100 h-12 transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg">
               Submit Event For Approval
@@ -144,7 +148,6 @@ const EventForm = () => {
           </div>
         </form>
       </div>
-       <EventProfile  img={img} org={org} title={title} start={startDate} end={endDate} email={email} desc={desc} url={url}/>;
 
   </div>
   );
