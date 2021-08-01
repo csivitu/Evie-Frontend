@@ -20,8 +20,13 @@ const Home = () => {
     let path = "/addevent";
     history.push(path);
   };
+  const todayRouteChange = () =>{
+    let path = "/today";
+    history.push(path);
+  }
   const [finalDate, setFinalDate] = useState([]);
   const [events, setEvents] = useState([]);
+  const [toggle,setToggle] = useState(true); //true=dark because dark op
 
   useEffect(() => {
     if (finalDate.length !== 0) {
@@ -33,15 +38,15 @@ const Home = () => {
       AsyncEvent();
     }
   }, [finalDate]);
-
   return (
-    <div className="md:container md:mx-auto box">
+    <div className="md:container md:mx-auto box" >
       <FullCalendar
         plugins={[dayGridPlugin, interactionPlugin, listPlugin]}
         events={events}
         initialView={"dayGridMonth"}
         height="100vh"
         eventAdd={events}
+        eventDisplay={"block"}
         customButtons={{
           eventform: {
             text: "Event Form",
@@ -49,10 +54,29 @@ const Home = () => {
               routeChange();
             },
           },
+          customToday: {
+            text: `Today`,
+            click: () => {
+              todayRouteChange();
+            },
+          },
+          toggleButton: {
+            text: `Button`,
+            click: () => {
+              setToggle(!toggle);
+              console.log(toggle)
+            },
+          },
         }}
         dateClick={(current) => {
           setDate(current.date);
           setShowModal(true);
+        }}
+        eventClick={(info)=>{
+          info.jsEvent.preventDefault();
+          if(info.event.url){
+            window.open(info.event.url);
+          }
         }}
         headerToolbar={
           isMobile
@@ -62,7 +86,7 @@ const Home = () => {
                 end: "next",
               }
             : {
-                start: "today",
+                start: "customToday",
                 center: "prev title next",
                 end: "eventform",
               }
@@ -71,7 +95,7 @@ const Home = () => {
           isMobile
             ? {
                 start: "",
-                center: "today eventform",
+                center: "customToday toggleButton eventform",
                 end: "",
               }
             : false

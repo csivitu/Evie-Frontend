@@ -51,17 +51,31 @@ table {
 }
 .fc-day-today {
   cursor: pointer;
-  background-color: #00c49a !important;
-  opacity: 0.5;
+  border-bottom: 5px solid #00c49a !important;
   transition: ease-in 50ms;
 }
 .fc-day-future:hover {
   cursor: pointer;
   border-bottom: 1px solid #00c49a !important;
-  transition: ease-in 50ms;
+  transition: ease-in 50ms !important;
 }
 .fc-toolbar {
   margin: 2%;
+}
+.fc-button{
+  border:1px solid #2A2B2E !important;
+  transition: all 0.3s;
+  outline: none;
+}
+.fc-button:hover{
+  background-color: #2A2B2E !important;
+  transition: ease-in-out 0.3s !important;
+  border:1px solid #00c49a !important;
+  outline:none;
+}
+.fc-customToday-button{
+  padding-right: 26px !important;
+  padding-left: 26px !important;
 }
 
 .fc td,

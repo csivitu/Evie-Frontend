@@ -1,10 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=STIX+Two+Math&display=swap");
 
 .wrapper-1 {
-  width: 100%;
+  /* width: 100%; */
   height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color:#2A2B2E;
+  /* background-color:#00c49a; */
+
+  /* color:#2A2B2E; */
 }
 .wrapper-2 {
   padding: 30px;
@@ -20,19 +23,17 @@ h1 {
 .wrapper-2 p {
   margin: 0;
   font-size: 1.3em;
-  color: #aaa;
-  font-family: "Source Sans Pro", sans-serif;
+  color: #00c49a;
   letter-spacing: 1px;
 }
 .go-home {
-  color: #fff;
+  color: aliceblue;
   background: #00c49a;
   border: none;
   padding: 10px 50px;
   margin: 30px 0;
   border-radius: 30px;
   text-transform: capitalize;
-  box-shadow: 0 0 20px 0 #00c49a;
 }
 
 @media (min-width: 360px) {
@@ -51,9 +52,19 @@ h1 {
   }
   .wrapper-1 {
     height: initial;
-    max-width: 620px;
+    /* max-width: 620px; */
+    background-color: #00c49a;
     margin: 0 auto;
     margin-top: 50px;
-    box-shadow: 0 0 35px 0 #00c49a;
   }
+  h1{
+    color: #2A2B2E;
+  }
+  .go-home{
+    background-color: #2A2B2E;
+  }
+  .wrapper-2 p{
+    color:#2A2B2E;
+  }
+
 }
