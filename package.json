@@ -27,7 +27,9 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "use-breakpoint": "^2.0.1",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "workbox-core": "^5.1.4",
+    "workbox-precaching": "^5.1.4"
   },
   "scripts": {
     "start": "craco start",

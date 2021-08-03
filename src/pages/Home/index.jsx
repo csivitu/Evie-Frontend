@@ -3,7 +3,7 @@ import FullCalendar from "@fullcalendar/react"; // must go before plugins
 import dayGridPlugin from "@fullcalendar/daygrid"; // a plugin!
 import interactionPlugin from "@fullcalendar/interaction";
 import Modal from "../../components/modal";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { getMonth } from "../../api/Request";
 import { useEffect } from "react";
 import listPlugin from "@fullcalendar/list";
@@ -26,7 +26,6 @@ const Home = () => {
   }
   const [finalDate, setFinalDate] = useState([]);
   const [events, setEvents] = useState([]);
-  const [toggle,setToggle] = useState(true); //true=dark because dark op
 
   useEffect(() => {
     if (finalDate.length !== 0) {
@@ -60,13 +59,6 @@ const Home = () => {
               todayRouteChange();
             },
           },
-          toggleButton: {
-            text: `Button`,
-            click: () => {
-              setToggle(!toggle);
-              console.log(toggle)
-            },
-          },
         }}
         dateClick={(current) => {
           setDate(current.date);
@@ -95,7 +87,7 @@ const Home = () => {
           isMobile
             ? {
                 start: "",
-                center: "customToday toggleButton eventform",
+                center: "customToday eventform",
                 end: "",
               }
             : false

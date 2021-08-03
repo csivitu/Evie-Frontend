@@ -3,13 +3,11 @@ const cacheName = "Vcal"
 const staticAssets = [
     './', './index.html', './styles.css', './index.js', './manifest.json'
 ];
-
 self.addEventListener('install', event => {
     event.waitUntil(
         (async () => {
-            const cache = await caches.open(cacheName)
-            await cache.addAll(staticAssets);
-            return self.skipWaiting();
+            const cache = await caches.open(cacheName);
+            return  cache.addAll(staticAssets);
         })
 
     )
