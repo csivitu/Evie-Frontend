@@ -21,6 +21,11 @@ const EventForm = () => {
     <div className="flex-col md:container md:mx-auto items-center sm:flex-row">
       <div className="container w-screen" >
         <div>
+          <div className="h-12">
+            <button className="text-white font-bold bg-green-500 hover:bg-green-600 h-12 text-center rounded-lg">
+              Back to V-Cal
+            </button>
+          </div>
           <form action={`${BASEURL}/api/add`} method="POST" >
             <div className="flex flex-col sm:flex-row w-full">
               <div className="w-full sm:w-11/12" style={{ top: "100%" }} >
@@ -162,7 +167,7 @@ const EventForm = () => {
               <div className="flex w-full items-center object-contain">
                 <div className="w-full flex-row sm: flex-col object-contain" >
                   <EventProfile img={img} org={org} title={title} start={startDate} end={endDate} email={email}
-                    desc={desc} url={url} textColor={textcolor} backgroundColor={labelcolor} required className="w-auto inline-block"/>
+                    desc={desc} url={url} textColor={textcolor} backgroundColor={labelcolor} required className="w-auto inline-block" />
                 </div>
               </div>
             </div>
