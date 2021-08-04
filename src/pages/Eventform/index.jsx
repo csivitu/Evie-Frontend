@@ -15,8 +15,8 @@ const EventForm = () => {
   const [email, setEmail] = useState("example@example.com");
   const [desc, setDesc] = useState("Description of the Event");
   const [url, setURL] = useState("URL of the Event");
-  const [textcolor, setTextColor] = useState("");
-  const [labelcolor, setLabelColor] = useState("");
+  const [textcolor, setTextColor] = useState("#2a2b2e");
+  const [labelcolor, setLabelColor] = useState("#00c49a");
 
   const history=useHistory()
   const routeChange = () => {
@@ -29,7 +29,7 @@ const EventForm = () => {
       <div className="container w-screen" >
         <div>
           <div className="h-12">
-            <button className="static left-36 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-500 text-base font-medium text-white hover:bg-green-700 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm fc-button" onClick={() => {
+            <button className="static left-36 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-500 text-base font-medium text-white hover:bg-green-700 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm fc-button" style={{marginLeft:0}}onClick={() => {
               routeChange()
             }}>
               Go Back
@@ -116,7 +116,7 @@ const EventForm = () => {
                     <i className="fa fa-user"></i>
                   </div>
                   <input className="input text-color"
-                    type="color" value="#ff00ff"
+                    type="color"
                     placeholder="Text Color"
                     name="textColor" value={textcolor}
                     required style={{ height: "30px" }} onChange={(e) => setTextColor(e.target.value)}
@@ -181,7 +181,7 @@ const EventForm = () => {
               </div>
             </div>
             <div className="h-12">
-              <button className="text-white font-bold bg-green-500 hover:bg-green-600 w-1/2 w-full scale-100 h-12 transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg">
+              <button type="submit" className="text-white font-bold bg-green-500 hover:bg-green-600 w-1/2 w-full scale-100 h-12 transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg">
                 Submit Event For Approval
               </button>
             </div>

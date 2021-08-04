@@ -6,10 +6,11 @@ import { getDate } from "../../api/Request";
 import EventProfile from "../../components/EventProfile";
 
 const Today = () => {
-  let date = new Date()
+  
   const [event, setEvent] = useState([]);
 
   useEffect(() => {
+    let date = new Date()
     const AsyncDay = async () => {
       let res = await getDate(date);
       setEvent(res);
@@ -23,7 +24,7 @@ const Today = () => {
   };
 
   return (
-        <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <div className="flex items-start justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
          
             <div className="px-4 pt-5 pb-4 sm:p-6 sm:pb-4" style={{backgroundColor:"#2A2B2E"}}>
               <div className="sm:flex sm:items-start">
@@ -45,13 +46,13 @@ const Today = () => {
                   </h3>
                   <div className="mt-2">
                     <div className="flex flex-col">
-                      {event ? (
+                    {(event.length!==0) ? (
                         event.map((item) => {
                           return <EventProfile key={item._id} {...item} />;
                         })
                       ) : (
                         <>
-                          <h1>No events Today!</h1>
+                          <h2 className="text-white text-center">Schedule on this date seems clear!</h2>
                         </>
                       )}
                     </div>

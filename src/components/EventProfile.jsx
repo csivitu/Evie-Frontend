@@ -38,7 +38,7 @@ const EventProfile = ({ img, org, title, desc, start,end,url,backgroundColor,tex
           <hr style={{backgroundColor:textColor,color:textColor,border:`1.25px solid ${textColor}`}}></hr>
           <div className="mt-2 text-sm" style={{color:textColor}}>
             <p>
-              <b>Description:</b>
+              <b>Description: </b>
               {desc}
             </p><br/>
           <button onClick={()=>{

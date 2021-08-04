@@ -7,12 +7,6 @@
 }
 
 
-/* *,
-*:before,
-*:after {
-    box-sizing: border-box;
-} */
-
 h4 {
     color: #00c49a;
     font-weight: bold;
@@ -78,13 +72,6 @@ select {
 }
 
 
-/* 
-.col-half.text-color {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%
-} */
-
 .input[type=color] {
     background-color: #2A2B2E;
     border: 0;
@@ -131,6 +118,3 @@ select {
     color: white;
 }
 
-#root>main>div>div>div>div>button {
-    margin-left: 0 !important;
-}

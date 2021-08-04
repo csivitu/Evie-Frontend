@@ -13,7 +13,7 @@ const Modal = ({ closeModal, date }) => {
       setEvent(res);
     };
     AsyncDay();
-  }, []);
+  }, [date]);
   if (closeModal) {
     
     return (

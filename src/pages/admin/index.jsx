@@ -35,20 +35,20 @@ const Admin = () => {
   if (events && (mode === "events")) {
     return (
       <>
-        <header class="text-gray-600 body-font w-full">
-          <div class="mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center w-full">
-            <Link to="/" class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-green-500 rounded-full" viewBox="0 0 24 24">
+        <header className="text-gray-600 body-font w-full">
+          <div className="mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center w-full">
+            <Link to="/" className="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-10 h-10 text-white p-2 bg-green-500 rounded-full" viewBox="0 0 24 24">
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
               </svg>
-              <span class="ml-3 text-xl">Vcal Admin</span>
+              <span className="ml-3 text-xl">Vcal Admin</span>
             </Link>
-            <nav class="md:ml-auto flex flex-wrap items-center text-white justify-center">
-              <a href="/#" onClick={() => { setMode("approved") }} class="mr-5 hover:text-green-500 cursor-pointer">Approved Events</a>
-              <a href="/#" onClick={() => { setMode("events") }} class="mr-5 hover:text-green-500 cursor-pointer">Moderate Events</a>
+            <nav className="md:ml-auto flex flex-wrap items-center text-white justify-center">
+              <a href="#/" onClick={() => { setMode("approved") }} className="mr-5 hover:text-green-500 cursor-pointer">Approved Events</a>
+              <a href="#/" onClick={() => { setMode("events") }} className="mr-5 hover:text-green-500 cursor-pointer">Moderate Events</a>
             </nav>
-            <button onClick={logOut} class="text-white inline-flex items-center bg-green-500 border-0 py-1 px-3 focus:outline-none hover:bg-green-700 rounded text-base mt-4 md:mt-0">Log Out
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+            <button onClick={logOut} className="text-white inline-flex items-center bg-green-500 border-0 py-1 px-3 focus:outline-none hover:bg-green-700 rounded text-base mt-4 md:mt-0">Log Out
+              <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
                 <path d="M5 12h14M12 5l7 7-7 7"></path>
               </svg>
             </button>
@@ -158,20 +158,20 @@ const Admin = () => {
   else if (approveds && (mode === "approved")) {
     return (
       <>
-        <header class="text-gray-600 body-font w-full">
-          <div class="mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center w-full">
-            <a href="/#" class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-green-500 rounded-full" viewBox="0 0 24 24">
+        <header className="text-gray-600 body-font w-full">
+          <div className="mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center w-full">
+            <a href="/" className="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-10 h-10 text-white p-2 bg-green-500 rounded-full" viewBox="0 0 24 24">
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
               </svg>
-              <span class="ml-3 text-xl">Vcal Admin</span>
+              <span className="ml-3 text-xl">Vcal Admin</span>
             </a>
-            <nav class="md:ml-auto flex flex-wrap items-center text-white justify-center">
-              <a href="/#" onClick={() => { setMode("approved") }} class="mr-5 hover:text-green-500">Approved Events</a>
-              <a href="/#" onClick={() => { setMode("events") }} class="mr-5 hover:text-green-500">Moderate Events</a>
+            <nav className="md:ml-auto flex flex-wrap items-center text-white justify-center">
+              <a href="#/" onClick={() => { setMode("approved") }} className="mr-5 hover:text-green-500">Approved Events</a>
+              <a href="#/" onClick={() => { setMode("events") }} className="mr-5 hover:text-green-500">Moderate Events</a>
             </nav>
-            <button onClick={logOut} class="text-white inline-flex items-center bg-green-500 border-0 py-1 px-3 focus:outline-none hover:bg-green-700 rounded text-base mt-4 md:mt-0">Log Out
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+            <button onClick={logOut} className="text-white inline-flex items-center bg-green-500 border-0 py-1 px-3 focus:outline-none hover:bg-green-700 rounded text-base mt-4 md:mt-0">Log Out
+              <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
                 <path d="M5 12h14M12 5l7 7-7 7"></path>
               </svg>
             </button>
@@ -248,11 +248,11 @@ const Admin = () => {
     return (
       <>
         <br />
-        <div class="container mx-auto flex flex-col px-5 py-24 justify-center items-center">
-          <div class="w-full md:w-2/3 flex flex-col mb-16 items-center text-center">
-            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Forbidden</h1>
-            <div class="flex w-full justify-center items-end">
-              <a href="/login" class="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">Login Here</a>
+        <div className="container mx-auto flex flex-col px-5 py-24 justify-center items-center">
+          <div className="w-full md:w-2/3 flex flex-col mb-16 items-center text-center">
+            <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Forbidden</h1>
+            <div className="flex w-full justify-center items-end">
+              <a href="/login" className="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">Login Here</a>
             </div>
           </div>
         </div>
