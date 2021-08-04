@@ -130,3 +130,7 @@ select {
     cursor: pointer;
     color: white;
 }
+
+#root>main>div>div>div>div>button {
+    margin-left: 0 !important;
+}
