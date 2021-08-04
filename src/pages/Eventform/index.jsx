@@ -4,6 +4,7 @@ import { BASEURL } from "../../api/Api"
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import EventProfile from "../../components/EventProfile";
+import { useHistory } from "react-router-dom";
 
 const EventForm = () => {
   const [startDate, setStartDate] = useState(new Date());
@@ -17,13 +18,21 @@ const EventForm = () => {
   const [textcolor, setTextColor] = useState("");
   const [labelcolor, setLabelColor] = useState("");
 
+  const history=useHistory()
+  const routeChange = () => {
+    let path = "/";
+    history.push(path);
+  };
+
   return (
     <div className="flex-col md:container md:mx-auto items-center sm:flex-row">
       <div className="container w-screen" >
         <div>
           <div className="h-12">
-            <button className="text-white font-bold bg-green-500 hover:bg-green-600 h-12 text-center rounded-lg">
-              Back to V-Cal
+            <button className="static left-36 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-500 text-base font-medium text-white hover:bg-green-700 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm fc-button" onClick={() => {
+              routeChange()
+            }}>
+              Go Back
             </button>
           </div>
           <form action={`${BASEURL}/api/add`} method="POST" >
