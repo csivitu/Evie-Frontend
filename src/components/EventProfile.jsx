@@ -41,7 +41,8 @@ const EventProfile = ({ img, org, title, desc, start,end,url,backgroundColor,tex
               <b>Description: </b>
               {desc}
             </p><br/>
-          <button onClick={()=>{
+          <button onClick={(e)=>{
+            e.preventDefault()
             window.open(url,"_blank");
           }} className="font-bold py-2 px-4 rounded-full border-none outline-none " style={{backgroundColor:textColor,color:backgroundColor,}}  >
           Click to view event website

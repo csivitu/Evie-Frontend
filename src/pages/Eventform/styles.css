@@ -2,7 +2,7 @@
     text-align: center;
     margin-left: 200px;
     margin-right: 200px;
-    text-decoration-color: #f0a500;
+    text-decoration-color: #00c49a;
     font-weight: bold;
 }
 
@@ -29,7 +29,7 @@ select {
     padding: 1em;
     line-height: 1.4;
     background-color: #f9f9f9;
-    border: 1px solid #e5e5e5;
+    border: 1px solid #00c49a;
     border-radius: 3px;
     -webkit-transition: 0.35s ease-in-out;
     -moz-transition: 0.35s ease-in-out;
@@ -111,7 +111,7 @@ select {
 
 .submit-event {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color: #f0a500;
+    background-color: #00c49a;
     font-weight: bold;
     font-size: 15px;
     cursor: pointer;
