@@ -23,11 +23,11 @@ const EventForm = () => {
   const [textColor, setTextColor] = useState("#2a2b2e");
   const [backgroundColor, setbackgroundColor] = useState("#00c49a");
   const history = useHistory();
-  const routeChange = () => {
-    let path = "/";
+  const routeChange = (path) => {
+    // let  = "/";
     history.push(path);
   };
-  const validate = () => {
+  const validate = async () => {
     
     const eventDetails={
       title,
@@ -54,7 +54,21 @@ const EventForm = () => {
       });
     }
     else{
-      let res=postEvent(eventDetails)
+      let res=await postEvent(eventDetails)
+      // console.log
+      if (res.code==="6969"){
+        routeChange("/verify")
+      }
+      else{
+        toast.error("Submission Failed! Please retry.  ", {
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }
     }
     
 
@@ -74,7 +88,7 @@ const EventForm = () => {
               className="static left-36 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-500 text-base font-medium text-white hover:bg-green-700 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm fc-button"
               style={{ marginLeft: 0 }}
               onClick={() => {
-                routeChange();
+                routeChange("/");
               }}
             >
               Go Back

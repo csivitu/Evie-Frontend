@@ -45,6 +45,5 @@ export const getToken = async (uname, password) => {
 
 export const postEvent= async(form)=>{
   let res = await API.post("/api/add",form)
-  return res;
-
+  return res.data;
 }
