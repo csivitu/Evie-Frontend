@@ -1,7 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Raleway&display=swap');
 body {
-  font-family: "Ubuntu Mono", monospace;
-  background-color: #2a2b2e;
+  font-family: 'Raleway', sans-serif;
+  background-color: #191927;
 }
 .box{
   color: aliceblue;
@@ -17,11 +18,39 @@ body {
   border: none !important;
 }
 .fc-day-today {
-  background-color: #2a2b2e !important;
+  background-color: #191927 !important;
 }
 
 .fc-toolbar-chunk {
   display: flex;
+}
+.fc-next-button{
+  border-radius:50% !important;
+  background-color:#1F1C4F !important;
+}
+.fc-prev-button{
+  border-radius:50% !important;
+  background-color:#1F1C4F !important;
+
+}
+.fc {
+  border-radius:4px !important;
+}
+.fc-toolbar-title{
+  /* font-size:18px !important; */
+  text-transform:uppercase !important;
+}
+.fc-icon-chevron-right{
+  color:#4C42C2 !important;
+}
+.fc-icon-chevron-left{
+  color:#4C42C2 !important;
+}
+.fc-eventform-button{
+  background-color:#4C42C2 !important;
+}
+.fc-customToday-button{
+  background-color:#4C42C2 !important;
 }
 
 table {
@@ -31,9 +60,9 @@ table {
 }
 .fc-button-primary {
   text-transform: capitalize !important;
-  background-color: #00c49a !important;
   border: none !important;
 }
+
 
 .fc-day-past {
   cursor: pointer;
@@ -41,36 +70,43 @@ table {
 }
 .fc-day-future {
   cursor: pointer;
-  border-bottom: 1px solid transparent !important;
+  border-bottom: 1px solid #191927 !important;
 }
-
+.fc-daygrid-day-top{
+  justify-content:center !important;
+}
 .fc-day-past:hover {
   cursor: pointer;
-  border-bottom: 1px solid #00c49a !important;
+  border-bottom: 1px solid #4C42C2 !important;
   transition: ease-in 50ms;
 }
 .fc-day-today {
   cursor: pointer;
-  border-bottom: 5px solid #00c49a !important;
+  border-bottom: 5px solid #4C42C2 !important;
   transition: ease-in 50ms;
 }
-.fc-day-future:hover {
+.fc-day-future:hover {  
   cursor: pointer;
-  border-bottom: 1px solid #00c49a !important;
+  border-bottom: 1px solid #4C42C2 !important;
   transition: ease-in 50ms !important;
 }
 .fc-toolbar {
   margin: 2%;
 }
+.fc-daygrid-day-frame{
+  background-color:#191927 !important;
+  border:none !important;
+}
 .fc-button{
-  border:1px solid #2A2B2E !important;
+  font-weight:500 !important;
+  font-family: 'Inter', sans-serif !important;
   transition: all 0.3s;
   outline: none;
 }
 .fc-button:hover{
-  background-color: #2A2B2E !important;
+  background-color: #1F1C4F !important;
   transition: ease-in-out 0.3s !important;
-  border:1px solid #00c49a !important;
+  /* border:1px solid #00c49a !important; */
   outline:none;
 }
 .fc-customToday-button{
