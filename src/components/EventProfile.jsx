@@ -16,7 +16,7 @@ const EventProfile = ({ img, org, title, desc, start,end,url,backgroundColor,tex
               <div className="flex items-center justify-between sm:mt-2">
                 <div className="flex items-center">
                   <div className="flex flex-col">
-                    <div className="w-full flex-none text-lg font-bold leading-none" style={{color:textColor}}>
+                    <div className="w-full flex-none text-4xl font-bold leading-none" style={{color:textColor}}>
                       {title}
                     </div>
                     <div className="flex-auto my-1" style={{color:textColor}}>

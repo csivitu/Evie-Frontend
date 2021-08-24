@@ -26,15 +26,16 @@ const Today = () => {
   return (
         <div className="flex items-start justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
          
-            <div className="px-4 pt-5 pb-4 sm:p-6 sm:pb-4" style={{backgroundColor:"#2A2B2E"}}>
+            <div className="px-4 pt-5 pb-4 sm:p-6 sm:pb-4" style={{backgroundColor:"#191927"}}>
               <div className="sm:flex sm:items-start">
                 <div className="mt-3 w-full text-center sm:mt-0 sm:ml-4 sm:text-left">
                    <button
                 type="button"
-                className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-500 text-base font-medium text-white hover:bg-green-700 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm fc-button"
+                className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 text-base font-medium text-white hover:bg-green-700 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm fc-button"
                 onClick={() => {
                   routeChange()
                 }}
+                style={{backgroundColor:"#4C42C2"}}
               >
                 Go Back
               </button>

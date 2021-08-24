@@ -66,7 +66,7 @@ table {
 
 .fc-day-past {
   cursor: pointer;
-  border-bottom: 1px solid transparent !important;
+  border-bottom: 1px solid #191927 !important;
 }
 .fc-day-future {
   cursor: pointer;

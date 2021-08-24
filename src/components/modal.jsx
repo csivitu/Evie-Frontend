@@ -37,12 +37,12 @@ const Modal = ({ closeModal, date }) => {
           </span>
 
           <div className="inline-block self-center align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle w-screen sm:w-9/12">
-            <div className="px-4 pt-5 pb-4 sm:p-6 sm:pb-4" style={{backgroundColor:"#2A2B2E"}}>
+            <div className="px-4 pt-5 pb-4 sm:p-6 sm:pb-4" style={{backgroundColor:"#191927"}}>
               <div>
             
                 <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                   <h3
-                    className="text-center text-md sm:text-lg leading-6 font-medium"
+                    className="text-center text-md sm:text-xl leading-6 font-medium"
                     id="modal-title" style={{color:"aliceblue"}}
                   >
                     {modalDate(date)}
@@ -63,13 +63,14 @@ const Modal = ({ closeModal, date }) => {
                 </div>
               </div>
             </div>
-            <div className="px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse" style={{backgroundColor:"#2A2B2E"}}>
+            <div className="px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse" style={{backgroundColor:"#191927"}}>
               <button
                 type="button"
-                className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-500 text-base font-medium text-white hover:bg-green-700 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm fc-button"
+                className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 text-base font-medium text-white focus:outline-none sm:ml-3 sm:w-auto sm:text-sm fc-button"
                 onClick={() => {
                   closeModal(false);
                 }}
+                style={{backgroundColor:"#4C42C2"}}
               >
                 Close
               </button>
