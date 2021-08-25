@@ -8,6 +8,7 @@ import EventProfile from "../../components/EventProfile";
 const Today = () => {
   
   const [event, setEvent] = useState([]);
+  const todayChecker=true
 
   useEffect(() => {
     let date = new Date()
@@ -40,16 +41,20 @@ const Today = () => {
                 Go Back
               </button>
                   <h3
-                    className="text-center text-md sm:text-lg leading-6 font-bold"
+                    className="text-center text-md sm:text-lg leading-6 font-bold mt-6"
                     id="modal-title" style={{color:"aliceblue",fontFamily:"Inter"}}
                   >
                     TODAY'S EVENTS
                   </h3>
                   <div className="mt-2">
-                    <div className="flex flex-col">
+                    <div className="flex flex-col sm:grid sm:grid-cols-2 " >
                     {(event.length!==0) ? (
                         event.map((item) => {
-                          return <EventProfile key={item._id} {...item} />;
+                          item["todayChecker"]=true
+                          return (
+                            <div>
+                          <EventProfile key={item._id} {...item}/>;
+                          </div>)
                         })
                       ) : (
                         <>

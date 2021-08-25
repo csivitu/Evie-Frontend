@@ -43,7 +43,7 @@ const Modal = ({ closeModal, date }) => {
                 <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                   <h3
                     className="text-center text-md sm:text-xl leading-6 font-medium"
-                    id="modal-title" style={{color:"aliceblue"}}
+                    id="modal-title" style={{color:"aliceblue",fontFamily:"Inter"}}
                   >
                     {modalDate(date)}
                   </h3>
