@@ -46,6 +46,7 @@ const Home = () => {
         height="100vh"
         eventAdd={events}
         eventDisplay={"block"}
+        // slotLabelFormat={{hour:"numeric",minute:"numeric"}}
         customButtons={{
           eventform: {
             text: "Event Form",
@@ -97,7 +98,8 @@ const Home = () => {
           const endDate = dateInfo.end;
           endDate.setDate(endDate.getDate() - 1);
           setFinalDate([dateInfo.start.toISOString(), endDate.toISOString()]);
-        }}
+        }
+      }
       />
 
       {showModal ? <Modal closeModal={setShowModal} date={date} /> : null}

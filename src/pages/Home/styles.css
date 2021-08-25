@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Raleway&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Raleway&family=Roboto&display=swap');
 body {
   font-family: 'Raleway', sans-serif;
   background-color: #191927;
@@ -27,18 +27,24 @@ body {
 .fc-next-button{
   border-radius:50% !important;
   background-color:#1F1C4F !important;
+  padding:10px !important;
 }
 .fc-prev-button{
   border-radius:50% !important;
   background-color:#1F1C4F !important;
-
+  padding:10px !important;
 }
+
 .fc {
   border-radius:4px !important;
 }
 .fc-toolbar-title{
+  font-family: 'Roboto', sans-serif;
   /* font-size:18px !important; */
   text-transform:uppercase !important;
+}
+.fc-event-main-frame{
+  font-family:"Inter", sans-serif;
 }
 .fc-icon-chevron-right{
   color:#4C42C2 !important;

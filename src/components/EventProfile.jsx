@@ -1,52 +1,106 @@
 import React from "react";
 import { finalDate } from "./dateFormat";
+import { AiOutlineCalendar } from "react-icons/ai";
+import { FiUsers } from "react-icons/fi";
+import { VscGlobe } from "react-icons/vsc";
 
-const EventProfile = ({ img, org, title, desc, start,end,url,backgroundColor,textColor }) => {
-  start=new Date(start)
-  end=new Date(end)
+const EventProfile = ({
+  img,
+  org,
+  title,
+  desc,
+  start,
+  end,
+  url,
+  backgroundColor,
+  textColor,
+}) => {
+  start = new Date(start);
+  end = new Date(end);
+  let myRegexp=new RegExp("^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n?]+)")
+  
+  let urlReg = myRegexp.exec(url);
+
+  console.log(urlReg[1]);
   return (
     <div className="w-full">
       <div className="flex flex-col">
-        <div className="border border-gray-900   rounded-3xl p-4 m-4 w-auto" style={{backgroundColor}}>
+        <div
+          className="border border-gray-900  p-4 m-4 w-auto"
+          style={{ backgroundColor,borderRadius:"8px" }}
+        >
           <div className="flex-none sm:flex">
             <div className=" relative sm:mb-0 mb-3">
-              <img src={img} alt={org} className="h-auto md:h-20 object-contain"/>
+              <img
+                src={img}
+                alt={org}
+                className="h-auto md:h-20 object-contain"
+              />
             </div>
             <div className="flex-auto sm:ml-5 justify-evenly">
               <div className="flex items-center justify-between sm:mt-2">
                 <div className="flex items-center">
                   <div className="flex flex-col">
-                    <div className="w-full flex-none text-4xl font-bold leading-none" style={{color:textColor}}>
+                    <div
+                      className="w-full flex-none text-4xl font-bold leading-none"
+                      style={{ color: textColor }}
+                    >
                       {title}
                     </div>
-                    <div className="flex-auto my-1" style={{color:textColor}}>
-                      <span className="mr-3 ">Start Time:{finalDate(start)}</span>
-                      <span className="mr-3 border-r border-gray-600  max-h-0"></span>
-                      <span className="mr-3 ">End Time:{finalDate(end)}</span>
-                      <span className="mr-3 border-r border-gray-600  max-h-0"></span>
-                      <span>{org}</span>
+                    <div
+                      className="flex-auto my-1"
+                      style={{ color: textColor, fontFamily: "Inter" }}
+                    >
+                      <span className="mr-3 font-bold">
+                        <AiOutlineCalendar
+                          style={{ display: "inline" }}
+                          className="mb-1"
+                        />
+                        {finalDate(start)} - {finalDate(end)}
+                      </span>
+                      <br></br>
+                      <span
+                        className="font-bold"
+                        style={{cursor:"pointer"}}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          window.open(url, "_blank");
+                        }}
+                      >
+                        <VscGlobe
+                          style={{ display: "inline" }}
+                          className="mb-0.5"
+                        />{" "}
+                        {urlReg[1]}{" "}
+                      </span>
+                      <span className="font-bold ml-20">
+                        <FiUsers
+                          style={{ display: "inline" }}
+                          className="mb-1"
+                        />{" "}
+                        {org}
+                      </span>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="flex flex-row items-center"></div>
-              <div className="flex text-sm " style={{color:textColor}}>
-              </div>
+              <div className="flex text-sm " style={{ color: textColor }}></div>
             </div>
           </div>
           <br />
-          <hr style={{backgroundColor:textColor,color:textColor,border:`1.25px solid ${textColor}`}}></hr>
-          <div className="mt-2 text-sm" style={{color:textColor}}>
+          <hr
+            style={{
+              backgroundColor: textColor,
+              color: textColor,
+              border: `1px solid ${textColor}`,
+            }}
+          ></hr>
+          <div className="mt-2 text-md" style={{ color: textColor }}>
             <p>
-              <b>Description: </b>
               {desc}
-            </p><br/>
-          <button onClick={(e)=>{
-            e.preventDefault()
-            window.open(url,"_blank");
-          }} className="font-bold py-2 px-4 rounded-full border-none outline-none " style={{backgroundColor:textColor,color:backgroundColor,}}  >
-          Click to view event website
-            </button>
+            </p>
+            <br />
           </div>
         </div>
       </div>

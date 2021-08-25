@@ -40,10 +40,10 @@ const Today = () => {
                 Go Back
               </button>
                   <h3
-                    className="text-center text-md sm:text-lg leading-6 font-medium"
-                    id="modal-title" style={{color:"aliceblue"}}
+                    className="text-center text-md sm:text-lg leading-6 font-bold"
+                    id="modal-title" style={{color:"aliceblue",fontFamily:"Inter"}}
                   >
-                    Events for Today
+                    TODAY'S EVENTS
                   </h3>
                   <div className="mt-2">
                     <div className="flex flex-col">
