@@ -1,16 +1,45 @@
-.add-event {
+/* .add-event {
     text-align: center;
     margin-left: 200px;
     margin-right: 200px;
     text-decoration-color: #00c49a;
     font-weight: bold;
+} */
+
+h2 {
+    color: #FFFFFF;
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    height: 42px;
+    width: 224px;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: bold;
+    font-style: normal;
 }
 
+.preview {
+    color: #FFFFFF;
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    height: 42px;
+    width: 224px;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: bold;
+    font-style: normal;
+    left: 17px;
+}
 
 h4 {
-    color: #00c49a;
-    font-weight: bold;
+    color: #FFFFFF;
     position: relative;
+    font-family: 'Inter';
+    font-size: 18px;
+    line-height: 22px;
+    height: 22px;
+    left: 2px;
+    padding-bottom: 5px;
 }
 
 .react-datepicker-wrapper {
@@ -28,14 +57,20 @@ select {
     width: 100%;
     padding: 1em;
     line-height: 1.4;
-    background-color: #f9f9f9;
-    border: 1px solid #00c49a;
+    background-color: #11111D;
+    border: 1px solid rgba(76, 66, 194, 0.3);
     border-radius: 3px;
     -webkit-transition: 0.35s ease-in-out;
     -moz-transition: 0.35s ease-in-out;
     -o-transition: 0.35s ease-in-out;
     transition: 0.35s ease-in-out;
     transition: all 0.35s ease-in-out;
+    color: #FFFFFF !important;
+}
+
+p {
+    inline-size: 300px;
+    overflow-wrap: break-word;
 }
 
 .input-group {
@@ -49,14 +84,47 @@ select {
     height: 200px;
     resize: none;
     border-radius: 3px;
-    border: 1px solid #e5e5e5;
-    background-color: #f9f9f9;
+    border: 1px solid rgba(76, 66, 194, 0.3);
+    background-color: #11111D;
     -webkit-transition: 0.35s ease-in-out;
     -moz-transition: 0.35s ease-in-out;
     -o-transition: 0.35s ease-in-out;
     transition: 0.35s ease-in-out;
     transition: all 0.35s ease-in-out;
     line-height: 1.4;
+    color: #FFFFFF;
+}
+
+#scroll-bar {
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+
+#scroll-bar::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #23204F;
+    position: absolute;
+    left: 565px;
+    top: 451px;
+    scrollbar-width: thin;
+}
+
+#scroll-bar::-webkit-scrollbar {
+    width: 4px;
+    height: 21px;
+    background-color: #11111D;
+    position: absolute;
+    left: 565px;
+    top: 451px;
+    scrollbar-width: thin;
+}
+
+#scroll-bar::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    position: absolute;
+    left: 565px;
+    top: 451px;
+    scrollbar-width: thin;
 }
 
 .event-color {
@@ -71,7 +139,6 @@ select {
     width: 100%;
 }
 
-
 .input[type=color] {
     background-color: #2A2B2E;
     border: 0;
@@ -83,7 +150,7 @@ select {
 .container {
     max-width: 80%;
     margin: 0em auto;
-    background-color: #2A2B2E;
+    background-color: #191927;
     border-radius: 4.2px;
     top: 0px;
 }
@@ -110,11 +177,10 @@ select {
 }
 
 .submit-event {
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color: #00c49a;
+    font-family: "Inter";
+    background-color: #191927 !important;
     font-weight: bold;
     font-size: 15px;
     cursor: pointer;
     color: white;
 }
-
