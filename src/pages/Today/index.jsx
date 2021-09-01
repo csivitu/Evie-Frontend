@@ -47,7 +47,7 @@ const Today = () => {
                     TODAY'S EVENTS
                   </h3>
                   <div className="mt-2">
-                    <div className="flex flex-col sm:grid sm:grid-cols-2 " >
+                    <div className="flex flex-col sm:grid sm:gap-x-5 sm:grid-cols-2 " >
                     {(event.length!==0) ? (
                         event.map((item) => {
                           item["todayChecker"]=true
