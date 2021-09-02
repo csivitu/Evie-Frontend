@@ -98,7 +98,7 @@ const EventForm = () => {
           </div>
           <form onSubmit={handleSubmit}>
             <div className="flex flex-col sm:flex-row w-full">
-              <div className="w-full sm:w-11/12" style={{ top: "100%" }}>
+              <div className="w-full sm:w-11/12 formdiv" style={{ top: "100%" }}>
                 <div className="row">
                 <h2>Event Details</h2> <br />
                   <br />
@@ -175,7 +175,7 @@ const EventForm = () => {
                     value={backgroundColor}
                     placeholder="Label Color"
                     name="backgroundColor"
-                    required value="#4C42C2"
+                    required
                     style={{ height: "30px" }}
                     onChange={(e) => setbackgroundColor(e.target.value)}
                   />
@@ -194,7 +194,7 @@ const EventForm = () => {
                     placeholder="Text Color"
                     name="textColor"
                     value={textColor}
-                    required value="#FFFFFF"
+                    required
                     style={{ height: "30px" }}
                     onChange={(e) => setTextColor(e.target.value)}
                   />
@@ -275,8 +275,8 @@ const EventForm = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex w-full items-top object-contain">
-                <div className="w-full flex-row sm: flex-col object-contain">
+              <div className="flex w-full items-top">
+                <div className="w-full flex-row sm: flex-col">
                 <h2 class="preview">Preview</h2>
                   <EventProfile id="livepreview"
                     img={img}

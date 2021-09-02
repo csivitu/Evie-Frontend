@@ -26,7 +26,7 @@ const EventProfile = ({img,org,title,desc,start,end,url,backgroundColor,textColo
                 className="object-contain rounded self-center w-full h-full"
             />
             </div>
-          <div className="flex-none md:flex w-full md:w-4/5" style={{overflowY:todayChecker?"auto":"none"}}>
+          <div className="flex-none md:flex md:w-4/5" style={{overflowY:todayChecker?"auto":"none"}}>
             <div className="flex-auto md:ml-5 justify-evenly">
               <div className="flex items-center justify-center md:justify-between md:mt-2">
                 <div className="flex items-center">

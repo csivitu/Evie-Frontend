@@ -6,7 +6,7 @@
     font-weight: bold;
 } */
 
-h2 {
+/* h2 {
     color: #FFFFFF;
     position: relative;
     font-family: 'Raleway', sans-serif;
@@ -16,7 +16,7 @@ h2 {
     line-height: 42px;
     font-weight: bold;
     font-style: normal;
-}
+} */
 
 .preview {
     color: #FFFFFF;
@@ -68,10 +68,10 @@ select {
     color: #FFFFFF !important;
 }
 
-p {
+/* p {
     inline-size: 300px;
     overflow-wrap: break-word;
-}
+} */
 
 .input-group {
     margin-bottom: 1em;
