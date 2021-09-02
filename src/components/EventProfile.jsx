@@ -6,7 +6,7 @@ import { VscGlobe } from "react-icons/vsc";
 import { isMobile } from "react-device-detect";
 
 const EventProfile = ({img,org,title,desc,start,end,url,backgroundColor,textColor,todayChecker}) => {
-  console.log(todayChecker);
+  console.log(todayChecker?"true":"false")
   start = new Date(start);
   end = new Date(end);
   let myRegexp=new RegExp("^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n?]+)")
@@ -17,7 +17,7 @@ const EventProfile = ({img,org,title,desc,start,end,url,backgroundColor,textColo
     <div className="w-full">
       <div className="flex flex-col">
         <div
-          className="border border-gray-900  p-2 m-2 w-auto h-auto  lg:h-52 flex-col md:flex-row"
+          className="border border-gray-900  p-2 m-2 w-full h-full  lg:h-52 flex-col md:flex-row"
           style={{ backgroundColor,borderRadius:"8px",display:"flex",}}
         >
           <div className="w-full h-44 sm:h-38 my-2 md:w-1/5 flex items-center justify-center " >
@@ -26,8 +26,8 @@ const EventProfile = ({img,org,title,desc,start,end,url,backgroundColor,textColo
                 className="object-contain rounded self-center w-full h-full"
             />
             </div>
-          <div className="flex-none md:flex md:w-4/5" style={{overflowY:todayChecker?"auto":"none"}}>
-            <div className="flex-auto md:ml-5 justify-evenly">
+          <div className="flex-none md:flex md:w-4/5" style={{overflowY:todayChecker?"auto":"none",overflowX:"hidden"}}>
+            <div className="flex-auto w-full md:ml-5 justify-evenly">
               <div className="flex items-center justify-center md:justify-between md:mt-2">
                 <div className="flex items-center">
                   <div className="flex flex-col">
@@ -49,8 +49,15 @@ const EventProfile = ({img,org,title,desc,start,end,url,backgroundColor,textColo
                         {finalDate(start)} - {finalDate(end)}
                       </span>
                       <div className="mt-3">
+                      <span className="font-bold">
+                        <FiUsers
+                          style={{ display: "inline" }}
+                          className="mb-1"
+                        />{" "}
+                        {org}
+                      </span>
                       <span
-                        className="font-bold"
+                        className="font-bold ml-2 md:ml-28 sm:ml-6"
                         style={{cursor:"pointer"}}
                         onClick={(e) => {
                           e.preventDefault();
@@ -63,13 +70,6 @@ const EventProfile = ({img,org,title,desc,start,end,url,backgroundColor,textColo
                         />{" "}
                         {urlReg[1]}{" "}
                       </span>
-                      <span className="font-bold ml-2 md:ml-28 sm:ml-6">
-                        <FiUsers
-                          style={{ display: "inline" }}
-                          className="mb-1"
-                        />{" "}
-                        {org}
-                      </span>
                       </div>
                     </div>
                   </div>
@@ -80,10 +80,11 @@ const EventProfile = ({img,org,title,desc,start,end,url,backgroundColor,textColo
               backgroundColor: textColor,
               color: textColor,
               border: `1px solid ${textColor}`,
+              width: "96%"
             }}
           ></hr>
-          <div className="mt-2 text-sm" style={{ color: textColor,fontFamily:"Inter" }}>
-            <p>
+          <div className="mt-2 text-sm w-4/5" style={{ color: textColor,fontFamily:"Inter"}}>
+            <p style={{overflowWrap:"break-word"}}>
               {desc}
             </p>
           </div>

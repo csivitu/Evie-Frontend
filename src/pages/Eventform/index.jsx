@@ -95,7 +95,7 @@ const EventForm = () => {
               <form onSubmit={handleSubmit}>
                 <div className="flex flex-col sm:flex-row w-full">
                   <div
-                    className="w-full sm:w-11/12 mr-16 formdiv"
+                    className="w-full sm:w-1/2 pr-16 formdiv"
                     style={{ top: "100%" }}
                   >
                     <div className="row">
@@ -149,8 +149,10 @@ const EventForm = () => {
                           id="scroll-bar"
                           className="description w-full px-4 pt-4 resize:none"
                           required
+                          maxLength="300"
                           onChange={(e) => setDesc(e.target.value)}
                         />
+                        <h2 className="text-white">{`${desc.length} of 300`}</h2>
                         <div className="input-icon">
                           <i className="fa fa-user"></i>
                         </div>
@@ -273,10 +275,11 @@ const EventForm = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="flex w-full items-top">
+                  <div className="flex sm:w-1/2 items-top">
                     <div className="w-full flex-row sm: flex-col">
                       <h2 class="preview mb-8">Preview</h2>
                       <EventProfile
+                        todayChecker={true}
                         id="livepreview"
                         img={img}
                         org={org}
@@ -288,7 +291,7 @@ const EventForm = () => {
                         url={url}
                         textColor={textColor}
                         backgroundColor={backgroundColor}
-                        className="w-auto inline-block"
+                        // className="w-auto inline-block"
                       />
                     </div>
                   </div>

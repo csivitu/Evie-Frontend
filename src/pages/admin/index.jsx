@@ -230,7 +230,7 @@ const Admin = () => {
                   </div>
                   <br />
                   <hr></hr>
-                  <div className="mt-2 text-gray-400 text-sm">
+                  <div className="mt-2 text-gray-400 break-words text-sm">
                     <p>
                       <b>Description: </b>
                       {event.desc}
