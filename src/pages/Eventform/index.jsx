@@ -95,7 +95,7 @@ const EventForm = () => {
               <form onSubmit={handleSubmit}>
                 <div className="flex flex-col sm:flex-row w-full">
                   <div
-                    className="w-full sm:w-11/12 formdiv"
+                    className="w-full sm:w-11/12 mr-16 formdiv"
                     style={{ top: "100%" }}
                   >
                     <div className="row">
@@ -293,16 +293,14 @@ const EventForm = () => {
                     </div>
                   </div>
                 </div>
-                <div className="h-12">
                   <button
                     type="submit"
-                    className="text-white font-bold bg-indigo-700 hover:bg-indigo-900 w-1/2 w-full 
+                    className="mt-4 text-white font-bold bg-indigo-700 hover:bg-indigo-900 w-1/2 w-full 
                 scale-100 h-12 transition ease-in duration-200 text-center text-base font-semibold 
                 shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg fc-button"
                   >
                     Submit Event For Approval
                   </button>
-                </div>
               </form>
             </div>
           </div>
