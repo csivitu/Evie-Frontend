@@ -6,7 +6,7 @@
     font-weight: bold;
 } */
 
-/* h2 {
+.EventDetails {
     color: #FFFFFF;
     position: relative;
     font-family: 'Raleway', sans-serif;
@@ -16,7 +16,7 @@
     line-height: 42px;
     font-weight: bold;
     font-style: normal;
-} */
+}
 
 .preview {
     color: #FFFFFF;
@@ -147,7 +147,7 @@ select {
     background: none;
 }
 
-.container {
+.container1 {
     max-width: 80%;
     margin: 0em auto;
     background-color: #191927;
