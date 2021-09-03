@@ -66,7 +66,9 @@ select {
     transition: 0.35s ease-in-out;
     transition: all 0.35s ease-in-out;
     color: #FFFFFF !important;
+    outline: none;
 }
+
 
 /* p {
     inline-size: 300px;
@@ -93,6 +95,7 @@ select {
     transition: all 0.35s ease-in-out;
     line-height: 1.4;
     color: #FFFFFF;
+    outline: none;
 }
 
 #scroll-bar {
