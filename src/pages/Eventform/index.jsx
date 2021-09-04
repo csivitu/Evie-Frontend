@@ -96,7 +96,7 @@ const EventForm = () => {
               <form onSubmit={handleSubmit}>
                 <div className="flex flex-col sm:flex-row w-full">
                   <div
-                    className="w-full sm:w-1/2 pr-16 formdiv"
+                    className="w-full sm:w-1/2 sm:pr-16 formdiv"
                     style={{ top: "100%" }}
                   >
                     <div className="row">
@@ -279,6 +279,7 @@ const EventForm = () => {
                   <div className="flex sm:w-1/2 items-top">
                     <div className="w-full flex-row sm: flex-col">
                       <h2 class="preview mb-8">Preview</h2>
+                      <div className="eventprofile">
                       <EventProfile
                         todayChecker={true}
                         id="livepreview"
@@ -294,6 +295,7 @@ const EventForm = () => {
                         backgroundColor={backgroundColor}
                         // className="w-auto inline-block"
                       />
+                      </div>
                     </div>
                   </div>
                 </div>

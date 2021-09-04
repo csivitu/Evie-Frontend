@@ -52,7 +52,7 @@ const Today = () => {
                         event.map((item) => {
                           item["todayChecker"]=true
                           return (
-                            <div>
+                            <div className="eventprofile">
                           <EventProfile key={item._id} {...item}/>;
                           </div>)
                         })
