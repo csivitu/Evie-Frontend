@@ -16,14 +16,13 @@ const EventForm = () => {
   const [org, setOrg] = useState("Club/Chapter");
   const [title, setTitle] = useState("Event Title");
   const [cname, setCname] = useState("");
-  const [email, setEmail] = useState("example@example.com");
+  const [email, setEmail] = useState("");
   const [desc, setDesc] = useState("Description of the Event");
   const [url, setURL] = useState("URL of the Event");
   const [textColor, setTextColor] = useState("#ffffff");
   const [backgroundColor, setbackgroundColor] = useState("#4C42C2");
   const history = useHistory();
   const routeChange = (path) => {
-    // let  = "/";
     history.push(path);
   };
   const validate = async () => {
@@ -53,7 +52,6 @@ const EventForm = () => {
       });
     } else {
       let res = await postEvent(eventDetails);
-      // console.log
       if (res.code === "6969") {
         routeChange("/verify");
       } else {
@@ -107,12 +105,8 @@ const EventForm = () => {
                           type="text"
                           placeholder="Event Name"
                           name="title"
-                          required="required"
                           onChange={(e) => setTitle(e.target.value)}
                         />
-                        <div className="input-icon">
-                          <i className="fa fa-user"></i>
-                        </div>
                       </div>
                       <div className="input-group">
                         <h4>Club/Chapter</h4>
@@ -120,12 +114,8 @@ const EventForm = () => {
                           type="text"
                           placeholder="Club/Chapter Name"
                           name="org"
-                          required
                           onChange={(e) => setOrg(e.target.value)}
                         />
-                        <div className="input-icon">
-                          <i className="fa fa-envelope"></i>
-                        </div>
                       </div>
                       <div className="input-group">
                         <h4>Coordinator's Name</h4>
@@ -133,12 +123,8 @@ const EventForm = () => {
                           type="text"
                           placeholder="Coordinator's Name"
                           name="cname"
-                          required="required"
                           onChange={(e) => setCname(e.target.value)}
                         />
-                        <div className="input-icon">
-                          <i className="fa fa-user"></i>
-                        </div>
                       </div>
                       <div className="input-group">
                         <h4>Email</h4>
@@ -146,11 +132,7 @@ const EventForm = () => {
                           placeholder="Email"
                           name="email"
                           onChange={(e) => setEmail(e.target.value)}
-                          required
                         />
-                        <div className="input-icon">
-                          <i className="fa fa-user"></i>
-                        </div>
                       </div>
                       <h4>Event Description</h4>
                       <div className="input-icon">
@@ -162,7 +144,6 @@ const EventForm = () => {
                           name="desc"
                           id="scroll-bar"
                           className="description w-full px-4 pt-4 resize:none"
-                          required
                           maxLength="300"
                           onChange={(e) => setDesc(e.target.value)}
                         />
@@ -170,7 +151,7 @@ const EventForm = () => {
                       </div>
                     </div>
 
-                    <div className="col h-16 mt-6">
+                    <div className="col h-16 mb-6">
                       <h4>Label Color </h4>
                       <div className="flex flex-row">
                         <input
@@ -179,8 +160,7 @@ const EventForm = () => {
                           value={backgroundColor}
                           placeholder="Label Color"
                           name="backgroundColor"
-                          required
-                          style={{ height: "60px",width:"50%" }}
+                          style={{ height: "60px", width: "50%" }}
                           onChange={(e) => setbackgroundColor(e.target.value)}
                         />
                         <input
@@ -193,7 +173,7 @@ const EventForm = () => {
                       </div>
                     </div>
 
-                    <div className="col mt-8 h-16">
+                    <div className="col-full mt-8">
                       <h4>Text Color </h4>
                       <div className="flex flex-row">
                         <input
@@ -202,37 +182,33 @@ const EventForm = () => {
                           placeholder="Text Color"
                           name="textColor"
                           value={textColor}
-                          required
-                          style={{ height: "60px",width:"50%"}}
+                          style={{ height: "60px", width: "50%" }}
                           onChange={(e) => setTextColor(e.target.value)}
                         />
-                         <input
+                        <input
                           className="input w-1/2 mt-2"
                           style={{ height: "60px" }}
                           placeholder="#ffffff"
                           value={textColor}
                           onChange={(e) => setTextColor(e.target.value)}
                         />
-                        </div>
-                      
-                    </div>
-                    <div className="col-full mt-8">
-                      <h4>Start Date and Time of Event</h4>
-                      <div className="input-group">
-                        <div className="col-full">
-                          <DatePicker
-                            selected={start}
-                            onChange={(date) => setStart(date)}
-                            timeInputLabel="Time:"
-                            dateFormat="MM/dd/yyyy h:mm aa"
-                            showTimeInput
-                            name="start"
-                            className="my-2 "
-                          />
-                        </div>
                       </div>
                     </div>
-                    <div className="col-full mt-8">
+                    <div className="col-full mt-6">
+                      <h4>Start Date and Time of Event</h4>
+                      <div className="input-group">
+                        <DatePicker
+                          selected={start}
+                          onChange={(date) => setStart(date)}
+                          timeInputLabel="Time:"
+                          dateFormat="dd/MM/yyyy hh:mm aa"
+                          showTimeInput
+                          name="start"
+                          className="my-2 "
+                        />
+                      </div>
+                    </div>
+                    <div className="col-full">
                       <h4>End Date and Time of Event</h4>
                       <div className="input-group">
                         <div className="col-full">
@@ -240,9 +216,8 @@ const EventForm = () => {
                             selected={end}
                             onChange={(date) => setEndDate(date)}
                             timeInputLabel="Time:"
-                            dateFormat="MM/dd/yyyy h:mm aa"
+                            dateFormat="dd/MM/yyyy hh:mm aa"
                             showTimeInput
-                            required
                             name="end"
                             minDate={start}
                             className="mt-2"
@@ -250,37 +225,36 @@ const EventForm = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="row">
-                      <div className="input-group"></div>
+                    <div className="col-full mt-6">
                       <h4>Image URL</h4>
-                    </div>
-                    <div className="input-group">
                       <input
                         type="text"
                         placeholder="Image URL"
                         name="img"
                         onChange={(e) => setImg(e.target.value)}
                       />
-                      <div className="input-icon">
-                        <i className="fa fa-user"></i>
-                      </div>
                     </div>
-                    <div className="input-group">
+                    <div className="col-full mt-6 mb-6">
                       <h4>Event URL</h4>
                       <input
                         type="text"
                         placeholder="Event URL"
                         name="url"
                         onChange={(e) => setURL(e.target.value)}
-                        required
                       />
-                      <div className="input-icon">
-                        <i className="fa fa-user"></i>
-                      </div>
                     </div>
+                    <button
+                      type="submit"
+                      className="invisible sm:visible w-full text-white font-bold bg-indigo-700 hover:bg-indigo-900
+                scale-100 h-12 transition ease-in duration-200 text-center text-base
+                shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg fc-button"
+                    >
+                      Submit Event For Approval
+                    </button>
+                    
                   </div>
                   <div className="flex sm:w-1/2 items-top">
-                    <div className="w-full flex-row sm: flex-col">
+                    <div className="w-full flex-row sm:flex-col">
                       <h2 class="preview mb-8">Preview</h2>
                       <div className="eventprofile">
                         <EventProfile
@@ -303,13 +277,13 @@ const EventForm = () => {
                   </div>
                 </div>
                 <button
-                  type="submit"
-                  className="mt-4 text-white font-bold bg-indigo-700 hover:bg-indigo-900 w-1/2 w-full 
-                scale-100 h-12 transition ease-in duration-200 text-center text-base font-semibold 
+                      type="submit"
+                      className="visible sm:invisible w-full text-white font-bold bg-indigo-700 hover:bg-indigo-900
+                scale-100 h-12 transition ease-in duration-200 text-center text-base
                 shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg fc-button"
-                >
-                  Submit Event For Approval
-                </button>
+                    >
+                      Submit Event For Approval
+                    </button>
               </form>
             </div>
           </div>

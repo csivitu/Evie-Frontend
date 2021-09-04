@@ -6,13 +6,11 @@ import { VscGlobe } from "react-icons/vsc";
 import { isMobile } from "react-device-detect";
 
 const EventProfile = ({img,org,title,desc,start,end,url,backgroundColor,textColor,todayChecker}) => {
-  console.log(todayChecker?"true":"false")
   start = new Date(start);
   end = new Date(end);
   let myRegexp=new RegExp("^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n?]+)")
   
   let urlReg = myRegexp.exec(url);
-
   return (
     <div className="w-full">
       <div className="flex flex-col">
@@ -24,10 +22,9 @@ const EventProfile = ({img,org,title,desc,start,end,url,backgroundColor,textColo
             <img src={img}
                 alt={org}
                 className="object-contain rounded self-center w-full h-full"
-                // style={{backgroundColor:"white"}}
             />
             </div>
-          <div className="flex-none sm:flex sm:w-4/5" style={{overflowY:todayChecker?"auto":"none",overflowX:"hidden"}}>
+          <div id="eventprofilecard" className="flex-none sm:flex sm:w-4/5" style={{overflowY:todayChecker?"auto":"none",overflowX:"hidden"}}>
             <div className="flex-auto w-full sm:ml-5 justify-evenly">
               <div className="flex items-center justify-center sm:justify-between sm:mt-2">
                 <div className="flex items-center">
@@ -69,7 +66,7 @@ const EventProfile = ({img,org,title,desc,start,end,url,backgroundColor,textColo
                           style={{ display: "inline" }}
                           className="mb-0.5"
                         />{" "}
-                        {urlReg[1]}{" "}
+                        {urlReg?urlReg[1]:" "}{" "}
                       </span>
                       </div>
                     </div>
@@ -80,7 +77,8 @@ const EventProfile = ({img,org,title,desc,start,end,url,backgroundColor,textColo
             style={{
               backgroundColor: textColor,
               color: textColor,
-              border: `0.px solid ${textColor}`,
+              height:1.5,
+              border:0,
               width: "100%"
             }}
           ></hr>

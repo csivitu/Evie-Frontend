@@ -38,7 +38,7 @@ const Home = () => {
     }
   }, [finalDate]);
   return (
-    <div className="md:container md:mx-auto box" >
+    <div className="md:mx-auto box" >
       <FullCalendar
         plugins={[dayGridPlugin, interactionPlugin, listPlugin]}
         events={events}

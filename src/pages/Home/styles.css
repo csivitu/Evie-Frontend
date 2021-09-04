@@ -24,17 +24,8 @@ body {
 .fc-event-time{
     padding-left:8px !important;
 }
-.fc-next-button {
-    border-radius: 50% !important;
-    background-color: #1F1C4F !important;
-    padding: 10px !important;
-}
 
-.fc-prev-button {
-    border-radius: 50% !important;
-    background-color: #1F1C4F !important;
-    padding: 10px !important;
-}
+
 
 .fc {
     border-radius: 4px !important;
@@ -42,8 +33,8 @@ body {
 
 .fc-toolbar-title {
     font-family: 'Roboto', sans-serif;
-    /* font-size:18px !important; */
     text-transform: uppercase !important;
+    margin-top:0.25rem !important;
 }
 
 .fc-event-main-frame {
@@ -59,10 +50,12 @@ body {
 }
 
 .fc-eventform-button {
+    padding:14px 29px !important;
     background-color: #4C42C2 !important;
 }
 
 .fc-customToday-button {
+    padding:14px 29px !important;
     background-color: #4C42C2 !important;
 }
 
@@ -71,7 +64,10 @@ table {
     border-collapse: separate;
     border-spacing: 0 15px;
 }
+.fc-button{
+    padding:14px 29px !important;
 
+}
 .fc-button-primary {
     text-transform: capitalize !important;
     border: none !important;
@@ -110,7 +106,7 @@ table {
 }
 
 .fc-toolbar {
-    margin: 2%;
+    margin: 1%;
 }
 
 .fc-daygrid-day-frame {
@@ -131,11 +127,18 @@ table {
     /* border:1px solid #00c49a !important; */
     outline: none;
 }
-
-.fc-customToday-button {
-    padding-right: 26px !important;
-    padding-left: 26px !important;
+.fc-prev-button {
+    border-radius: 50% !important;
+    background-color: #1F1C4F !important;
+    padding: 10px !important;
 }
+.fc-next-button {
+    border-radius: 50% !important;
+    background-color: #1F1C4F !important;
+    padding: 10px !important;
+}
+
+
 
 .fc td,
 .fc th {
