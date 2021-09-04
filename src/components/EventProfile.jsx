@@ -17,7 +17,7 @@ const EventProfile = ({img,org,title,desc,start,end,url,backgroundColor,textColo
     <div className="w-full">
       <div className="flex flex-col">
         <div
-          className="border border-gray-900  p-2 m-2 w-full h-full  sm:h-52 flex-col sm:flex-row"
+          className="border border-gray-900 text-center sm:text-left p-2 mr-2 mb-2 mt-2 w-full h-full  sm:h-52 flex-col sm:flex-row"
           style={{ backgroundColor,borderRadius:"8px",display:"flex",}}
         >
           <div className="w-full h-44 sm:h-38 my-2 md:w-1/5 flex items-center justify-center">
@@ -27,8 +27,8 @@ const EventProfile = ({img,org,title,desc,start,end,url,backgroundColor,textColo
             />
             </div>
           <div className="flex-none sm:flex sm:w-4/5" style={{overflowY:todayChecker?"auto":"none",overflowX:"hidden"}}>
-            <div className="flex-auto w-full md:ml-5 justify-evenly">
-              <div className="flex items-center justify-center md:justify-between md:mt-2">
+            <div className="flex-auto w-full sm:ml-5 justify-evenly">
+              <div className="flex items-center justify-center sm:justify-between sm:mt-2">
                 <div className="flex items-center">
                   <div className="flex flex-col">
                     <div
@@ -80,10 +80,10 @@ const EventProfile = ({img,org,title,desc,start,end,url,backgroundColor,textColo
               backgroundColor: textColor,
               color: textColor,
               border: `1px solid ${textColor}`,
-              width: "96%"
+              width: "100%"
             }}
           ></hr>
-          <div className="mt-2 text-sm w-4/5" style={{ color: textColor,fontFamily:"Inter"}}>
+          <div className="mt-2 text-sm w-full sm:w-11/12" style={{ color: textColor,fontFamily:"Inter"}}>
             <p style={{overflowWrap:"break-word"}}>
               {desc}
             </p>
