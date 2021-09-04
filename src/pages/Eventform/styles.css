@@ -54,11 +54,12 @@ h4 {
 input,
 select {
     width: 100%;
+    margin-top:8px;
     padding: 1em;
     line-height: 1.4;
     background-color: #11111D;
     border: 1px solid rgba(76, 66, 194, 0.3);
-    border-radius: 3px;
+    border-radius: 8px;
     -webkit-transition: 0.35s ease-in-out;
     -moz-transition: 0.35s ease-in-out;
     -o-transition: 0.35s ease-in-out;
@@ -75,16 +76,17 @@ select {
 } */
 
 .input-group {
-    margin-bottom: 1em;
+    margin-bottom: 1.5rem;
     zoom: 1;
 }
 
 .description {
     word-wrap: break-word;
     word-break: break-all;
+    margin-top:8px;
     height: 200px;
     resize: none;
-    border-radius: 3px;
+    border-radius: 8px;
     border: 1px solid rgba(76, 66, 194, 0.3);
     background-color: #11111D;
     -webkit-transition: 0.35s ease-in-out;
@@ -134,7 +136,12 @@ select {
 }
 
 .label-color {
-    width: 100%;
+    outline:black !important;
+    border-radius:8px 0px 0px 8px;
+}
+.label-color:focus {
+    outline:none !important;
+    border:none !important  ;
 }
 
 .text-color {
@@ -142,11 +149,11 @@ select {
 }
 
 .input[type=color] {
-    background-color: #2A2B2E;
     border: 0;
     cursor: pointer;
     padding: 0;
     background: none;
+    display:block;
 }
 
 .container1 {

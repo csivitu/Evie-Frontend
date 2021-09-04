@@ -12,11 +12,10 @@ import { postEvent } from "../../api/Request";
 const EventForm = () => {
   const [start, setStart] = useState(new Date());
   const [end, setEndDate] = useState(new Date());
-  const [img, setImg] = useState(
-    "https://external-preview.redd.it/fBai3DKZrSGf3YRd89f9pUHJua_lyGNS3LF0I-joA8Y.jpg?width=640&crop=smart&auto=webp&s=d53d81a152b17cbb467151b7513a7e0aac378567"
-  );
+  const [img, setImg] = useState("https://i.imgur.com/GHdv67k.png");
   const [org, setOrg] = useState("Club/Chapter");
   const [title, setTitle] = useState("Event Title");
+  const [cname, setCname] = useState("");
   const [email, setEmail] = useState("example@example.com");
   const [desc, setDesc] = useState("Description of the Event");
   const [url, setURL] = useState("URL of the Event");
@@ -30,6 +29,7 @@ const EventForm = () => {
   const validate = async () => {
     const eventDetails = {
       title,
+      cname,
       email,
       desc,
       url,
@@ -128,6 +128,19 @@ const EventForm = () => {
                         </div>
                       </div>
                       <div className="input-group">
+                        <h4>Coordinator's Name</h4>
+                        <input
+                          type="text"
+                          placeholder="Coordinator's Name"
+                          name="cname"
+                          required="required"
+                          onChange={(e) => setCname(e.target.value)}
+                        />
+                        <div className="input-icon">
+                          <i className="fa fa-user"></i>
+                        </div>
+                      </div>
+                      <div className="input-group">
                         <h4>Email</h4>
                         <input
                           placeholder="Email"
@@ -153,58 +166,57 @@ const EventForm = () => {
                           maxLength="300"
                           onChange={(e) => setDesc(e.target.value)}
                         />
-                        <h2 className="text-white">{`${desc.length} of 300`}</h2>
-                        <div className="input-icon">
-                          <i className="fa fa-user"></i>
-                        </div>
+                        <h2 className="text-white text-right">{`${desc.length}/300`}</h2>
                       </div>
-                      <div className="input-group"></div>
                     </div>
-                    <div className="row"></div>
 
-                    <div className="col-half h-16 flex flex-wrap content-start">
-                      <div className="input-icon">
-                        <i className="fa fa-user"></i>
-                      </div>
+                    <div className="col h-16 mt-6">
                       <h4>Label Color </h4>
-                      <div className="input-icon">
-                        <i className="fa fa-user"></i>
+                      <div className="flex flex-row">
+                        <input
+                          className="input label-color"
+                          type="color"
+                          value={backgroundColor}
+                          placeholder="Label Color"
+                          name="backgroundColor"
+                          required
+                          style={{ height: "60px",width:"50%" }}
+                          onChange={(e) => setbackgroundColor(e.target.value)}
+                        />
+                        <input
+                          className="input w-1/2 mt-2"
+                          style={{ height: "60px" }}
+                          placeholder="#4C42C2"
+                          value={backgroundColor}
+                          onChange={(e) => setbackgroundColor(e.target.value)}
+                        />
                       </div>
-                      <input
-                        className="input label-color"
-                        type="color"
-                        value={backgroundColor}
-                        placeholder="Label Color"
-                        name="backgroundColor"
-                        required
-                        style={{ height: "30px" }}
-                        onChange={(e) => setbackgroundColor(e.target.value)}
-                      />
-                      <br></br>
-                      <br></br>
                     </div>
 
-                    <div className="col-half h-16 flex flex-wrap content-start">
+                    <div className="col mt-8 h-16">
                       <h4>Text Color </h4>
-                      <div className="input-icon">
-                        <i className="fa fa-user"></i>
-                      </div>
-                      <input
-                        className="input text-color"
-                        type="color"
-                        placeholder="Text Color"
-                        name="textColor"
-                        value={textColor}
-                        required
-                        style={{ height: "30px" }}
-                        onChange={(e) => setTextColor(e.target.value)}
-                      />
-                      <div className="col-full">
-                        <div className="col-full"></div>
-                      </div>
+                      <div className="flex flex-row">
+                        <input
+                          className="input w-1/2 text-color"
+                          type="color"
+                          placeholder="Text Color"
+                          name="textColor"
+                          value={textColor}
+                          required
+                          style={{ height: "60px",width:"50%"}}
+                          onChange={(e) => setTextColor(e.target.value)}
+                        />
+                         <input
+                          className="input w-1/2 mt-2"
+                          style={{ height: "60px" }}
+                          placeholder="#ffffff"
+                          value={textColor}
+                          onChange={(e) => setTextColor(e.target.value)}
+                        />
+                        </div>
+                      
                     </div>
-                    <div className="input-group col-full"></div>
-                    <div className="col-full">
+                    <div className="col-full mt-8">
                       <h4>Start Date and Time of Event</h4>
                       <div className="input-group">
                         <div className="col-full">
@@ -220,11 +232,7 @@ const EventForm = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="input-group"></div>
-                    <br></br>
-                    <br></br>
-                    <div className="input-group"></div>
-                    <div className="col-full">
+                    <div className="col-full mt-8">
                       <h4>End Date and Time of Event</h4>
                       <div className="input-group">
                         <div className="col-full">
@@ -242,11 +250,6 @@ const EventForm = () => {
                         </div>
                       </div>
                     </div>
-
-                    <div className="row">
-                      <div className="input-group"></div>
-                    </div>
-
                     <div className="row">
                       <div className="input-group"></div>
                       <h4>Image URL</h4>
@@ -280,33 +283,33 @@ const EventForm = () => {
                     <div className="w-full flex-row sm: flex-col">
                       <h2 class="preview mb-8">Preview</h2>
                       <div className="eventprofile">
-                      <EventProfile
-                        todayChecker={true}
-                        id="livepreview"
-                        img={img}
-                        org={org}
-                        title={title}
-                        start={start}
-                        end={end}
-                        email={email}
-                        desc={desc}
-                        url={url}
-                        textColor={textColor}
-                        backgroundColor={backgroundColor}
-                        // className="w-auto inline-block"
-                      />
+                        <EventProfile
+                          todayChecker={true}
+                          id="livepreview"
+                          img={img}
+                          org={org}
+                          title={title}
+                          start={start}
+                          end={end}
+                          email={email}
+                          desc={desc}
+                          url={url}
+                          textColor={textColor}
+                          backgroundColor={backgroundColor}
+                          // className="w-auto inline-block"
+                        />
                       </div>
                     </div>
                   </div>
                 </div>
-                  <button
-                    type="submit"
-                    className="mt-4 text-white font-bold bg-indigo-700 hover:bg-indigo-900 w-1/2 w-full 
+                <button
+                  type="submit"
+                  className="mt-4 text-white font-bold bg-indigo-700 hover:bg-indigo-900 w-1/2 w-full 
                 scale-100 h-12 transition ease-in duration-200 text-center text-base font-semibold 
                 shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg fc-button"
-                  >
-                    Submit Event For Approval
-                  </button>
+                >
+                  Submit Event For Approval
+                </button>
               </form>
             </div>
           </div>

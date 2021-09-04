@@ -2,6 +2,7 @@ import Joi from 'joi';
 
 const eventFormSchema = Joi.object({
     title: Joi.string().min(3).max(70).required().label("Event Title").error(new Error('Title should be of min 3 max 70')),
+    cname:Joi.string().min(3).max(70).required().label("Coordinator's name").error(new Error('Coordinator name should be of min 3 max 70')),
     email: Joi.string().email({ tlds: {allow: false} }).lowercase().required().error(new Error('Invalid Email')),
     desc: Joi.string().max(300).required().error(new Error('Description max reached')),
     start: Joi.date().error(new Error('Start date must be lower than end date')),

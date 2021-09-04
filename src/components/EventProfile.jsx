@@ -24,6 +24,7 @@ const EventProfile = ({img,org,title,desc,start,end,url,backgroundColor,textColo
             <img src={img}
                 alt={org}
                 className="object-contain rounded self-center w-full h-full"
+                // style={{backgroundColor:"white"}}
             />
             </div>
           <div className="flex-none sm:flex sm:w-4/5" style={{overflowY:todayChecker?"auto":"none",overflowX:"hidden"}}>
@@ -79,7 +80,7 @@ const EventProfile = ({img,org,title,desc,start,end,url,backgroundColor,textColo
             style={{
               backgroundColor: textColor,
               color: textColor,
-              border: `1px solid ${textColor}`,
+              border: `0.px solid ${textColor}`,
               width: "100%"
             }}
           ></hr>

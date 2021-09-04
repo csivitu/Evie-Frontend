@@ -21,7 +21,9 @@ body {
 .fc-toolbar-chunk {
     display: flex;
 }
-
+.fc-event-time{
+    padding-left:8px !important;
+}
 .fc-next-button {
     border-radius: 50% !important;
     background-color: #1F1C4F !important;
