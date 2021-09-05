@@ -55,7 +55,7 @@ const EventForm = () => {
       if (res.code === "6969") {
         routeChange("/verify");
       } else {
-        toast.error("Submission Failed! Please retry.  ", {
+        toast.error("Submission Failed! Please retry.", {
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
@@ -98,7 +98,7 @@ const EventForm = () => {
                     style={{ top: "100%" }}
                   >
                     <div className="row">
-                      <h2 className="EventDetails mb-8">Event Details</h2>
+                      <h2 className="EventDetails mb-8 mt-6 sm:mt-0">Event Details</h2>
                       <div className="input-group">
                         <h4>Event Name</h4>
                         <input
@@ -234,7 +234,7 @@ const EventForm = () => {
                         onChange={(e) => setImg(e.target.value)}
                       />
                     </div>
-                    <div className="col-full mt-6 mb-6">
+                    <div className="col-full mt-6">
                       <h4>Event URL</h4>
                       <input
                         type="text"
@@ -245,7 +245,7 @@ const EventForm = () => {
                     </div>
                     <button
                       type="submit"
-                      className="invisible sm:visible w-full text-white font-bold bg-indigo-700 hover:bg-indigo-900
+                      className="invisible sm:visible sm:w-full sm:mt-8 text-white font-bold bg-indigo-700 hover:bg-indigo-900
                 scale-100 h-12 transition ease-in duration-200 text-center text-base
                 shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg fc-button"
                     >
@@ -256,7 +256,7 @@ const EventForm = () => {
                   <div className="flex sm:w-1/2 items-top">
                     <div className="w-full flex-row sm:flex-col">
                       <h2 class="preview mb-8">Preview</h2>
-                      <div className="eventprofile">
+                      <div className="eventprofile mb-8">
                         <EventProfile
                           todayChecker={true}
                           id="livepreview"
@@ -270,7 +270,6 @@ const EventForm = () => {
                           url={url}
                           textColor={textColor}
                           backgroundColor={backgroundColor}
-                          // className="w-auto inline-block"
                         />
                       </div>
                     </div>
