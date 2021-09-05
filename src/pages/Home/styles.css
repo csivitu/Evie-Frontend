@@ -137,8 +137,15 @@ table {
     background-color: #1F1C4F !important;
     padding: 10px !important;
 }
-
-
+.fc-footer-toolbar{
+    z-index:2 !important;
+    position:fixed !important;
+    bottom:0 !important;
+    width:100% !important;
+}
+.fc-header-toolbar{
+    padding:2px 10px !important;
+}
 
 .fc td,
 .fc th {

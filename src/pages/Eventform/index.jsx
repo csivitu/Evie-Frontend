@@ -12,7 +12,7 @@ import { postEvent } from "../../api/Request";
 const EventForm = () => {
   const [start, setStart] = useState(new Date());
   const [end, setEndDate] = useState(new Date());
-  const [img, setImg] = useState("https://i.imgur.com/GHdv67k.png");
+  const [img, setImg] = useState("https://i.imgur.com/rnyUp4J.gif");
   const [org, setOrg] = useState("Club/Chapter");
   const [title, setTitle] = useState("Event Title");
   const [cname, setCname] = useState("");

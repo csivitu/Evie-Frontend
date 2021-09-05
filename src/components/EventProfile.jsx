@@ -24,7 +24,7 @@ const EventProfile = ({img,org,title,desc,start,end,url,backgroundColor,textColo
             />
             </div>
           <div id="eventprofilecard" className="flex-none sm:flex sm:w-4/5" style={{overflowY:todayChecker?"auto":"none",overflowX:"hidden"}}>
-            <div className="flex-auto w-full sm:ml-5 justify-evenly">
+            <div className="flex-auto w-full p-2 sm:ml-5 justify-evenly">
               <div className="flex items-center justify-center sm:justify-between sm:mt-2">
                 <div className="flex items-center">
                   <div className="flex flex-col">
@@ -38,15 +38,15 @@ const EventProfile = ({img,org,title,desc,start,end,url,backgroundColor,textColo
                       className="flex-auto my-3 text-sm"
                       style={{ color: textColor, fontFamily: "Inter" }}
                     >
-                      <span className="mr-3 font-bold inline-block">
+                      <span className="sm:mr-3 font-bold inline-block">
                         <AiOutlineCalendar
                           style={{ display: "inline" }}
                           className="mb-1"
                         />
                         {finalDate(start)} - {finalDate(end)}
                       </span>
-                      <div className="mt-3">
-                      <span className="font-bold">
+                      <div className=" flex sm:block flex-col sm:flex-none sm:mt-3">
+                      <span className="font-bold mt-3 sm:mt-0">
                         <FiUsers
                           style={{ display: "inline" }}
                           className="mb-1"
@@ -54,7 +54,7 @@ const EventProfile = ({img,org,title,desc,start,end,url,backgroundColor,textColo
                         {org}
                       </span>
                       <span
-                        className="font-bold ml-2 md:ml-28 sm:ml-6"
+                        className="font-bold mt-3 sm:mt-0 ml-0 sm:ml-28"
                         style={{cursor:"pointer"}}
                         onClick={(e) => {
                           e.preventDefault();

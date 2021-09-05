@@ -36,7 +36,7 @@ const Home = () => {
     }
   }, [finalDate]);
   return (
-    <div className="md:mx-auto box">
+    <div className="md:mx-auto box overflow-x-hidden">
       <FullCalendar
         plugins={[dayGridPlugin, interactionPlugin, listPlugin]}
         events={events}
@@ -45,6 +45,7 @@ const Home = () => {
         eventAdd={events}
         eventDisplay={"block"}
         // slotLabelFormat={{hour:"numeric",minute:"numeric"}}
+        eventTimeFormat={{hour:"2-digit",minute:"numeric",omitZeroMinute:true}}
         customButtons={{
           eventform: {
             text: "Event Form",
@@ -85,9 +86,7 @@ const Home = () => {
         footerToolbar={
           isMobile
             ? {
-                start: "",
                 center: "customToday eventform",
-                end: "",
               }
             : false
         }
