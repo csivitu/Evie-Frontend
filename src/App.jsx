@@ -6,9 +6,11 @@ import Admin from "./pages/admin";
 import AdminLogin from "./pages/admin/login";
 import ThankYou from "./pages/Thankyou";
 import Verify from "./pages/Verify";
+import { RegisterSW } from "./components/serviceWorker";
 
 
 function App() {
+  RegisterSW();
   return (
     <main>
       <Switch>

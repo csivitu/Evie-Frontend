@@ -8,7 +8,6 @@ import EventProfile from "../../components/EventProfile";
 const Today = () => {
   
   const [event, setEvent] = useState([]);
-  const todayChecker=true
 
   useEffect(() => {
     let date = new Date()

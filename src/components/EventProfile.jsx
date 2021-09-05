@@ -3,12 +3,11 @@ import { finalDate } from "./dateFormat";
 import { AiOutlineCalendar } from "react-icons/ai";
 import { FiUsers } from "react-icons/fi";
 import { VscGlobe } from "react-icons/vsc";
-import { isMobile } from "react-device-detect";
 
 const EventProfile = ({img,org,title,desc,start,end,url,backgroundColor,textColor,todayChecker}) => {
   start = new Date(start);
   end = new Date(end);
-  let myRegexp=new RegExp("^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n?]+)")
+  let myRegexp=new RegExp("^(?:https?://)?(?:[^@]+@)?(?:www.)?([^:/?]+)")
   
   let urlReg = myRegexp.exec(url);
   return (

@@ -255,7 +255,7 @@ const EventForm = () => {
                   </div>
                   <div className="flex sm:w-1/2 items-top">
                     <div className="w-full flex-row sm:flex-col">
-                      <h2 class="preview mb-8">Preview</h2>
+                      <h2 className="preview mb-8">Preview</h2>
                       <div className="eventprofile mb-8">
                         <EventProfile
                           todayChecker={true}

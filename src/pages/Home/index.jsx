@@ -1,4 +1,4 @@
-import React, { useState } from "react"; 
+import React, { useState } from "react";
 import FullCalendar from "@fullcalendar/react"; // must go before plugins
 import dayGridPlugin from "@fullcalendar/daygrid"; // a plugin!
 import interactionPlugin from "@fullcalendar/interaction";
@@ -9,7 +9,6 @@ import { useEffect } from "react";
 import listPlugin from "@fullcalendar/list";
 import { isMobile } from "react-device-detect";
 import "./styles.css";
-import { RegisterSW } from "../../components/serviceWorker";
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
@@ -20,10 +19,10 @@ const Home = () => {
     let path = "/addevent";
     history.push(path);
   };
-  const todayRouteChange = () =>{
+  const todayRouteChange = () => {
     let path = "/today";
     history.push(path);
-  }
+  };
   const [finalDate, setFinalDate] = useState([]);
   const [events, setEvents] = useState([]);
 
@@ -32,13 +31,12 @@ const Home = () => {
       const AsyncEvent = async () => {
         let res = await getMonth(finalDate);
         setEvents(res);
-        RegisterSW();
       };
       AsyncEvent();
     }
   }, [finalDate]);
   return (
-    <div className="md:mx-auto box" >
+    <div className="md:mx-auto box">
       <FullCalendar
         plugins={[dayGridPlugin, interactionPlugin, listPlugin]}
         events={events}
@@ -65,9 +63,9 @@ const Home = () => {
           setDate(current.date);
           setShowModal(true);
         }}
-        eventClick={(info)=>{
+        eventClick={(info) => {
           info.jsEvent.preventDefault();
-          if(info.event.url){
+          if (info.event.url) {
             window.open(info.event.url);
           }
         }}
@@ -98,10 +96,8 @@ const Home = () => {
           const endDate = dateInfo.end;
           endDate.setDate(endDate.getDate() - 1);
           setFinalDate([dateInfo.start.toISOString(), endDate.toISOString()]);
-        }
-      }
+        }}
       />
-
       {showModal ? <Modal closeModal={setShowModal} date={date} /> : null}
     </div>
   );
