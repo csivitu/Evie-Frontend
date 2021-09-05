@@ -4,7 +4,7 @@ const eventFormSchema = Joi.object({
     title: Joi.string().min(3).max(70).required().label("Event Title").error(new Error('Title should be of min 3 max 70')),
     cname:Joi.string().min(3).max(70).required().label("Coordinator's name").error(new Error('Coordinator name should be of min 3 max 70')),
     email: Joi.string().email({ tlds: {allow: false} }).lowercase().required().error(new Error('Invalid Email')),
-    desc: Joi.string().max(300).required().error(new Error('Description max reached')),
+    desc: Joi.string().max(500).required().error(new Error('Description max reached')),
     start: Joi.date().error(new Error('Start date must be lower than end date')),
     end: Joi.date().min(Joi.ref('start')).error(new Error('End date must be greater than start date')),
     url:Joi.string().error(new Error('Invalid URL')),

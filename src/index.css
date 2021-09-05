@@ -44,4 +44,15 @@
   .eventprofile {
     width: 90vw;
   }
+  .imgdiv{
+    height:85vw !important;
+    width:85vw !important;
+  }
 }
+@media (max-width: 520px) {
+  .imgdiv{
+    height:70vw !important;
+    width:70vw !important;
+  }
+} 
+

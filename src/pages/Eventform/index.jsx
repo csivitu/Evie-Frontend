@@ -144,10 +144,10 @@ const EventForm = () => {
                           name="desc"
                           id="scroll-bar"
                           className="description w-full px-4 pt-4 resize:none"
-                          maxLength="300"
+                          maxLength="500"
                           onChange={(e) => setDesc(e.target.value)}
                         />
-                        <h2 className="text-white text-right">{`${desc.length}/300`}</h2>
+                        <h2 className="text-white text-right">{`${desc.length}/500`}</h2>
                       </div>
                     </div>
 

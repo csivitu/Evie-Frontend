@@ -14,18 +14,18 @@ const EventProfile = ({img,org,title,desc,start,end,url,backgroundColor,textColo
     <div className="w-full">
       <div className="flex flex-col">
         <div
-          className="border border-gray-900 text-center sm:text-left p-2 mr-2 mb-2 mt-2 w-full h-full  sm:h-52 flex-col sm:flex-row"
+          className="border border-gray-900 align-center text-left p-2 mr-2 mb-2 mt-2 w-full h-full  sm:h-56 flex-col sm:flex-row"
           style={{ backgroundColor,borderRadius:"8px",display:"flex",}}
         >
-          <div className="w-full h-44 sm:h-38 my-2 md:w-1/5 flex items-center justify-center">
+          <div className="h-80 w-80 self-center sm:w-48 sm:h-48 my-2 flex items-center justify-center imgdiv">
             <img src={img}
                 alt={org}
-                className="object-contain rounded self-center w-full h-full"
+                className="object-cover rounded self-center w-full h-full"
             />
             </div>
-          <div id="eventprofilecard" className="flex-none sm:flex sm:w-4/5" style={{overflowY:todayChecker?"auto":"none",overflowX:"hidden"}}>
-            <div className="flex-auto w-full p-2 sm:ml-5 justify-evenly">
-              <div className="flex items-center justify-center sm:justify-between sm:mt-2">
+          <div id="eventprofilecard" className="flex-none sm:flex w-full sm:w-4/5" style={{overflowY:todayChecker?"auto":"none",overflowX:"hidden"}}>
+            <div className="flex-auto w-full p-2 sm:ml-2 justify-evenly">
+              <div className="flex items-start sm:justify-between sm:mt-2">
                 <div className="flex items-center">
                   <div className="flex flex-col">
                     <div
