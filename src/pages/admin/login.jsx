@@ -25,7 +25,7 @@ const AdminLogin = () => {
         border: "1px solid #00c49a"}}
     >
       <div className="self-center mb-6 text-xl font-light sm:text-2xl text-white">
-        VCal Admin Login
+        Evie Admin Login
       </div>
       <div className="mt-8">
         <form autoComplete="off">

@@ -1,5 +1,5 @@
 
-const cacheName = "Vcal"
+const cacheName = "Evie"
 const staticAssets = [
     './', './index.html', './styles.css', './index.js', './manifest.json'
 ];

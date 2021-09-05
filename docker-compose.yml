@@ -3,7 +3,7 @@ version: '3.9'
 services:
 
   sample:
-    container_name: Vcal_frontend
+    container_name: Evie_frontend
     build:
       context: .
       dockerfile: Dockerfile
