@@ -75,11 +75,11 @@ const EventForm = () => {
     <div className="flex items-start justify-center min-h-screen pt-4 px-4 pb-20 sm:block sm:p-0">
       <ToastContainer />
       <div
-        className="px-4 pt-5 pb-4 sm:p-6 sm:pb-4"
+        className="px-4 pt-5 pb-4 sm:pt-5 sm:px-12"
         style={{ backgroundColor: "#16151C" }}
       >
         <div className="sm:flex sm:items-start">
-          <div className="mt-3 w-full sm:mt-0 sm:ml-4 sm:text-left">
+          <div className="mt-3 w-full sm:mt-0 sm:text-left">
             <button
               type="button"
               className="w-full inline-flex justify-center text-white outline-none sm:w-auto sm:text-sm goback-button fc-button"
@@ -97,7 +97,9 @@ const EventForm = () => {
                     style={{ top: "100%" }}
                   >
                     <div className="row">
-                      <h2 className="EventDetails mb-8 mt-6 sm:mt-0">Event Details</h2>
+                      <h2 className="EventDetails mb-8 mt-6 sm:mt-0">
+                        Event Details
+                      </h2>
                       <div className="input-group">
                         <h4>Event Name</h4>
                         <input
@@ -195,7 +197,7 @@ const EventForm = () => {
                     </div>
                     <div className="col-full mt-6">
                       <h4>Start Date and Time</h4>
-                      <div >
+                      <div>
                         <DatePicker
                           selected={start}
                           onChange={(date) => setStart(date)}
@@ -209,7 +211,7 @@ const EventForm = () => {
                     </div>
                     <div className="col-full">
                       <h4>End Date and Time</h4>
-                      <div >
+                      <div>
                         <div className="col-full">
                           <DatePicker
                             selected={end}
@@ -244,13 +246,13 @@ const EventForm = () => {
                     </div>
                     <button
                       type="submit"
-                      className="invisible sm:visible sm:w-full sm:mt-8 text-white font-bold bg-indigo-700 hover:bg-indigo-900
-                scale-100 h-12 transition ease-in duration-200 text-center text-base
-                shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg fc-button whitespace-nowrap"
+                      className="invisible sm:visible sm:w-full sm:mt-8 text-white font-bold 
+                transition ease-in duration-200 text-center text-base
+                focus:outline-none fc-button goback-button whitespace-nowrap"
+                      // className="w-full inline-flex justify-center mb-11 sm:mb-0 text-white outline-none sm:w-auto sm:text-sm goback-button fc-button"
                     >
                       Submit Event For Approval
                     </button>
-                    
                   </div>
                   <div className="flex sm:w-3/5 items-top">
                     <div className="w-full flex-row sm:flex-col">
@@ -275,13 +277,13 @@ const EventForm = () => {
                   </div>
                 </div>
                 <button
-                      type="submit"
-                      className="visible sm:invisible w-full text-white font-bold bg-indigo-700 hover:bg-indigo-900
-                scale-100 h-12 transition ease-in duration-200 text-center text-base
-                shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg fc-button whitespace-nowrap"
-                    >
-                      Submit Event For Approval
-                    </button>
+                  type="submit"
+                  className="visible sm:invisible w-full sm:mt-8 text-white font-bold 
+                transition ease-in duration-200 text-center text-base
+                focus:outline-none fc-button goback-button whitespace-nowrap"
+                >
+                  Submit Event For Approval
+                </button>
               </form>
             </div>
           </div>

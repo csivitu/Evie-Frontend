@@ -17,7 +17,7 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #29236c;
+  background: #25252D;
   transition: ease-in 1s !important;
 }
 #eventprofilecard::-webkit-scrollbar {

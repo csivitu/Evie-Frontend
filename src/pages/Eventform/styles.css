@@ -63,8 +63,8 @@ select {
     margin-top: 8px;
     padding: 1em;
     line-height: 1.4;
-    background-color: #11111D;
-    border: 1px solid rgba(76, 66, 194, 0.3);
+    background-color: #22242D;
+    border: 1px solid #383844;
     border-radius: 8px;
     -webkit-transition: 0.35s ease-in-out;
     -moz-transition: 0.35s ease-in-out;
@@ -75,7 +75,9 @@ select {
     outline: none;
 }
 
-
+input:focus{
+    border:1px solid #BABABA;
+}
 /* p {
     inline-size: 300px;
     overflow-wrap: break-word;
@@ -93,8 +95,8 @@ select {
     height: 200px;
     resize: none;
     border-radius: 8px;
-    border: 1px solid rgba(76, 66, 194, 0.3);
-    background-color: #11111D;
+    border: 1px solid #383844;
+    background-color: #22242D;
     -webkit-transition: 0.35s ease-in-out;
     -moz-transition: 0.35s ease-in-out;
     -o-transition: 0.35s ease-in-out;
@@ -104,38 +106,16 @@ select {
     color: #FFFFFF;
     outline: none;
 }
+.description:focus{
+    border:1px solid #BABABA;
+}
 
 #scroll-bar {
     overflow-y: scroll;
     scrollbar-width: thin;
 }
 
-#scroll-bar::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background-color: #23204F;
-    position: absolute;
-    left: 565px;
-    top: 451px;
-    scrollbar-width: thin;
-}
 
-#scroll-bar::-webkit-scrollbar {
-    width: 4px;
-    height: 21px;
-    background-color: #11111D;
-    position: absolute;
-    left: 565px;
-    top: 451px;
-    scrollbar-width: thin;
-}
-
-#scroll-bar::-webkit-scrollbar-thumb {
-    border-radius: 100px;
-    position: absolute;
-    left: 565px;
-    top: 451px;
-    scrollbar-width: thin;
-}
 
 .event-color {
     width: 100%;
