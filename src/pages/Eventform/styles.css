@@ -16,6 +16,7 @@
     line-height: 42px;
     font-weight: bold;
     font-style: normal;
+    white-space: nowrap;
 }
 
 .preview {
@@ -54,7 +55,7 @@ h4 {
 input,
 select {
     width: 100%;
-    margin-top:8px;
+    margin-top: 8px;
     padding: 1em;
     line-height: 1.4;
     background-color: #11111D;
@@ -83,7 +84,7 @@ select {
 .description {
     word-wrap: break-word;
     word-break: break-all;
-    margin-top:8px;
+    margin-top: 8px;
     height: 200px;
     resize: none;
     border-radius: 8px;
@@ -136,12 +137,13 @@ select {
 }
 
 .label-color {
-    outline:black !important;
-    border-radius:8px 0px 0px 8px;
+    outline: black !important;
+    border-radius: 8px 0px 0px 8px;
 }
+
 .label-color:focus {
-    outline:none !important;
-    border:none !important  ;
+    outline: none !important;
+    border: none !important;
 }
 
 .text-color {
@@ -153,7 +155,7 @@ select {
     cursor: pointer;
     padding: 0;
     background: none;
-    display:block;
+    display: block;
 }
 
 .container1 {
