@@ -229,7 +229,7 @@ const EventForm = () => {
                       <h4>Image/GIF URL</h4>
                       <input
                         type="text"
-                        placeholder="Image URL"
+                        placeholder="https://example.com/img.(jpg/gif/png/jpeg)"
                         name="img"
                         onChange={(e) => setImg(e.target.value)}
                       />
@@ -238,7 +238,7 @@ const EventForm = () => {
                       <h4>Event URL</h4>
                       <input
                         type="text"
-                        placeholder="Event URL"
+                        placeholder="https://example.com/register"
                         name="url"
                         onChange={(e) => setURL(e.target.value)}
                       />

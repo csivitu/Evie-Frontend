@@ -121,6 +121,7 @@ const Admin = () => {
                             href={event.url}
                             className="flex-no-shrink bg-blue-400 hover:bg-blue-500 px-3 ml-4 py-1 text-xs shadow-sm hover:shadow-lg font-medium tracking-wider border-2 border-blue-300 hover:border-indigo-800 text-white rounded-full transition ease-in duration-300"
                             target="_blank"
+                            rel="noreferrer"
                           >
                             <b> → </b>
                           </a>

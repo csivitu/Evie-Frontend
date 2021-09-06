@@ -17,7 +17,7 @@ const EventProfile = ({img,org,title,desc,start,end,url,backgroundColor,textColo
           className="border border-gray-900 align-center text-left p-2 mr-2 mb-2 mt-2 w-full h-full sm:h-56 flex-col sm:flex-row"
           style={{ backgroundColor,borderRadius:"8px",display:"flex",}}
         >
-          <div className="h-80 w-80 self-center sm:w-48 sm:h-48 my-2 flex items-center justify-center imgdiv">
+          <div className="h-80 w-80  self-center sm:w-48 sm:h-48 my-2 flex items-center justify-center imgdiv">
             <img src={img}
                 alt={org}
                 className="object-cover rounded self-center w-full h-full"

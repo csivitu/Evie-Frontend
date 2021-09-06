@@ -44,7 +44,6 @@ const Home = () => {
         height="100vh"
         eventAdd={events}
         eventDisplay={"block"}
-        // slotLabelFormat={{hour:"numeric",minute:"numeric"}}
         eventTimeFormat={{hour:"2-digit",minute:"numeric",omitZeroMinute:true}}
         customButtons={{
           eventform: {
