@@ -94,7 +94,7 @@ const EventForm = () => {
               <form onSubmit={handleSubmit}>
                 <div className="flex flex-col sm:flex-row w-full">
                   <div
-                    className="w-full sm:w-1/2 sm:pr-16 formdiv"
+                    className="w-full sm:w-2/5 sm:pr-16 formdiv"
                     style={{ top: "100%" }}
                   >
                     <div className="row">
@@ -196,7 +196,7 @@ const EventForm = () => {
                     </div>
                     <div className="col-full mt-6">
                       <h4>Start Date and Time of Event</h4>
-                      <div className="input-group">
+                      <div >
                         <DatePicker
                           selected={start}
                           onChange={(date) => setStart(date)}
@@ -210,7 +210,7 @@ const EventForm = () => {
                     </div>
                     <div className="col-full">
                       <h4>End Date and Time of Event</h4>
-                      <div className="input-group">
+                      <div >
                         <div className="col-full">
                           <DatePicker
                             selected={end}
@@ -253,7 +253,7 @@ const EventForm = () => {
                     </button>
                     
                   </div>
-                  <div className="flex sm:w-1/2 items-top">
+                  <div className="flex sm:w-3/5 items-top">
                     <div className="w-full flex-row sm:flex-col">
                       <h2 className="preview mb-8">Preview</h2>
                       <div className="eventprofile mb-8">

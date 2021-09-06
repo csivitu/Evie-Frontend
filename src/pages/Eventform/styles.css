@@ -42,14 +42,19 @@ h4 {
     padding-bottom: 5px;
 }
 
+
 .react-datepicker-wrapper {
     width: 100% !important;
-    color: grey;
+    /* color: grey; */
 }
 
 .react-datepicker__input-container {
     width: 100% !important;
-    color: grey;
+    /* color: grey; */
+}
+.react-datepicker-time__input{
+    background-color:inherit !important;
+    color:black !important;
 }
 
 input,
