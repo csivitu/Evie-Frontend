@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { getCalendar, getEvents } from "../../api/Request";
+import { approveEvent, denyEvent, getCalendar, getEvents, removeEvent } from "../../api/Request";
 
 
 const Admin = () => {
@@ -119,19 +119,27 @@ const Admin = () => {
                           </div>
                           <a
                             href={event.url}
-                            className="flex-no-shrink bg-blue-400 hover:bg-blue-500 px-3 ml-4 py-1 text-xs shadow-sm hover:shadow-lg font-medium tracking-wider border-2 border-blue-300 hover:border-blue-500 text-white rounded-full transition ease-in duration-300"
+                            className="flex-no-shrink bg-blue-400 hover:bg-blue-500 px-3 ml-4 py-1 text-xs shadow-sm hover:shadow-lg font-medium tracking-wider border-2 border-blue-300 hover:border-indigo-800 text-white rounded-full transition ease-in duration-300"
+                            target="_blank"
                           >
                             <b> → </b>
                           </a>
                           <a
-                            href={`http://localhost:3001/admin/approve/${event._id}`}
+                            href={`#/`}
                             className="flex-no-shrink bg-green-400 hover:bg-green-500 px-3 ml-4 py-1 text-xs shadow-sm hover:shadow-lg font-medium tracking-wider border-2 border-green-300 hover:border-green-500 text-white rounded-full transition ease-in duration-300"
+                            onClick={async ()=>{
+                            await approveEvent(event._id)
+                            window.location.reload()}}
                           >
                             <b> ✓ </b>
                           </a>
                           <a
-                            href={`http://localhost:3001/admin/deny/${event._id}/${reason}`}
+                            href={`#/`}
                             className="flex-no-shrink bg-red-400 hover:bg-red-500 px-3 ml-4 py-1 text-xs shadow-sm hover:shadow-lg font-medium tracking-wider border-2 border-red-300 hover:border-red-500 text-white rounded-full transition ease-in duration-300"
+                            onClick={async ()=>{
+                              await denyEvent(event._id,reason)
+                              window.location.reload()
+                            }}
                           >
                             <b> ✘ </b>
                           </a>
@@ -219,8 +227,13 @@ const Admin = () => {
                           </svg>
                           <p className="">{event.email}</p>
                           <a
-                          href={`http://localhost:3001/admin/remove/${event._id}`}
+                          href={`#/`}
                           className="flex-no-shrink bg-red-400 hover:bg-red-500 px-3 ml-4 py-1 text shadow-sm hover:shadow-lg font-medium tracking-wider border-2 border-red-300 hover:border-red-500 text-white rounded-full transition ease-in duration-300"
+                          
+                          onClick={async ()=>{
+                            await removeEvent(event._id,reason)
+                            window.location.reload()
+                          }}
                         >
                           <b> ✘ </b>
                         </a>
@@ -252,7 +265,7 @@ const Admin = () => {
           <div className="w-full md:w-2/3 flex flex-col mb-16 items-center text-center">
             <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Forbidden</h1>
             <div className="flex w-full justify-center items-end">
-              <a href="/login" className="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">Login Here</a>
+              <a href="/login" style={{backgroundColor:"#4C42C2"}} className="inline-flex text-white  py-2 px-6 outline-none rounded text-lg fc-button">Login Here</a>
             </div>
           </div>
         </div>

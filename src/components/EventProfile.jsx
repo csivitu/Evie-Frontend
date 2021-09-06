@@ -14,7 +14,7 @@ const EventProfile = ({img,org,title,desc,start,end,url,backgroundColor,textColo
     <div className="w-full">
       <div className="flex flex-col">
         <div
-          className="border border-gray-900 align-center text-left p-2 mr-2 mb-2 mt-2 w-full h-full  sm:h-56 flex-col sm:flex-row"
+          className="border border-gray-900 align-center text-left p-2 mr-2 mb-2 mt-2 w-full h-full sm:h-56 flex-col sm:flex-row"
           style={{ backgroundColor,borderRadius:"8px",display:"flex",}}
         >
           <div className="h-80 w-80 self-center sm:w-48 sm:h-48 my-2 flex items-center justify-center imgdiv">
@@ -23,7 +23,7 @@ const EventProfile = ({img,org,title,desc,start,end,url,backgroundColor,textColo
                 className="object-cover rounded self-center w-full h-full"
             />
             </div>
-          <div id="eventprofilecard" className="flex-none sm:flex w-full sm:w-4/5" style={{overflowY:todayChecker?"auto":"none",overflowX:"hidden"}}>
+          <div id="eventprofilecard" className="flex-none sm:flex w-full sm:w-3/4" style={{overflowY:todayChecker?"auto":"none",overflowX:"hidden"}}>
             <div className="flex-auto w-full p-2 sm:ml-2 justify-evenly">
               <div className="flex items-start sm:justify-between sm:mt-2">
                 <div className="flex items-center">
@@ -54,7 +54,7 @@ const EventProfile = ({img,org,title,desc,start,end,url,backgroundColor,textColo
                         {org}
                       </span>
                       <span
-                        className="font-bold mt-3 sm:mt-0 ml-0 sm:ml-28"
+                        className="font-bold mt-3 sm:mt-0 ml-0 sm:ml-28 italic hover:underline"
                         style={{cursor:"pointer"}}
                         onClick={(e) => {
                           e.preventDefault();

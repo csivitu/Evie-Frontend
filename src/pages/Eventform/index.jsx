@@ -52,7 +52,7 @@ const EventForm = () => {
       });
     } else {
       let res = await postEvent(eventDetails);
-      if (res.code === "6969") {
+      if (res.code === 1) {
         routeChange("/verify");
       } else {
         toast.error("Submission Failed! Please retry.", {
@@ -195,7 +195,7 @@ const EventForm = () => {
                       </div>
                     </div>
                     <div className="col-full mt-6">
-                      <h4>Start Date and Time of Event</h4>
+                      <h4>Start Date and Time</h4>
                       <div >
                         <DatePicker
                           selected={start}
@@ -209,7 +209,7 @@ const EventForm = () => {
                       </div>
                     </div>
                     <div className="col-full">
-                      <h4>End Date and Time of Event</h4>
+                      <h4>End Date and Time</h4>
                       <div >
                         <div className="col-full">
                           <DatePicker
@@ -247,7 +247,7 @@ const EventForm = () => {
                       type="submit"
                       className="invisible sm:visible sm:w-full sm:mt-8 text-white font-bold bg-indigo-700 hover:bg-indigo-900
                 scale-100 h-12 transition ease-in duration-200 text-center text-base
-                shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg fc-button"
+                shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg fc-button whitespace-nowrap"
                     >
                       Submit Event For Approval
                     </button>
@@ -279,7 +279,7 @@ const EventForm = () => {
                       type="submit"
                       className="visible sm:invisible w-full text-white font-bold bg-indigo-700 hover:bg-indigo-900
                 scale-100 h-12 transition ease-in duration-200 text-center text-base
-                shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg fc-button"
+                shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg fc-button whitespace-nowrap"
                     >
                       Submit Event For Approval
                     </button>

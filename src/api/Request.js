@@ -36,14 +36,28 @@ export const getToken = async (uname, password) => {
     }
     );
     localStorage.setItem('jwtToken', res.data);
-    return
+    return res.data;
   } catch (err) {
-    console.error(err);
+    console.error("this isthe error",err);
     return
   }
 }
 
 export const postEvent= async(form)=>{
   let res = await API.post("/api/add",form)
+  return res.data;
+}
+
+export const approveEvent = async (id) =>{
+  let res = await API.post(`/admin/approve`,{id}, { headers: { Authorization: `Bearer ${localStorage.getItem('jwtToken')}` } })
+  return res.data;
+}
+
+export const denyEvent = async (id,reason) =>{
+  let res = await API.post(`/admin/deny`,{id,reason}, { headers: { Authorization: `Bearer ${localStorage.getItem('jwtToken')}` } })
+  return res.data;
+}
+export const removeEvent = async (id) =>{
+  let res = await API.post(`/admin/remove`,{id}, { headers: { Authorization: `Bearer ${localStorage.getItem('jwtToken')}` } })
   return res.data;
 }
