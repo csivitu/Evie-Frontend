@@ -54,7 +54,7 @@ h1 {
   .wrapper-1 {
     height: initial;
     /* max-width: 620px; */
-    background-color: #4C42C2;
+    background-color: #383844;
     margin: 0 auto;
     margin-top: 50px;
   }
@@ -62,7 +62,7 @@ h1 {
     color: aliceblue;
   }
   .go-home{
-    background-color: #191927;
+    background-color: #16151C;
   }
   .wrapper-2 p{
     color:aliceblue;

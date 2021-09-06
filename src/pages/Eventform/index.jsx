@@ -20,7 +20,7 @@ const EventForm = () => {
   const [desc, setDesc] = useState("Description of the Event");
   const [url, setURL] = useState("URL of the Event");
   const [textColor, setTextColor] = useState("#ffffff");
-  const [backgroundColor, setbackgroundColor] = useState("#4C42C2");
+  const [backgroundColor, setbackgroundColor] = useState("#383844");
   const history = useHistory();
   const routeChange = (path) => {
     history.push(path);
@@ -76,14 +76,13 @@ const EventForm = () => {
       <ToastContainer />
       <div
         className="px-4 pt-5 pb-4 sm:p-6 sm:pb-4"
-        style={{ backgroundColor: "#191927" }}
+        style={{ backgroundColor: "#16151C" }}
       >
         <div className="sm:flex sm:items-start">
           <div className="mt-3 w-full sm:mt-0 sm:ml-4 sm:text-left">
             <button
               type="button"
-              className="w-full inline-flex mb-4 justify-center rounded-md border border-transparent shadow-sm px-4 py-2 text-base font-medium text-white hover:bg-green-700 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm fc-button"
-              style={{ marginLeft: 0, backgroundColor: "#4C42C2" }}
+              className="w-full inline-flex justify-center text-white outline-none sm:w-auto sm:text-sm goback-button fc-button"
               onClick={() => {
                 routeChange("/");
               }}
@@ -166,7 +165,7 @@ const EventForm = () => {
                         <input
                           className="input w-1/2 mt-2"
                           style={{ height: "60px" }}
-                          placeholder="#4C42C2"
+                          placeholder="#383844"
                           value={backgroundColor}
                           onChange={(e) => setbackgroundColor(e.target.value)}
                         />

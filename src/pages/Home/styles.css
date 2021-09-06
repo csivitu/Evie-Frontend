@@ -1,157 +1,181 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap'); */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Raleway&family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Raleway&family=Roboto&display=swap");
 body {
-    font-family: 'Raleway', sans-serif;
-    background-color: #191927;
+  font-family: "Raleway", sans-serif;
+  background-color: #16151c;
 }
 
 .box {
-    color: aliceblue;
+  color: aliceblue;
 }
 
-#root>main>div>div>div.fc-view-harness.fc-view-harness-active>div>table {
-    border: none !important;
+#root
+  > main
+  > div
+  > div
+  > div.fc-view-harness.fc-view-harness-active
+  > div
+  > table {
+  border: none !important;
 }
 
 .fc-day-today {
-    background-color: #191927 !important;
+  background-color: #16151c !important;
 }
 
 .fc-toolbar-chunk {
-    display: flex;
-}
-.fc-event-time{
-    padding-left:8px !important;
+  display: flex;
 }
 
-
+.fc-event-time {
+  padding-left: 8px !important;
+}
 
 .fc {
-    border-radius: 4px !important;
+  border-radius: 4px !important;
 }
 
 .fc-toolbar-title {
-    font-family: 'Roboto', sans-serif;
-    text-transform: uppercase !important;
-    margin-top:0.25rem !important;
+  font-family: "Raleway", sans-serif;
+  margin: 0.75em !important;
+  text-transform: uppercase !important;
+  justify-content: center !important;
+  text-align: center !important;
+  white-space: nowrap !important;
 }
 
 .fc-event-main-frame {
-    font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .fc-icon-chevron-right {
-    color: #4C42C2 !important;
+  color: #b9b9b9 !important;
 }
 
 .fc-icon-chevron-left {
-    color: #4C42C2 !important;
+  color: #b9b9b9 !important;
 }
 
 .fc-eventform-button {
-    padding:14px 29px !important;
-    background-color: #4C42C2 !important;
+  padding: 14px 29px !important;
+  background-color: #383844 !important;
 }
 
 .fc-customToday-button {
-    padding:14px 29px !important;
-    background-color: #4C42C2 !important;
+  padding: 14px 29px !important;
+  background-color: #383844 !important;
+}
+.goback-button{
+  padding: 14px 29px !important;
+  background-color: #383844 !important;
+  font-size:16px !important;
+  line-height:24px !important;
+  border-radius:4px !important;
 }
 
 table {
-    border: none;
-    border-collapse: separate;
-    border-spacing: 0 15px;
+  border: none;
+  border-collapse: separate;
+  border-spacing: 0 15px;
 }
-.fc-button{
-    padding:14px 29px !important;
-
+.fc-button {
+  padding: 14px 29px !important;
 }
 .fc-button-primary {
-    text-transform: capitalize !important;
-    border: none !important;
+  text-transform: capitalize !important;
+  border: none !important;
 }
 
 .fc-day-past {
-    cursor: pointer;
-    border-bottom: 1px solid #191927 !important;
+  cursor: pointer;
+  border-bottom: 1px solid #16151c !important;
 }
 
 .fc-day-future {
-    cursor: pointer;
-    border-bottom: 1px solid #191927 !important;
+  cursor: pointer;
+  border-bottom: 1px solid #16151c !important;
 }
 
 .fc-daygrid-day-top {
-    justify-content: center !important;
+  justify-content: center !important;
 }
 
 .fc-day-past:hover {
-    cursor: pointer;
-    border-bottom: 1px solid #4C42C2 !important;
-    transition: ease-in 50ms;
+  cursor: pointer;
+  border-bottom: 1px solid #383844 !important;
+  transition: ease-in 50ms;
 }
 
 .fc-day-today {
-    cursor: pointer;
-    border-bottom: 5px solid #4C42C2 !important;
-    transition: ease-in 50ms;
+  cursor: pointer;
+  border-bottom: 5px solid #383844 !important;
+  transition: ease-in 50ms;
 }
 
 .fc-day-future:hover {
-    cursor: pointer;
-    border-bottom: 1px solid #4C42C2 !important;
-    transition: ease-in 50ms !important;
+  cursor: pointer;
+  border-bottom: 1px solid #383844 !important;
+  transition: ease-in 50ms !important;
 }
 
-.fc-header-toolbar {
+/* .fc-header-toolbar {
     margin: 1%;
-}
+} */
 
 .fc-daygrid-day-frame {
-    background-color: #191927 !important;
-    border: none !important;
+  background-color: #16151c !important;
+  border: none !important;
 }
 
 .fc-button {
-    font-weight: 500 !important;
-    font-family: 'Inter', sans-serif !important;
-    transition: all 0.3s;
-    outline: none;
+  font-weight: 500 !important;
+  font-family: "Inter", sans-serif !important;
+  transition: all 0.3s;
+  outline: none;
 }
 
 .fc-button:hover {
-    background-color: #1F1C4F !important;
-    transition: ease-in-out 0.3s !important;
-    /* border:1px solid #00c49a !important; */
-    outline: none;
+  background-color: #22242d !important;
+  transition: ease-in-out 0.3s !important;
+  /* border:1px solid #00c49a !important; */
+  outline: none;
 }
 .fc-prev-button {
-    border-radius: 50% !important;
-    background-color: #1F1C4F !important;
-    padding: 10px !important;
+  border-radius: 50% !important;
+  background-color: #22242d !important;
+  padding: 18px !important;
+  margin: 0.75em !important;
 }
 .fc-next-button {
-    border-radius: 50% !important;
-    background-color: #1F1C4F !important;
-    padding: 10px !important;
+  border-radius: 50% !important;
+  background-color: #22242d !important;
+  padding: 18px !important;
+  margin: 0.75em !important;
 }
-.fc-footer-toolbar{
-    z-index:2 !important;
-    position:fixed !important;
-    bottom:0 !important;
-    width:100% !important;
-    background-color: #191927 !important;
+.fc-footer-toolbar {
+  z-index: 2 !important;
+  position: fixed !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  background-color: #16151c !important;
 }
-.fc-header-toolbar{
-    padding:2px 10px !important;
+.fc-header-toolbar {
+  margin: 2px 50px !important;
 }
 
 .fc td,
 .fc th {
-    border-style: none;
-    border-width: 1px;
-    padding: 0;
-    vertical-align: top;
+  border-style: none;
+  border-width: 1px;
+  padding: 0;
+  vertical-align: top;
+}
+@media (max-width: 640px) {
+  .fc-toolbar-title {
+    font-size: 1em !important;
+  }
+  .fc-toolbar {
+    justify-content: center !important;
+  }
 }

@@ -264,7 +264,7 @@ const Admin = () => {
           <div className="w-full md:w-2/3 flex flex-col mb-16 items-center text-center">
             <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Forbidden</h1>
             <div className="flex w-full justify-center items-end">
-              <a href="/login" style={{backgroundColor:"#4C42C2"}} className="inline-flex text-white  py-2 px-6 outline-none rounded text-lg fc-button">Login Here</a>
+              <a href="/login" style={{backgroundColor:"#383844"}} className="inline-flex text-white  py-2 px-6 outline-none rounded text-lg fc-button">Login Here</a>
             </div>
           </div>
         </div>

@@ -83,7 +83,7 @@ const validate = async () => {
     <div
       id="container"
       className="flex flex-col align-middle w-full max-w-md px-4 py-8 bg-white rounded-lg shadow dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10"
-      style={{backgroundColor: "#4C42C2"}}
+      style={{backgroundColor: "#383844"}}
     >
       <div className="self-center mb-6 text-xl font-light sm:text-2xl text-white">
         Evie Admin Login
@@ -109,7 +109,7 @@ const validate = async () => {
                 placeholder="Username"
                 name="uname"
                 onChange={(e) => setUsername(e.target.value)}
-                style={{backgroundColor:"#191927"}}
+                style={{backgroundColor:"#16151C"}}
               />
             </div>
           </div>
@@ -132,7 +132,7 @@ const validate = async () => {
                 placeholder="Password"
                 name="password"
                 onChange={(e) => setPassword(e.target.value)}
-                style={{backgroundColor:"#191927"}}
+                style={{backgroundColor:"#16151C"}}
               />
             </div>
           </div>
@@ -141,7 +141,7 @@ const validate = async () => {
               type="submit"
               className="text-white transition ease-in duration-200 text-center text-base font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2 fc-button w-full rounded-lg "
               onClick={handleOnClick}
-              style={{backgroundColor:"#191927"}}
+              style={{backgroundColor:"#16151C"}}
             >
               Login
             </button>

@@ -166,7 +166,7 @@ select {
 .container1 {
     max-width: 80%;
     margin: 0em auto;
-    background-color: #191927;
+    background-color: #16151C;
     border-radius: 4.2px;
     top: 0px;
 }
@@ -194,7 +194,7 @@ select {
 
 .submit-event {
     font-family: "Inter";
-    background-color: #191927 !important;
+    background-color: #16151C !important;
     font-weight: bold;
     font-size: 15px;
     cursor: pointer;
