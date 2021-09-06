@@ -226,7 +226,7 @@ const EventForm = () => {
                       </div>
                     </div>
                     <div className="col-full mt-6">
-                      <h4>Image URL</h4>
+                      <h4>Image/GIF URL</h4>
                       <input
                         type="text"
                         placeholder="Image URL"
