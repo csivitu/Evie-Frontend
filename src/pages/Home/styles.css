@@ -170,10 +170,17 @@ table {
   padding: 14px 29px !important;
   background-color: #383844;
   border-radius: 0.25em;
-  top: 1px;
-  left: 50%;
+  white-space:nowrap;
+  /* top: 1px; */
+  /* left: 50%; */
+  /* right:auto; */
   z-index: 1000;
   transition: all 0.3s;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
 }
 .add-button:hover{
   background-color: #22242d !important;
