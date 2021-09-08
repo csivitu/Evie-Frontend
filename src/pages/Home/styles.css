@@ -44,7 +44,9 @@ body {
   text-align: center !important;
   white-space: nowrap !important;
 }
-
+.fc-day-disabled{
+  background-color:#16151c !important;
+}
 .fc-event-main-frame {
   font-family: "Inter", sans-serif;
 }
@@ -121,10 +123,6 @@ table {
   transition: ease-in 50ms !important;
 }
 
-/* .fc-header-toolbar {
-    margin: 1%;
-} */
-
 .fc-daygrid-day-frame {
   background-color: #16151c !important;
   border: none !important;
@@ -171,9 +169,6 @@ table {
   background-color: #383844;
   border-radius: 0.25em;
   white-space:nowrap;
-  /* top: 1px; */
-  /* left: 50%; */
-  /* right:auto; */
   z-index: 1000;
   transition: all 0.3s;
   position: absolute;

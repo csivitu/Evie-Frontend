@@ -25,6 +25,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-toastify": "^7.0.4",
+    "serve": "^12.0.0",
     "use-breakpoint": "^2.0.1",
     "web-vitals": "^1.1.2",
     "workbox-core": "^5.1.4",
