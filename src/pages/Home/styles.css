@@ -165,7 +165,19 @@ table {
 .fc-header-toolbar {
   margin: 2px 50px !important;
 }
-
+.add-button {
+  position: absolute;
+  padding: 14px 29px !important;
+  background-color: #383844;
+  border-radius: 0.25em;
+  top: 1px;
+  left: 50%;
+  z-index: 1000;
+  transition: all 0.3s;
+}
+.add-button:hover{
+  background-color: #22242d !important;
+}
 .fc td,
 .fc th {
   border-style: none;

@@ -33,10 +33,32 @@ const Home = () => {
         setEvents(res);
       };
       AsyncEvent();
+      let deferredPrompt;
+      const addBtn = document.querySelector(".add-button");
+      addBtn.style.display = "none";
+      window.addEventListener("beforeinstallprompt", (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        addBtn.style.display = "block";
+        addBtn.addEventListener("click", (e) => {
+          addBtn.style.display = "none";
+          deferredPrompt.prompt();
+          deferredPrompt.userChoice.then((choiceResult) => {
+            if (choiceResult.outcome === "accepted") {
+              console.log("User accepted the A2HS prompt");
+            } else {
+              console.log("User dismissed the A2HS prompt");
+            }
+            deferredPrompt = null;
+          });
+        });
+      });
     }
   }, [finalDate]);
+
   return (
     <div className="md:mx-auto box overflow-x-hidden">
+      <button class="add-button">Add Evie to home screen</button>
       <FullCalendar
         plugins={[dayGridPlugin, interactionPlugin, listPlugin]}
         events={events}
@@ -44,7 +66,11 @@ const Home = () => {
         height="100vh"
         eventAdd={events}
         eventDisplay={"block"}
-        eventTimeFormat={{hour:"2-digit",minute:"numeric",omitZeroMinute:true}}
+        eventTimeFormat={{
+          hour: "2-digit",
+          minute: "numeric",
+          omitZeroMinute: true,
+        }}
         customButtons={{
           eventform: {
             text: "Event Form",

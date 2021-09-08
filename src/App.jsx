@@ -8,7 +8,6 @@ import ThankYou from "./pages/Thankyou";
 import Verify from "./pages/Verify";
 import { RegisterSW } from "./components/serviceWorker";
 
-
 function App() {
   RegisterSW();
   return (
