@@ -163,22 +163,22 @@ table {
 .fc-header-toolbar {
   margin: 2px 50px !important;
 }
-.add-button {
-  position: absolute;
+.swal-button {
   padding: 14px 29px !important;
   background-color: #383844;
   border-radius: 0.25em;
   white-space:nowrap;
-  z-index: 1000;
   transition: all 0.3s;
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
 }
-.add-button:hover{
+.swal-button:hover{
   background-color: #22242d !important;
+}
+.swal-modal {
+  background-color: #16151C;
+  color:aliceblue;
+}
+.swal-title {
+  color:#FFFFFF !important;
 }
 .fc td,
 .fc th {

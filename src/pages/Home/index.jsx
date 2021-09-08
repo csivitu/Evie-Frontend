@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import listPlugin from "@fullcalendar/list";
 import { isMobile } from "react-device-detect";
 import "./styles.css";
+import swal from "sweetalert";
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
@@ -33,32 +34,43 @@ const Home = () => {
         setEvents(res);
       };
       AsyncEvent();
-      let deferredPrompt;
-      const addBtn = document.querySelector(".add-button");
-      addBtn.style.display = "none";
-      window.addEventListener("beforeinstallprompt", (e) => {
-        e.preventDefault();
-        deferredPrompt = e;
-        addBtn.style.display = "block";
-        addBtn.addEventListener("click", (e) => {
-          addBtn.style.display = "none";
-          deferredPrompt.prompt();
-          deferredPrompt.userChoice.then((choiceResult) => {
-            if (choiceResult.outcome === "accepted") {
-              console.log("User accepted the A2HS prompt");
-            } else {
-              console.log("User dismissed the A2HS prompt");
-            }
-            deferredPrompt = null;
+      var promptEvent;
+      let rejectApp = localStorage.getItem("rejectApp");
+      if (!rejectApp) {
+        window.addEventListener("beforeinstallprompt", function (e) {
+          e.preventDefault();
+          promptEvent = e;
+          swal({
+            title: "Add Evie to Home Screen",
+            buttons: {
+              Remember: "No and Remember!",
+              "Nope!": true,
+              "Yup!": true,
+            },
+          }).then((value) => {
+            console.log(value);
+            if (value === "Yup!") presentAddToHome();
+            else if (value === "Remember")
+              localStorage.setItem("rejectApp", true);
           });
         });
-      });
+      }
+
+      function presentAddToHome() {
+        promptEvent.prompt(); // Wait for the user to respond to the prompt
+        promptEvent.userChoice.then((choice) => {
+          if (choice.outcome === "accepted") {
+            console.log("User accepted");
+          } else {
+            console.log("User dismissed");
+          }
+        });
+      }
     }
   }, [finalDate]);
 
   return (
     <div className="md:mx-auto box overflow-x-hidden">
-      <button class="add-button">Add Evie to home screen</button>
       <FullCalendar
         plugins={[dayGridPlugin, interactionPlugin, listPlugin]}
         events={events}
