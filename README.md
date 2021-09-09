@@ -8,19 +8,18 @@
     <img src="https://csivit.com/images/favicon.png" alt="Logo" width="80">
   </a>
 
-  <h3 align="center">YOUR_TITLE</h3>
+  <h3 align="center">Evie Frontend</h3>
 
   <p align="center">
-    YOUR_SHORT_DESCRIPTION
-    <br />
-    <a href="https://github.com/csivitu/Template"><strong>Explore the docs »</strong></a>
+    Event Calendar for VITians
     <br />
     <br />
-    <a href="https://github.com/csivitu/Template">View Demo</a>
+    <br />
+    <a href="https://evie.csivit.com">Visit Website</a>
     ·
-    <a href="https://github.com/csivitu/Template/issues">Report Bug</a>
+    <a href="https://github.com/csivitu/Evie-frontend/issues">Report Bug</a>
     ·
-    <a href="https://github.com/csivitu/Template/issues">Request Feature</a>
+    <a href="https://github.com/csivitu/Evie-frontend/issues">Request Feature</a>
   </p>
 </p>
 
@@ -29,76 +28,55 @@
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-* [About the Project](#about-the-project)
-  * [Built With](#built-with)
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-* [Usage](#usage)
-* [Roadmap](#roadmap)
-* [Contributing](#contributing)
-* [License](#license)
-* [Contributors](#contributors-)
+- [Table of Contents](#table-of-contents)
+- [About The Project](#about-the-project)
+  - [Built With](#built-with)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contributors](#contributors)
 
 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+<p align="center">
+<img src="https://i.imgur.com/58cJF37.png" alt="Logo" width="100">
+</p>
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+![Product Name Screen Shot](https://i.imgur.com/0Pl0alg.png)
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`Template`
+Evie, a periodically updated calendar which can help clubs/chapters to let people know what they're up to, and students can keep up with events that suit their interests.
 
 
 ### Built With
 
-* []()
-* []()
-* []()
+* React
+* Node & Express
+* MongoDB
 
 
 
-<!-- GETTING STARTED -->
-## Getting Started
 
-To get a local copy up and running follow these simple steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-```sh
-npm install npm@latest -g
-```
-
-### Installation
- 
-1. Clone the repo
-```sh
-git clone https://github.com/csivitu/Template.git
-```
-2. Install NPM packages
-```sh
-npm install
-```
 
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+The students can visit [Evie](https://evie.csivit.com) and see upcoming events organised by various clubs and chapters and also visit registration wesites to register and know more about these events.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+A PWA (Progressive Web App) is also available, users will be prompted to install it as soon as they open the website.
+You can use this PWA to keep track of events easily! 😄🎉
+<p align="center">
+<img src="https://i.imgur.com/eY6so6Z.png" alt="Logo" width="500">
+</p>
+
+The clubs/chapters can add their events in the calendar by filling up the [Event Form](https://evie.csivit.com/addevent).
 
 
 
-<!-- ROADMAP -->
-## Roadmap
 
-See the [open issues](https://github.com/csivitu/Template/issues) for a list of proposed features (and known issues).
 
 
 
@@ -120,12 +98,25 @@ You are requested to follow the contribution guidelines specified in [CONTRIBUTI
 
 Distributed under the MIT License. See [`LICENSE`](./LICENSE) for more information.
 
-
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [csivitu-shield]: https://img.shields.io/badge/csivitu-csivitu-blue
 [csivitu-url]: https://csivit.com
 [issues-shield]: https://img.shields.io/github/issues/csivitu/Template.svg?style=flat-square
-[issues-url]: https://github.com/csivitu/Template/issues
+[issues-url]: https://github.com/csivitu/Template/issues```[![csivit][csivitu-shield]][csivitu-url]
+[![Issues][issues-shield]][issues-url]
+//github.com/csivitu/Template/issues
+
+## Contributors
+
+Thanks goes to these wonderful people:
+
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/sanjaybaskaran01"><img src="https://avatars.githubusercontent.com/u/72266283?v=4" width="100px;" alt=""/><br /><sub><b>Sanjay Baskaran</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/Mannan-Goyal"><img src="https://avatars.githubusercontent.com/u/72966340?v=4" width="100px;" alt=""/><br /><sub><b>Mannan Goyal</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/ameeshagireesh"><img src="https://avatars.githubusercontent.com/u/67223373?v=4" width="100px;" alt=""/><br /><sub><b>Ameesha Gireesh</b></sub></a><br /></td>
+
+
+  </tr>
+</table>

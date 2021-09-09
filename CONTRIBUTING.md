@@ -62,4 +62,8 @@ You can contribute by:
 
 Make sure to document the contributions well in the pull request.
 
+<<<<<<< HEAD
 > It is not compulsory to follow the guidelines mentioned above, but it is strongly recommended.
+=======
+> It is not compulsory to follow the guidelines mentioned above, but it is strongly recommended.
+>>>>>>> dev-sanjay

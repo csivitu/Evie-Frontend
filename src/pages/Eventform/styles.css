@@ -1,0 +1,182 @@
+/* .add-event {
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    text-decoration-color: #00c49a;
+    font-weight: bold;
+} */
+
+.EventDetails {
+    color: #FFFFFF;
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    height: 42px;
+    width: 224px;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: bold;
+    font-style: normal;
+    white-space: nowrap;
+}
+
+.preview {
+    color: #FFFFFF;
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    height: 42px;
+    width: 224px;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+h4 {
+    color: #FFFFFF;
+    position: relative;
+    font-family: 'Inter';
+    font-size: 18px;
+    line-height: 22px;
+    height: 22px;
+    left: 2px;
+    padding-bottom: 5px;
+}
+
+
+.react-datepicker-wrapper {
+    width: 100% !important;
+    /* color: grey; */
+}
+
+.react-datepicker__input-container {
+    width: 100% !important;
+    /* color: grey; */
+}
+.react-datepicker-time__input{
+    background-color:inherit !important;
+    color:black !important;
+}
+
+input,
+select {
+    width: 100%;
+    margin-top: 8px;
+    padding: 1em;
+    line-height: 1.4;
+    background-color: #22242D;
+    border: 1px solid #383844;
+    border-radius: 8px;
+    -webkit-transition: 0.35s ease-in-out;
+    -moz-transition: 0.35s ease-in-out;
+    -o-transition: 0.35s ease-in-out;
+    transition: 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+    color: #FFFFFF !important;
+    outline: none;
+}
+
+input:focus{
+    border:1px solid #BABABA;
+}
+/* p {
+    inline-size: 300px;
+    overflow-wrap: break-word;
+} */
+
+.input-group {
+    margin-bottom: 1.5rem;
+    zoom: 1;
+}
+
+.description {
+    word-wrap: break-word;
+    word-break: break-all;
+    margin-top: 8px;
+    height: 200px;
+    resize: none;
+    border-radius: 8px;
+    border: 1px solid #383844;
+    background-color: #22242D;
+    -webkit-transition: 0.35s ease-in-out;
+    -moz-transition: 0.35s ease-in-out;
+    -o-transition: 0.35s ease-in-out;
+    transition: 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+    line-height: 1.4;
+    color: #FFFFFF;
+    outline: none;
+}
+.description:focus{
+    border:1px solid #BABABA;
+}
+
+#scroll-bar {
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+
+
+
+.event-color {
+    width: 100%;
+}
+
+.label-color {
+    outline: black !important;
+    border-radius: 8px 0px 0px 8px;
+}
+
+.label-color:focus {
+    outline: none !important;
+    border: none !important;
+}
+
+.text-color {
+    width: 100%;
+}
+
+.input[type=color] {
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    background: none;
+    display: block;
+}
+
+.container1 {
+    max-width: 80%;
+    margin: 0em auto;
+    background-color: #16151C;
+    border-radius: 4.2px;
+    top: 0px;
+}
+
+.row:before,
+.row:after {
+    content: "";
+    display: table;
+}
+
+.row:after {
+    clear: both;
+}
+
+.col-half {
+    padding-right: 10px;
+    float: left;
+    width: 50%;
+}
+
+.col-full {
+    float: left;
+    width: 100%;
+}
+
+.submit-event {
+    font-family: "Inter";
+    background-color: #16151C !important;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    color: white;
+}
