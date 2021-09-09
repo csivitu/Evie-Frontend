@@ -103,9 +103,7 @@ Distributed under the MIT License. See [`LICENSE`](./LICENSE) for more informati
 [csivitu-shield]: https://img.shields.io/badge/csivitu-csivitu-blue
 [csivitu-url]: https://csivit.com
 [issues-shield]: https://img.shields.io/github/issues/csivitu/Template.svg?style=flat-square
-[issues-url]: https://github.com/csivitu/Template/issues```[![csivit][csivitu-shield]][csivitu-url]
-[![Issues][issues-shield]][issues-url]
-//github.com/csivitu/Template/issues
+[issues-url]: https://github.com/csivitu/Evie-frontend/issues
 
 ## Contributors
 
