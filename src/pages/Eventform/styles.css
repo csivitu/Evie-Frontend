@@ -1,14 +1,6 @@
-/* .add-event {
-    text-align: center;
-    margin-left: 200px;
-    margin-right: 200px;
-    text-decoration-color: #00c49a;
-    font-weight: bold;
-} */
 
 .EventDetails {
     color: #FFFFFF;
-    position: relative;
     font-family: 'Raleway', sans-serif;
     height: 42px;
     width: 224px;
@@ -17,8 +9,22 @@
     font-weight: bold;
     font-style: normal;
     white-space: nowrap;
+    
 }
 
+.previewDiv{
+    top:8% !important;
+    z-index:1000;
+    position:fixed;
+}
+@media (max-width: 640px) {
+    .previewDiv{
+        top:auto !important;
+        /* z-index:1000; */
+        position:relative;
+    }
+
+}
 .preview {
     color: #FFFFFF;
     position: relative;
@@ -29,6 +35,7 @@
     line-height: 42px;
     font-weight: bold;
     font-style: normal;
+    
 }
 
 h4 {

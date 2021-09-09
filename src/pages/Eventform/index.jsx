@@ -89,7 +89,7 @@ const EventForm = () => {
             >
               Go Back
             </button>
-            <div className="container">
+            <div className="mt-2 container">
               <form onSubmit={handleSubmit}>
                 <div className="flex flex-col sm:flex-row w-full">
                   <div
@@ -256,9 +256,11 @@ const EventForm = () => {
                   </div>
                   <div className="flex sm:w-3/5 items-top">
                     <div className="w-full flex-row sm:flex-col">
+                      <div className="previewDiv sm:w-1/2">
                       <h2 className="preview mb-8">Preview</h2>
                       <div className="eventprofile mb-8">
                         <EventProfile
+                          className="eventprofile-card"
                           todayChecker={true}
                           id="livepreview"
                           img={img}
@@ -272,6 +274,7 @@ const EventForm = () => {
                           textColor={textColor}
                           backgroundColor={backgroundColor}
                         />
+                      </div>
                       </div>
                     </div>
                   </div>
