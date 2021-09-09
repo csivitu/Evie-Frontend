@@ -11,7 +11,7 @@ const Verify=() =>{
             <br></br>
             <br></br>
             <a href="/" className="go-home">
-            Go back to V-Cal
+            Go back to Evie
             </a>
           </div>
       </div>
