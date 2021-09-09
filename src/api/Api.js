@@ -2,10 +2,10 @@ import axios from "axios";
 
 
 export const API = axios.create({
-    baseURL: "http://localhost:3001", //PROCESS.ENV_REACT_APP_BASE_URL
+    baseURL: "https://evie-api.csivit.com", //PROCESS.ENV_REACT_APP_BASE_URL
     responseType: "json",
 })
 
-export const BASEURL = "http://localhost:3001"
+export const BASEURL = "https://evie-api.csivit.com"
 
 export default API

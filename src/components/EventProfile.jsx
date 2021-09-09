@@ -5,17 +5,24 @@ import { FiUsers } from "react-icons/fi";
 import { VscGlobe } from "react-icons/vsc";
 
 const EventProfile = ({img,org,title,desc,start,end,url,backgroundColor,textColor,todayChecker}) => {
+  const mediaMatch = window.matchMedia('(min-width: 640px)');
+  console.log(mediaMatch.matches);
   start = new Date(start);
   end = new Date(end);
   let myRegexp=new RegExp("^(?:https?://)?(?:[^@]+@)?(?:www.)?([^:/?]+)")
-  
+  const style={
+    backgroundColor:backgroundColor,
+    borderRadius:"8px",
+    display:"flex",
+    height:todayChecker?(mediaMatch.matches?"14rem":"100%"):"100%",
+  }
   let urlReg = myRegexp.exec(url);
   return (
     <div className="w-full">
       <div className="flex flex-col">
         <div
-          className="border border-gray-900 align-center text-left p-2 mr-2 mb-2 mt-2 w-full h-full sm:h-56 flex-col sm:flex-row"
-          style={{ backgroundColor,borderRadius:"8px",display:"flex",}}
+          className="border border-gray-900 align-center text-left p-2 mr-2 mb-2 mt-2 w-full flex-col sm:flex-row"
+          style={style}
         >
           <div className="h-80 w-80  self-center sm:w-48 sm:h-48 my-2 flex items-center justify-center imgdiv">
             <img src={img}
