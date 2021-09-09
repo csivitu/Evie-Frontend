@@ -195,3 +195,11 @@ table {
     justify-content: center !important;
   }
 }
+.submit{
+  background-color:#04ccfc !important;
+  color:black !important;
+}
+.submit:hover{
+  background-color:#0292B6 !important;
+  color:black !important;
+}

@@ -248,7 +248,7 @@ const EventForm = () => {
                       type="submit"
                       className="invisible sm:visible sm:w-full sm:mt-8 text-white font-bold 
                 transition ease-in duration-200 text-center text-base
-                focus:outline-none fc-button goback-button whitespace-nowrap"
+                focus:outline-none fc-button goback-button whitespace-nowrap submit"
                       // className="w-full inline-flex justify-center mb-11 sm:mb-0 text-white outline-none sm:w-auto sm:text-sm goback-button fc-button"
                     >
                       Submit Event For Approval
@@ -283,7 +283,7 @@ const EventForm = () => {
                   type="submit"
                   className="visible sm:invisible w-full sm:mt-8 text-white font-bold 
                 transition ease-in duration-200 text-center text-base
-                focus:outline-none fc-button goback-button whitespace-nowrap"
+                focus:outline-none fc-button goback-button whitespace-nowrap submit"
                 >
                   Submit Event For Approval
                 </button>
