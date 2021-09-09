@@ -8,6 +8,7 @@ import { getMonth } from "../../api/Request";
 import { useEffect } from "react";
 import listPlugin from "@fullcalendar/list";
 import { isMobile } from "react-device-detect";
+import CircularProgress from '@material-ui/core/CircularProgress';
 import "./styles.css";
 import swal from "sweetalert";
 
@@ -15,6 +16,7 @@ const Home = () => {
   const [showModal, setShowModal] = useState(false);
   const [date, setDate] = useState();
   const history = useHistory();
+  const [isLoading,setisLoading]=useState(true)
 
   const routeChange = () => {
     let path = "/addevent";
@@ -32,6 +34,7 @@ const Home = () => {
       const AsyncEvent = async () => {
         let res = await getMonth(finalDate);
         setEvents(res);
+        setisLoading(false)
       };
       AsyncEvent();
       var promptEvent;
@@ -70,6 +73,11 @@ const Home = () => {
 
   return (
     <div className="md:mx-auto box overflow-x-hidden">
+      {isLoading?
+      <div id="loading-home">
+      <CircularProgress className="loadingcircle"/>
+      </div>:null
+    }
       <FullCalendar
         plugins={[dayGridPlugin, interactionPlugin, listPlugin]}
         events={events}

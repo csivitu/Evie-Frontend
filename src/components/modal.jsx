@@ -1,3 +1,4 @@
+import { CircularProgress } from "@material-ui/core";
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -7,10 +8,12 @@ import EventProfile from "./EventProfile";
 
 const Modal = ({ closeModal, date }) => {
   const [event, setEvent] = useState([]);
+  const [isLoading,setIsloading]=useState(true)
   useEffect(() => {
     const AsyncDay = async () => {
       let res = await getDate(date);
       setEvent(res);
+      setIsloading(false)
     };
     AsyncDay();
   }, [date]);
@@ -49,6 +52,13 @@ const Modal = ({ closeModal, date }) => {
                   </h3>
                   <div className="mt-2">
                     <div className="flex flex-col">
+                      {isLoading?
+                    <>
+                        <CircularProgress color="#122222" id="loading" style={{alignSelf:"center"}} />
+
+                    </>  
+                    :
+                    <>
                       {(event.length!==0) ? (
                         event.map((item) => {
                           return <EventProfile key={item._id} {...item} />;
@@ -58,6 +68,8 @@ const Modal = ({ closeModal, date }) => {
                           <p>Schedule on this date seems clear!</p>
                         </>
                       )}
+                      </>
+  }
                     </div>
                   </div>
                 </div>
