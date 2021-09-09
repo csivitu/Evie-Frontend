@@ -1,5 +1,7 @@
 FROM node:14.17.5 as build
 
+ENV TZ="Asia/Kolkata"
+
 # set working directory
 WORKDIR /app
 

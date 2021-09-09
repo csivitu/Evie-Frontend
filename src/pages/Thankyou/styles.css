@@ -29,12 +29,16 @@ h1 {
 }
 .go-home {
   color: aliceblue;
-  background: aliceblue;
+  background-color:#16151c;
   border: none;
   padding: 10px 50px;
   margin: 30px 0;
   border-radius: 0.25em !important;
   text-transform: capitalize;
+  transition:all 0.3s;
+}
+.go-home:hover {
+  background:#22242d;
 }
 
 @media (min-width: 360px) {
@@ -62,7 +66,7 @@ h1 {
     color: aliceblue;
   }
   .go-home{
-    background-color: #16151C;
+    background-color: #16151c;
   }
   .wrapper-2 p{
     color:aliceblue;

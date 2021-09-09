@@ -48,7 +48,6 @@ const Home = () => {
               "Yup!": true,
             },
           }).then((value) => {
-            console.log(value);
             if (value === "Yup!") presentAddToHome();
             else if (value === "Remember")
               localStorage.setItem("rejectApp", true);
