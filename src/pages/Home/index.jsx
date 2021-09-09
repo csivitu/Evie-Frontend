@@ -43,7 +43,7 @@ const Home = () => {
           swal({
             title: "Add Evie to Home Screen",
             buttons: {
-              Remember: "No and Remember!",
+              Remember: "Never!",
               "Nope!": true,
               "Yup!": true,
             },
@@ -56,7 +56,7 @@ const Home = () => {
       }
 
       function presentAddToHome() {
-        promptEvent.prompt(); // Wait for the user to respond to the prompt
+        promptEvent.prompt(); 
         promptEvent.userChoice.then((choice) => {
           if (choice.outcome === "accepted") {
             console.log("User accepted");

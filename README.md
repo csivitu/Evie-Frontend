@@ -1,70 +1,123 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![csivit][csivitu-shield]][csivitu-url]
+[![Issues][issues-shield]][issues-url]
 
-## Available Scripts
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/csivitu/Template">
+    <img src="https://csivit.com/images/favicon.png" alt="Logo" width="80">
+  </a>
 
-In the project directory, you can run:
+  <h3 align="center">Evie Frontend</h3>
 
-### `npm start`
+  <p align="center">
+    Event Calendar for VITians
+    <br />
+    <br />
+    <br />
+    <a href="https://evie.csivit.com">Visit Website</a>
+    ·
+    <a href="https://github.com/csivitu/Evie-frontend/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/csivitu/Evie-frontend/issues">Request Feature</a>
+  </p>
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Table of Contents](#table-of-contents)
+- [About The Project](#about-the-project)
+  - [Built With](#built-with)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contributors](#contributors)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- ABOUT THE PROJECT -->
+## About The Project
+<p align="center">
+<img src="https://i.imgur.com/58cJF37.png" alt="Logo" width="100">
+</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Product Name Screen Shot](https://i.imgur.com/0Pl0alg.png)
 
-### `npm run eject`
+Evie, a periodically updated calendar which can help clubs/chapters to let people know what they're up to, and students can keep up with events that suit their interests.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Built With
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* React
+* Node & Express
+* MongoDB
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+<!-- USAGE EXAMPLES -->
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The students can visit [Evie](https://evie.csivit.com) and see upcoming events organised by various clubs and chapters and also visit registration wesites to register and know more about these events.
 
-### Making a Progressive Web App
+A PWA (Progressive Web App) is also available, users will be prompted to install it as soon as they open the website.
+You can use this PWA to keep track of events easily! 😄🎉
+<p align="center">
+<img src="https://i.imgur.com/eY6so6Z.png" alt="Logo" width="500">
+</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The clubs/chapters can add their events in the calendar by filling up the [Event Form](https://evie.csivit.com/addevent).
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'feat: Add some AmazingFeature'`)
+4. Push to the Branch (`git push -u origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+You are requested to follow the contribution guidelines specified in [CONTRIBUTING.md](./CONTRIBUTING.md) while contributing to the project :smile:.
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See [`LICENSE`](./LICENSE) for more information.
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[csivitu-shield]: https://img.shields.io/badge/csivitu-csivitu-blue
+[csivitu-url]: https://csivit.com
+[issues-shield]: https://img.shields.io/github/issues/csivitu/Template.svg?style=flat-square
+[issues-url]: https://github.com/csivitu/Template/issues```[![csivit][csivitu-shield]][csivitu-url]
+[![Issues][issues-shield]][issues-url]
+//github.com/csivitu/Template/issues
+
+## Contributors
+
+Thanks goes to these wonderful people:
+
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/sanjaybaskaran01"><img src="https://avatars.githubusercontent.com/u/72266283?v=4" width="100px;" alt=""/><br /><sub><b>Sanjay Baskaran</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/Mannan-Goyal"><img src="https://avatars.githubusercontent.com/u/72966340?v=4" width="100px;" alt=""/><br /><sub><b>Mannan Goyal</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/ameeshagireesh"><img src="https://avatars.githubusercontent.com/u/67223373?v=4" width="100px;" alt=""/><br /><sub><b>Ameesha Gireesh</b></sub></a><br /></td>
+
+
+  </tr>
+</table>
